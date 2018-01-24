@@ -24,7 +24,10 @@ class GdbcContactFormsAdminPage extends GdbcBaseAdminPage
 		parent::__construct($pageMenuTitle, $pageBrowserTitle, $pluginSlug);
 
 		$modulesList = array();
-
+		
+		if(GdbcModulesController::isModuleRegistered(GdbcModulesController::MODULE_HTML_FORMS))
+			$modulesList[] = GdbcHtmlFormsAdminModule::getInstance();
+		
 		if(GdbcModulesController::isModuleRegistered(GdbcModulesController::MODULE_JETPACK_CONTACT_FORM))
 			$modulesList[] = GdbcJetPackContactFormAdminModule::getInstance();
 

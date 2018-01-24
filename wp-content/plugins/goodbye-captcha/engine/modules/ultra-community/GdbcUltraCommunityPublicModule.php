@@ -29,9 +29,9 @@ final class GdbcUltraCommunityPublicModule extends GdbcBasePublicModule
 			return;
 		}
 
-		if(!class_exists('\UltraCommunity\UltraCommHooks')) {
-			return;
-		}
+//		if(!class_exists('\UltraCommunity\UltraCommHooks')) {
+//			return;
+//		}
 
 		if($this->getOption(GdbcUltraCommunityAdminModule::OPTION_LOGIN_FORM_PROTECTION_ACTIVATED))
 		{

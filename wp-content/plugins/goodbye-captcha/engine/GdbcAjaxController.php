@@ -58,6 +58,7 @@ final class GdbcAjaxController
 			        GdbcModulesController::MODULE_AFFILIATE_WP,
 			        GdbcModulesController::MODULE_EASY_DIGITAL_DOWNLOADS,
 			        GdbcModulesController::MODULE_QUFORM,
+					GdbcModulesController::MODULE_HTML_FORMS,
 		        ) as $moduleName){
 
 			if(null === ($publicModuleInstance = GdbcModulesController::getPublicModuleInstance($moduleName)))

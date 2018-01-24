@@ -38,6 +38,7 @@ final class GdbcModulesController
 	CONST MODULE_NINJA_FORMS      = 'NinjaForms';
 	CONST MODULE_CONTACT_FORM_7   = 'ContactForm7';
 	CONST MODULE_GRAVITY_FORMS    = 'GravityForms';
+	CONST MODULE_HTML_FORMS       = 'HTML Forms';
 	CONST MODULE_FAST_SECURE_FORM = 'FastSecureForm';
 	CONST MODULE_FORMIDABLE_FORMS = 'FormidableForms';
 	CONST MODULE_JETPACK_CONTACT_FORM  = 'JetPackContactForm';
@@ -137,8 +138,8 @@ final class GdbcModulesController
 							'IsLicensed' => true,
 					),
 					'classes' => array(
-							'GdbcGravityFormsAdminModule'  => '/modules/gravity-forms/GdbcGravityFormsAdminModule.php',
-							'GdbcGravityFormsPublicModule' => '/modules/gravity-forms/GdbcGravityFormsPublicModule.php',
+						'GdbcGravityFormsAdminModule' => '/modules/gravity-forms/GdbcGravityFormsAdminModule.php',
+						'GdbcHtmlFormsPublicModule'   => '/modules/gravity-forms/GdbcGravityFormsPublicModule.php',
 					)
 			),
 
@@ -461,7 +462,18 @@ final class GdbcModulesController
 							'GdbcUltraCommunityPublicModule' => '/modules/ultra-community/GdbcUltraCommunityPublicModule.php',
 					)
 			),
-
+			
+			self::MODULE_HTML_FORMS => array(
+				'info'    => array(
+					'ModuleId' => 36,
+					'IsLicensed' => false,
+				),
+				'classes' => array(
+					'GdbcHtmlFormsAdminModule'  => '/modules/html-forms/GdbcHtmlFormsAdminModule.php',
+					'GdbcHtmlFormsPublicModule' => '/modules/html-forms/GdbcHtmlFormsPublicModule.php',
+				)
+			),
+	
 	);
 
 

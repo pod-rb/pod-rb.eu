@@ -56,8 +56,8 @@ final class GdbcJetPackContactFormAdminModule  extends GdbcBaseAdminModule
 
 	public  function renderModuleSettingsSectionHeader(array $arrSectionInfo)
 	{
-		echo '<h3>' . __('Popular Contact Forms Settings', GoodByeCaptcha::PLUGIN_SLUG) . '</h3><hr />';
-		echo '<h4>' . __('Enable protection for the following popular contact forms:', GoodByeCaptcha::PLUGIN_SLUG) . '</h4>';
+//		echo '<h3>' . __('Popular Contact Forms Settings', GoodByeCaptcha::PLUGIN_SLUG) . '</h3><hr />';
+//		echo '<h4>' . __('Enable protection for the following popular contact forms:', GoodByeCaptcha::PLUGIN_SLUG) . '</h4>';
 	}
 
 	public function getFormattedBlockedContent(GdbcAttemptEntity $attemptEntity)
