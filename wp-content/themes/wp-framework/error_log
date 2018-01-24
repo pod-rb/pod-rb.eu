@@ -1,0 +1,16 @@
+[22-Jan-2014 19:00:11 Europe/Sofia] PHP Fatal error:  Call to undefined function get_header() in /home/podrb/public_html/wp-content/themes/wp-framework/404.php on line 10
+[03-Feb-2014 23:15:32 Europe/Sofia] PHP Fatal error:  Call to undefined function get_header() in /home/podrb/public_html/wp-content/themes/wp-framework/index.php on line 9
+[03-Feb-2014 23:15:33 Europe/Sofia] PHP Fatal error:  Call to undefined function get_header() in /home/podrb/public_html/wp-content/themes/wp-framework/index.php on line 9
+[29-Feb-2016 20:58:29 Europe/Sofia] PHP Fatal error:  Call to undefined function language_attributes() in /home/podrb/public_html/wp-content/themes/wp-framework/header.php on line 12
+[29-Feb-2016 20:58:29 Europe/Sofia] PHP Warning:  require_once(TEMPLATEPATH/library/framework.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/podrb/public_html/wp-content/themes/wp-framework/functions.php on line 15
+[29-Feb-2016 20:58:29 Europe/Sofia] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'TEMPLATEPATH/library/framework.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/podrb/public_html/wp-content/themes/wp-framework/functions.php on line 15
+[29-Feb-2016 20:58:30 Europe/Sofia] PHP Fatal error:  Call to undefined function the_time() in /home/podrb/public_html/wp-content/themes/wp-framework/footer.php on line 15
+[29-Feb-2016 20:58:32 Europe/Sofia] PHP Fatal error:  Call to undefined function get_header() in /home/podrb/public_html/wp-content/themes/wp-framework/author.php on line 9
+[29-Feb-2016 20:58:33 Europe/Sofia] PHP Fatal error:  Call to undefined function get_header() in /home/podrb/public_html/wp-content/themes/wp-framework/archive.php on line 9
+[29-Feb-2016 20:58:33 Europe/Sofia] PHP Fatal error:  Call to undefined function get_header() in /home/podrb/public_html/wp-content/themes/wp-framework/404.php on line 10
+[29-Feb-2016 20:58:33 Europe/Sofia] PHP Fatal error:  Call to undefined function get_header() in /home/podrb/public_html/wp-content/themes/wp-framework/404.php on line 10
+[12-Mar-2016 23:48:45 Europe/Sofia] PHP Warning:  require_once(TEMPLATEPATH/library/framework.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/podrb/public_html/wp-content/themes/wp-framework/functions.php on line 15
+[12-Mar-2016 23:48:45 Europe/Sofia] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'TEMPLATEPATH/library/framework.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/podrb/public_html/wp-content/themes/wp-framework/functions.php on line 15
+[12-Mar-2016 23:48:45 Europe/Sofia] PHP Fatal error:  Call to undefined function get_header() in /home/podrb/public_html/wp-content/themes/wp-framework/404.php on line 10
+[12-Mar-2016 23:48:45 Europe/Sofia] PHP Fatal error:  Call to undefined function the_time() in /home/podrb/public_html/wp-content/themes/wp-framework/footer.php on line 15
+[06-Jul-2016 05:35:19 Europe/Sofia] PHP Fatal error:  Call to undefined function get_header() in /home/podrb/public_html/wp-content/themes/wp-framework/author.php on line 9

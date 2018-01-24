@@ -1,0 +1,79 @@
+body {
+  height: 95%;
+}
+
+#container {
+  width: 100%; height: 100%; border:1px solid black; 
+}
+
+#container g {
+  stroke-width: 1;
+}
+
+#svgMap {
+  position: relative;
+  z-index: 2;
+  display: inline; width: inherit; min-width: inherit; max-width: inherit; height: inherit; min-height: inherit; max-height: inherit;
+}
+
+#container.bigMap g {
+  stroke-width: 5;
+}
+
+#AutoDWGLayers {
+  stroke-width: 1;
+}
+
+g[id*=-steni-9] g:last-child {
+  stroke-width: 0;
+}
+
+#topoMap {
+  opacity: 0.6;
+}
+
+#menu {
+  position: relative;
+  float: right;
+}
+
+#menuButton {
+  font-size:140%;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+#dropdownMenu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 3;
+  min-width: 127px;
+}
+
+#dropdownMenu.visible {
+  display: block;
+}
+
+#dropdownMenu button {
+  font-size: 16px;
+  border: 0 none;
+  width:100%;
+  text-align: left;
+  background: transparent;
+  cursor: pointer;
+}
+
+#dropdownMenu i:before {
+ margin-right: 5px;
+}
+
+.logo {
+  position: absolute;
+  right: 10px;
+  top: 85px;
+}
+

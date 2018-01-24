@@ -1,0 +1,59 @@
+# Copyright (C) 2016 Zoom OpenSeadragon
+# This file is distributed under the same license as the Zoom OpenSeadragon package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Zoom OpenSeadragon\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/zoom-"
+"openseadragon\n"
+"POT-Creation-Date: 2016-02-05 11:52:55+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-02-05 14:58+0300\n"
+"Last-Translator: Alexey Tikhonov <alt@altert.net>\n"
+"Language-Team: Alexey Tikhonov <alt@altert.net>\n"
+"X-Generator: Poedit 1.5.5\n"
+"Language: Russian\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: zoom-openseadragon.php:45
+msgid "Zoom OpenSeadragon Options"
+msgstr "Настройки Zoom OpenSeadragon"
+
+#: zoom-openseadragon.php:53
+msgid "Replace wordpress gallery"
+msgstr "Заменить галерею wordpress"
+
+#: zoom-openseadragon.php:73
+msgid "Options related to OpenSeadragon plugin"
+msgstr "Настройки, относящиеся к OpenSeadragon"
+
+#: zoom-openseadragon.php:79
+msgid "Replaces all galleries with Zoom OpenSeadragon galleries"
+msgstr "Заменить все галереи галереями Zoom OpenSeadragon"
+
+#. Plugin Name of the plugin/theme
+msgid "Zoom OpenSeadragon"
+msgstr "Zoom OpenSeadragon"
+
+#. #-#-#-#-#  plugin.pot (Zoom OpenSeadragon 1.0)  #-#-#-#-#
+#. Plugin URI of the plugin/theme
+#. #-#-#-#-#  plugin.pot (Zoom OpenSeadragon 1.0)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "http://altert.net"
+msgstr "http://altert.net"
+
+#. Description of the plugin/theme
+msgid ""
+"Zoom OpenSeadragon is an implementation of [OpenSeadragon](http://"
+"openseadragon.github.io//), an open-source, web-based viewer for high-"
+"resolution zoomable images, implemented in pure JavaScript, for desktop and "
+"mobile."
+msgstr ""
+"Zoom OpenSeadragon это реализация библиотеки [OpenSeadragon](http://"
+"openseadragon.github.io//) для просмотра изображений высокого разрешения, "
+"реализованной на чистом Javascript, в том числе и для мобильных устройств"
+
+#. Author of the plugin/theme
+msgid "Alexey Tikhonov"
+msgstr "Алексей Тихонов"

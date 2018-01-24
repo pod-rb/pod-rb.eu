@@ -1,0 +1,5 @@
+[16-Jul-2013 21:13:35 Europe/Sofia] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/podrb/public_html/wp-includes/registration-functions.php on line 7
+[29-Nov-2016 05:06:58 Europe/Sofia] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/podrb/public_html/wp-includes/registration.php on line 7
+[29-Nov-2016 05:40:44 Europe/Sofia] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/podrb/public_html/wp-includes/registration.php on line 7
+[29-Nov-2016 07:11:21 Europe/Sofia] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/podrb/public_html/wp-includes/registration.php on line 7
+[29-Nov-2016 19:15:37 Europe/Sofia] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/podrb/public_html/wp-includes/registration.php on line 7

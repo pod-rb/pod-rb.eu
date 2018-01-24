@@ -1,0 +1,1319 @@
+# Copyright (C) 2015 the Catch Themes Team
+# This file is distributed under the  GNU General Public License.
+msgid ""
+msgstr ""
+"Project-Id-Version: Adventurous\n"
+"Report-Msgid-Bugs-To: https://catchthemes.com/contact-us/\n"
+"POT-Creation-Date: 2017-10-10 14:24+0545\n"
+"PO-Revision-Date: 2017-10-10 14:24+0545\n"
+"Last-Translator: Sakin Shrestha <info@catchthemes.com>\n"
+"Language-Team: Catch Themes <info@catchthemes.com>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;esc_attr_e;esc_attr__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Hoppala! Die Seite konnte nicht gefunden werden"
+
+#: ../404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"An diesem Ort konnte wohl nichts gefunden werden. Vielleicht führt einer der "
+"folgenden Links oder eine Suche zum gewünschten Erfolg? "
+
+#: ../404.php:28
+msgid "Most Used Categories"
+msgstr "Häufig verwendete Kategorien"
+
+#: ../404.php:36
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Versuchen Sie es in den Monats-Archiven. %1$s"
+
+#: ../comments.php:36
+#, php-format
+msgctxt "comments title"
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr ""
+
+#: ../comments.php:56 ../comments.php:76
+msgid "Comment navigation"
+msgstr "Kommentarnavigation"
+
+#: ../comments.php:57 ../comments.php:77
+msgid "&larr; Older Comments"
+msgstr "&larr; Ältere Anmerkungen"
+
+#: ../comments.php:58 ../comments.php:78
+msgid "Newer Comments &rarr;"
+msgstr "Neuere Anmerkungen %rarr;"
+
+#: ../comments.php:88
+msgid "Comments are closed."
+msgstr "Es können keine Kommentare abgegeben werden."
+
+#: ../content-aside.php:20 ../content-audio.php:20 ../content-chat.php:21
+#: ../content-gallery.php:24 ../content-gallery.php:41
+#: ../content-gallery.php:42 ../content-image.php:22 ../content-search.php:16
+#: ../content-video.php:23 ../content.php:31
+#: ../inc/adventurous-functions.php:140
+#, php-format
+msgid "Permalink to %s"
+msgstr "Permalink zu %s"
+
+#: ../content-aside.php:26 ../content-audio.php:32 ../content-chat.php:33
+#: ../content-gallery.php:48 ../content-image.php:34 ../content-link.php:29
+#: ../content-page.php:24 ../content-quote.php:25 ../content-single.php:29
+#: ../content-status.php:33 ../content-video.php:35 ../content.php:51
+#: ../image.php:92
+msgid "Pages:"
+msgstr "Seiten:"
+
+#: ../content-aside.php:39 ../content-audio.php:45 ../content-chat.php:46
+#: ../content-gallery.php:62 ../content-image.php:47 ../content-link.php:41
+#: ../content-quote.php:37 ../content-single.php:45 ../content-status.php:45
+#: ../content-video.php:48 ../content.php:65
+msgid "Leave a reply"
+msgstr "Kommentieren"
+
+#: ../content-aside.php:39 ../content-audio.php:45 ../content-chat.php:46
+#: ../content-gallery.php:62 ../content-image.php:47 ../content-link.php:41
+#: ../content-quote.php:37 ../content-single.php:45 ../content-status.php:45
+#: ../content-video.php:48 ../content.php:65
+msgid "1 Reply"
+msgstr "1 Antwort"
+
+#: ../content-aside.php:39 ../content-audio.php:45 ../content-chat.php:46
+#: ../content-gallery.php:62 ../content-image.php:47 ../content-link.php:41
+#: ../content-quote.php:37 ../content-status.php:45 ../content-video.php:48
+msgid "% Replies;"
+msgstr "% Antworten;"
+
+#: ../content-aside.php:41 ../content-audio.php:47 ../content-chat.php:48
+#: ../content-gallery.php:64 ../content-image.php:49 ../content-link.php:43
+#: ../content-page.php:33 ../content-quote.php:39 ../content-search.php:24
+#: ../content-single.php:48 ../content-status.php:47 ../content-video.php:50
+#: ../content.php:68 ../image.php:38 ../image.php:111
+#: ../inc/adventurous-template-tags.php:189
+msgid "Edit"
+msgstr "Editieren"
+
+#: ../content-audio.php:21
+msgid "All Audio Posts"
+msgstr "Alle Audio-Beiträge"
+
+#: ../content-audio.php:21
+msgid "Audio"
+msgstr "Audio"
+
+#: ../content-chat.php:22
+msgid "All Chat Posts"
+msgstr "Alle Chat-Beiträge"
+
+#: ../content-chat.php:22
+msgid "Chat"
+msgstr "Chat"
+
+#: ../content-gallery.php:25
+msgid "All Gallery Posts"
+msgstr "Alle Galerie-Beiträge"
+
+#: ../content-gallery.php:25
+msgid "Gallery"
+msgstr "Galerie"
+
+#: ../content-gallery.php:42
+#, php-format
+msgid "This gallery contains <a %1$s>%2$s photo</a>."
+msgid_plural "This gallery contains <a %1$s>%2$s photos</a>."
+msgstr[0] "Diese Galerie enthält <a %1$s>%2$s Foto</a>"
+msgstr[1] "Diese Galerie enthält <a %1$s>%2$s Fotos</a>"
+
+#: ../content-image.php:23
+msgid "All Image Posts"
+msgstr "Alle Foto-Beiträge"
+
+#: ../content-image.php:23
+msgid "Image"
+msgstr "Foto"
+
+#: ../content-link.php:23
+msgid "All Link Posts"
+msgstr "Alle Verweis-Beiträge"
+
+#: ../content-link.php:23
+msgid "Link"
+msgstr "Verweis"
+
+#: ../content-single.php:45 ../content.php:65
+msgid "% Replies"
+msgstr "% Antworten"
+
+#: ../content-single.php:61 ../content.php:75
+#, php-format
+msgid "About %s"
+msgstr "Über %s"
+
+#: ../content-single.php:65 ../content.php:79
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Alle Beiträge von %s <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../content-status.php:27
+msgid "All Status Posts"
+msgstr "Alle Status-Beiträge"
+
+#: ../content-status.php:27
+msgid "Status"
+msgstr "Status"
+
+#: ../content-video.php:24
+msgid "All Video Posts"
+msgstr "Alle Video-Beiträge"
+
+#: ../content-video.php:24
+msgid "Video"
+msgstr "Video"
+
+#: ../content.php:23
+msgid "Featured post"
+msgstr "Gekennzeichnete Beiträge"
+
+#: ../functions.php:119
+msgid "Header Right Menu"
+msgstr "Rechtes Header-Menü (Primärmenü)"
+
+#: ../functions.php:120
+msgid "Header Secondary Menu"
+msgstr "Zweites Header-Menü"
+
+#: ../image.php:28
+#, php-format
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\" pubdate>%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-"
+"size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s"
+"\" rel=\"gallery\">%7$s</a>"
+msgstr ""
+"Veröffentlicht am <span class=\"entry-date\"> um <time class=\"entry-date\" "
+"datetime=\"%1$s\" pubdate>%2$s</time></span> auf <a href=\"%3$s\" title="
+"\"Link naar volledige afbeelding\">%4$s &times; %5$s</a> in <a href=\"%6$s\" "
+"title=\"Terug naar %7$s\" rel=\"gallery\">%7$s</a> "
+
+#: ../image.php:42
+msgid "&larr; Previous"
+msgstr "&larr; Vorherige"
+
+#: ../image.php:43
+msgid "Next &rarr;"
+msgstr "Folgende &rarr;"
+
+#: ../image.php:103
+#, php-format
+msgid ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a "
+"comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" "
+"title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Plaats een reactie"
+"\">Eine Anmerkung veröffentlichen</a> oder einen Trackback hinterlassen: <a "
+"class=\"trackback-link\" href=\"%s\" title=\"Trackback URL für den Beitrag\" "
+"rel=\"trackback\">Trackback URL</a>. "
+
+#: ../image.php:105
+#, php-format
+msgid ""
+"Comments are closed, but you can leave a trackback: <a class=\"trackback-link"
+"\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback"
+"\">Trackback URL</a>."
+msgstr ""
+"Kommentierung nicht möglich, doch es kann ein Trackback hinterlassen werden: "
+"<a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL für den Beitrag"
+"\" rel=\"trackback\">Trackback URL</a>."
+
+#: ../image.php:107
+msgid ""
+"Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond"
+"\" title=\"Post a comment\">post a comment</a>."
+msgstr ""
+"Trackback nicht möglich, doch Sie können eine <a class=\"comment-link\" href="
+"\"#respond\" title=\"Anmerkung veröffentlichen\">Anmerkung veröffentlichen</"
+"a>."
+
+#: ../image.php:109
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Weder Kommentierung noch Trackback möglich."
+
+#: ../inc/adventurous-custom-header.php:35
+msgid "Highway"
+msgstr "Highway"
+
+#: ../inc/adventurous-custom-header.php:41
+msgid "Buddha"
+msgstr "Buddha"
+
+#: ../inc/adventurous-default-options.php:96
+msgid "Copyright"
+msgstr "Copyright"
+
+#: ../inc/adventurous-default-options.php:96
+msgid "All Rights Reserved"
+msgstr "Alle Rechte vorbehalten"
+
+#: ../inc/adventurous-default-options.php:96
+msgid "Adventurous Theme by"
+msgstr "Adventurous Theme by"
+
+#: ../inc/adventurous-default-options.php:144
+msgid "https://catchthemes.com"
+msgstr "https://catchthemes.com"
+
+#: ../inc/adventurous-default-options.php:144
+msgid "Catch Themes"
+msgstr "Catch Themes"
+
+#: ../inc/adventurous-functions.php:628
+msgid "Facebook"
+msgstr "Facebook"
+
+#: ../inc/adventurous-functions.php:633
+msgid "Twitter"
+msgstr "Twitter"
+
+#: ../inc/adventurous-functions.php:638
+msgid "Google+"
+msgstr "Google+"
+
+#: ../inc/adventurous-functions.php:643
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: ../inc/adventurous-functions.php:648
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: ../inc/adventurous-functions.php:653
+msgid "YouTube"
+msgstr "YouTube"
+
+#: ../inc/adventurous-functions.php:658
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#: ../inc/adventurous-functions.php:663
+msgid "SlideShare"
+msgstr "SlideShare"
+
+#: ../inc/adventurous-functions.php:668
+msgid "FourSquare"
+msgstr "FourSquare"
+
+#: ../inc/adventurous-functions.php:673
+msgid "Flickr"
+msgstr "Flickr"
+
+#: ../inc/adventurous-functions.php:678
+msgid "Tumblr"
+msgstr "Tumblr"
+
+#: ../inc/adventurous-functions.php:683
+msgid "deviantART"
+msgstr "deviantART"
+
+#: ../inc/adventurous-functions.php:688
+msgid "Dribbble"
+msgstr "Dribbble"
+
+#: ../inc/adventurous-functions.php:693
+msgid "MySpace"
+msgstr "MySpace"
+
+#: ../inc/adventurous-functions.php:698
+msgid "WordPress"
+msgstr "Wordpress"
+
+#: ../inc/adventurous-functions.php:703
+msgid "RSS"
+msgstr "RSS"
+
+#: ../inc/adventurous-functions.php:708
+msgid "Delicious"
+msgstr "Delicious"
+
+#: ../inc/adventurous-functions.php:713
+msgid "Last.fm"
+msgstr "Last.fm"
+
+#: ../inc/adventurous-functions.php:718
+msgid "Instagram"
+msgstr "Instagram"
+
+#: ../inc/adventurous-functions.php:723
+msgid "GitHub"
+msgstr "GitHub"
+
+#: ../inc/adventurous-functions.php:728
+msgid "Vkontakte"
+msgstr "Vkontakte"
+
+#: ../inc/adventurous-functions.php:733
+msgid "My World"
+msgstr "My World"
+
+#: ../inc/adventurous-functions.php:738
+msgid "Odnoklassniki"
+msgstr "Odnoklassniki"
+
+#: ../inc/adventurous-functions.php:743
+msgid "GoodReads"
+msgstr "GoodReads"
+
+#: ../inc/adventurous-functions.php:748
+msgid "Skype"
+msgstr "Skype"
+
+#: ../inc/adventurous-functions.php:753
+msgid "SoundCloud"
+msgstr "SoundCloud"
+
+#: ../inc/adventurous-functions.php:758
+msgid "Email"
+msgstr "Email"
+
+#: ../inc/adventurous-functions.php:763
+msgid "Contact"
+msgstr "Contact"
+
+#: ../inc/adventurous-functions.php:768
+msgid "Xing"
+msgstr "Xing"
+
+#: ../inc/adventurous-functions.php:773
+msgid "Meetup"
+msgstr "Meetup"
+
+#: ../inc/adventurous-functions.php:795
+msgid "ID"
+msgstr "ID"
+
+#: ../inc/adventurous-menus.php:11
+msgid "Primary Menu"
+msgstr "Primärmenü"
+
+#: ../inc/adventurous-menus.php:12
+msgid "Skip to content"
+msgstr "Zum Inhalt springen"
+
+#: ../inc/adventurous-menus.php:44
+msgid "Secondary Menu"
+msgstr "Sekundär-Menü"
+
+#: ../inc/adventurous-metabox.php:14 ../inc/adventurous-metabox.php:20
+msgid "Adventurous Options"
+msgstr "Adventurous Options"
+
+#: ../inc/adventurous-metabox.php:34
+msgid "Default"
+msgstr "Voreinstellung"
+
+#: ../inc/adventurous-metabox.php:39
+msgid "Enable"
+msgstr "Aktivieren"
+
+#: ../inc/adventurous-metabox.php:44
+msgid "Disable"
+msgstr "Deaktivieren"
+
+#: ../inc/adventurous-metabox.php:55 ../inc/adventurous-metabox.php:86
+#, php-format
+msgid "Default Layout Set in <a href=\"%s\">Theme Options</a>"
+msgstr "Vorgabe-Layout gesetzt auf <a href=\"%s\">Theme-Optionen</a>"
+
+#: ../inc/adventurous-metabox.php:61
+msgid "Right sidebar"
+msgstr "Rechte Seitenleiste"
+
+#: ../inc/adventurous-metabox.php:67
+msgid "Left sidebar"
+msgstr "Linke Seitenleiste"
+
+#: ../inc/adventurous-metabox.php:73
+msgid "No sidebar"
+msgstr "Keine Seitenleiste"
+
+#: ../inc/adventurous-metabox.php:91
+msgid "Featured Image"
+msgstr "Hervorgehobenes Foto"
+
+#: ../inc/adventurous-metabox.php:96
+msgid "Full Image"
+msgstr "Vollbild"
+
+#: ../inc/adventurous-metabox.php:101
+msgid "Slider Image"
+msgstr "Slider-Show"
+
+#: ../inc/adventurous-metabox.php:106
+msgid "Disable Image"
+msgstr "Foto deaktivieren"
+
+#: ../inc/adventurous-metabox.php:123
+msgid "Sidebar Layout"
+msgstr "Seitenleisten-Layout"
+
+#: ../inc/adventurous-metabox.php:153
+msgid "Header Featured Image Options"
+msgstr "Optionen für das Header-Themenbild"
+
+#: ../inc/adventurous-metabox.php:181
+msgid "Content Featured Image Options"
+msgstr "Optionen für das Content-Themenbild"
+
+#: ../inc/adventurous-slider.php:240
+msgid ""
+"You have selected Post Slider but you haven't added the Post ID in "
+"\"Appearance => Theme Options => Featured Slider => Featured Post Slider "
+"Options\""
+msgstr ""
+"Beitrags-Slider wurde selektiert ohne Beitrags-IDs hinzuzufügen(\"Theme-"
+"Optionen => Themen-Slider => Optionen für Beitrag-Themen-Slider\")"
+
+#: ../inc/adventurous-slider.php:248
+msgid ""
+"You have selected Category Slider but you haven't selected any categories in "
+"\"Appearance => Theme Options => Featured Slider => Featured Category Slider "
+"Options\""
+msgstr ""
+"Kategorien-Slider wurde selektiert ohne Kategorien hinzuzufügen(\"Theme-"
+"Optionen => Themen-Slider => Optionen für Kategorien-Themen-Slider\")"
+
+#: ../inc/adventurous-template-tags.php:51
+#: ../inc/adventurous-template-tags.php:109
+msgid "Post navigation"
+msgstr "Beitragsnavigation"
+
+#: ../inc/adventurous-template-tags.php:55
+#: ../inc/adventurous-template-tags.php:113
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr "&larr;"
+
+#: ../inc/adventurous-template-tags.php:56
+#: ../inc/adventurous-template-tags.php:114
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: ../inc/adventurous-template-tags.php:65
+#: ../inc/adventurous-template-tags.php:123
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Ältere Beiträge"
+
+#: ../inc/adventurous-template-tags.php:69
+#: ../inc/adventurous-template-tags.php:127
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Neuere Beiträge <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/adventurous-template-tags.php:157
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: ../inc/adventurous-template-tags.php:157
+msgid "(Edit)"
+msgstr "(Editieren)"
+
+#: ../inc/adventurous-template-tags.php:172
+msgid "Post author"
+msgstr "Autor dieses Beitrags:"
+
+#: ../inc/adventurous-template-tags.php:178
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s auf %2$s"
+
+#: ../inc/adventurous-template-tags.php:184
+msgid "Your comment is awaiting moderation."
+msgstr "Ihre Anmerkung wartet auf Moderation."
+
+#: ../inc/adventurous-template-tags.php:193
+msgid "Reply"
+msgstr "Antworten"
+
+#: ../inc/adventurous-template-tags.php:222
+#: ../inc/adventurous-template-tags.php:295
+#, php-format
+msgid "View all posts by %s"
+msgstr "Alle Beiträge von %s anzeigen"
+
+#: ../inc/adventurous-template-tags.php:227
+#, php-format
+msgid ""
+"<span class=\"on-date\">Posted on %1$s</span><span class=\"by-author\"> by "
+"%2$s</span>"
+msgstr ""
+"<span class=\"on-date\">Veröffentlicht am %1$s</span><span class=\"by-author"
+"\"> von %2$s</span>"
+
+#: ../inc/adventurous-template-tags.php:249
+#: ../inc/adventurous-template-tags.php:252
+#: ../inc/adventurous-template-tags.php:281
+#: ../inc/adventurous-template-tags.php:284
+msgid ", "
+msgstr ", "
+
+#: ../inc/adventurous-template-tags.php:257
+#, php-format
+msgid ""
+"<span class=\"in-category\">Posted in %1$s</span><span class=\"sep\"> | </"
+"span><span class=\"in-tag\">Tagged %2$s</span>"
+msgstr ""
+"<span class=\"in-category\">Veröffentlicht unter %1$s</span><span class=\"sep"
+"\"> | </span><span class=\"in-tag\">Lemmata: %2$s</span> "
+
+#: ../inc/adventurous-template-tags.php:259
+#, php-format
+msgid "<span class=\"in-category\">Posted in %1$s</span>"
+msgstr "<span class=\"in-category\">Veröffentlicht unter %1$s</span>"
+
+#: ../inc/adventurous-template-tags.php:301
+#, php-format
+msgid ""
+"<span class=\"on-date\">Posted on %3$s</span><span class=\"in-category\"> "
+"under %1$s</span><span class=\"sep\"> | </span><span class=\"in-tag\">Tagged "
+"%2$s</span><span class=\"sep\"> | </span><span class=\"by-author\"> By %4$s</"
+"span>"
+msgstr ""
+"<span class=\"on-date\">Veröffentlicht am %3$s</span><span class=\"in-"
+"category\"> unter %1$s</span><span class=\"sep\"> | </span><span class=\"in-"
+"tag\">Lemmata: %2$s</span><span class=\"sep\"> | </span><span class=\"by-"
+"author\"> Von %4$s</span>"
+
+#: ../inc/adventurous-template-tags.php:303
+#, php-format
+msgid ""
+"<span class=\"on-date\">Posted on %3$s</span><span class=\"in-category\"> "
+"under in %1$s</span><span class=\"sep\"> | </span><span class=\"by-author\"> "
+"By %4$s</span>."
+msgstr ""
+"<span class=\"on-date\">Veröffentlicht am %3$s</span><span class=\"in-"
+"category\"> unter %1$s</span><span class=\"sep\"> | </span><span class=\"by-"
+"author\"> Von %4$s</span>. "
+
+#: ../inc/adventurous-template-tags.php:305
+#, php-format
+msgid ""
+"<span class=\"on-date\">Posted on %3$s</span><span class=\"sep\"> | </"
+"span><span class=\"by-author\"> By %4$s</span>."
+msgstr ""
+"<span class=\"on-date\">Veröffentlicht am %3$s</span><span class=\"sep\"> | "
+"</span><span class=\"by-author\"> Von %4$s</span>."
+
+#: ../inc/adventurous-widgets.php:14
+msgid "Main Sidebar"
+msgstr "Haupt-Seitenleiste"
+
+#: ../inc/adventurous-widgets.php:16
+msgid "Shows the Widgets at the side of Content"
+msgstr "Die Wdgets seitlich des Inhalts anzeigen"
+
+#: ../inc/adventurous-widgets.php:25
+msgid "Footer Area One"
+msgstr "Footer-Bereich 1"
+
+#: ../inc/adventurous-widgets.php:27 ../inc/adventurous-widgets.php:38
+#: ../inc/adventurous-widgets.php:49 ../inc/adventurous-widgets.php:60
+msgid "An optional widget area for your site footer"
+msgstr "Ein optionaler Widget-Bereich im Seitenfuß  "
+
+#: ../inc/adventurous-widgets.php:36
+msgid "Footer Area Two"
+msgstr "Footer-Bereich 2"
+
+#: ../inc/adventurous-widgets.php:47
+msgid "Footer Area Three"
+msgstr "Footer-Bereich 3"
+
+#: ../inc/adventurous-widgets.php:58
+msgid "Footer Area Four"
+msgstr "Footer-Bereich 4"
+
+#: ../inc/adventurous-widgets.php:88
+msgid "CT: Social Icons"
+msgstr ""
+
+#: ../inc/adventurous-widgets.php:89
+msgid ""
+"Use this widget to add Social Icons from Social Icons Settings as a widget."
+msgstr ""
+
+#: ../inc/adventurous-widgets.php:102
+msgid "Title (optional):"
+msgstr "Titel (optional):"
+
+#: ../inc/panel/customizer/customizer-custom-controls.php:34
+msgid "All Categories"
+msgstr ""
+
+#: ../inc/panel/customizer/customizer-custom-controls.php:48
+msgid ""
+"Hold down the Ctrl (windows) / Command (Mac) button to select multiple "
+"options."
+msgstr ""
+
+#: ../inc/panel/customizer/customizer-custom-controls.php:61
+msgid "Theme Instructions"
+msgstr ""
+
+#: ../inc/panel/customizer/customizer-custom-controls.php:65
+msgid "Support"
+msgstr "Unterstützung"
+
+#: ../inc/panel/customizer/customizer-custom-controls.php:69
+msgid "Changelog"
+msgstr ""
+
+#: ../inc/panel/customizer/customizer-custom-controls.php:73
+msgid "Donate Now"
+msgstr "Jetzt spenden"
+
+#: ../inc/panel/customizer/customizer-custom-controls.php:77
+msgid "Review"
+msgstr ""
+
+#: ../no-results.php:15
+msgid "Nothing Found"
+msgstr "Nichts gefunden"
+
+#: ../no-results.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Bereit für die Veröffentlichung des ersten Beitrags? <a href=\"%1$s\">Hier "
+"geht&rsquo;s los</a>. "
+
+#: ../no-results.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "Zu den angegebenen Suchbegriffen konnte kein Inhalt gefunden werden."
+
+#: ../no-results.php:30
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "Nicht gefunden. Die Suche kann weiterhelfen."
+
+#: ../search.php:18
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Suchergebnisse für: %s"
+
+#: ../searchform.php:18
+msgid "Search"
+msgstr "Suchen"
+
+#: ../sidebar.php:64
+msgid "Archives"
+msgstr "Archive"
+
+#~ msgid "One thought on &ldquo;%2$s&rdquo;"
+#~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "Eine Anmerkung zu  &ldquo;%2$s&rdquo;"
+#~ msgstr[1] "%1$s Anmerkungen zu  &ldquo;%2$s&rdquo;"
+
+#~ msgid "Adventurous is a Simple, Clean and Responsive WordPress Theme"
+#~ msgstr ""
+#~ "Adventurous ist ein Einfaches, Strukturiertes und Geräte-reagierendes "
+#~ "(\"Responsive\") WordPress Theme"
+
+#~ msgid ""
+#~ "This is Promotion Headline. You can edit this from \"Appearance => Theme "
+#~ "Options => Promotion Headline Options\""
+#~ msgstr ""
+#~ "Dies ist die Themen-Kopfzeile. Sie kann in \"Design => Themenotionen => "
+#~ "Themen-Kopfziel Optionen\" editiert werden."
+
+#~ msgid "Reviews"
+#~ msgstr "Berichte"
+
+#~ msgid "Continue Reading &rarr;"
+#~ msgstr "Weiterlesen &rarr;"
+
+#~ msgid "Search &hellip;"
+#~ msgstr "Suche &hellip;"
+
+#~ msgid "Y"
+#~ msgstr "Y"
+
+#~ msgid "3 Columns"
+#~ msgstr "3 Spalten"
+
+#~ msgid "4 Columns"
+#~ msgstr "4 Spalten"
+
+#~ msgid "Homepage"
+#~ msgstr "Startseite"
+
+#~ msgid "Excluding Homepage"
+#~ msgstr "außer auf der Startseite"
+
+#~ msgid "Entire Site"
+#~ msgstr "gesamte Site"
+
+#~ msgid "Entire Site, Page/Post Featured Image"
+#~ msgstr "Gesamte Seite, mit Seiten/Beitrag-Themenbild"
+
+#~ msgid "Pages & Posts"
+#~ msgstr "Seiten & Beiträge"
+
+#~ msgid "Right Sidebar"
+#~ msgstr "Seitenleiste rechts"
+
+#~ msgid "Left Sidebar"
+#~ msgstr "Seitenleiste links"
+
+#~ msgid "No Sidebar"
+#~ msgstr "Keine Seitenleiste"
+
+#~ msgid "Full Content Display"
+#~ msgstr "Gesamten Inhalt anzeigen"
+
+#~ msgid "Excerpt/Blog Display"
+#~ msgstr "Auszugsanzeige (Excerpt)"
+
+#~ msgid "Demo Slider"
+#~ msgstr "Slider-Demo"
+
+#~ msgid "Post Slider"
+#~ msgstr "Beitrags-Slider"
+
+#~ msgid "Category Slider"
+#~ msgstr "Kategorien-Slider"
+
+#~ msgid "fade"
+#~ msgstr "Überblenden"
+
+#~ msgid "wipe"
+#~ msgstr "Auswischen"
+
+#~ msgid "scrollUp"
+#~ msgstr "Nach oben scrollen"
+
+#~ msgid "scrollDown"
+#~ msgstr "Nach unten scrollen"
+
+#~ msgid "scrollLeft"
+#~ msgstr "Nach links scrollen"
+
+#~ msgid "scrollRight"
+#~ msgstr "Nach rechts scrollen"
+
+#~ msgid "blindX"
+#~ msgstr "blinderen X"
+
+#~ msgid "blindY"
+#~ msgstr "blinderen Y"
+
+#~ msgid "blindZ"
+#~ msgstr "blinderen Z"
+
+#~ msgid "cover"
+#~ msgstr "bedecken"
+
+#~ msgid "shuffle"
+#~ msgstr "zufällig"
+
+#~ msgid "Theme Options"
+#~ msgstr "Theme-Optionen"
+
+#~ msgid "Options Saved"
+#~ msgstr "Einstellungen gespeichert"
+
+#~ msgid "Theme Options By"
+#~ msgstr "Theme-optionen sortiert nach"
+
+#~ msgid "https://catchthemes.com/"
+#~ msgstr "https://catchthemes.com"
+
+#~ msgid "https://catchthemes.com/themes/adventurous-pro/"
+#~ msgstr "https://catchthemes.com/themes/adventurous-pro/"
+
+#~ msgid "Upgrade to Adventurous Pro"
+#~ msgstr "Adventurous Pro kaufen (Upgrade)"
+
+#~ msgid "https://catchthemes.com/donate/"
+#~ msgstr "https://catchthemes.com/donate/"
+
+#~ msgid "Donate to Adventurous"
+#~ msgstr "Donate to Adventurous"
+
+#~ msgid "https://catchthemes.com/support/"
+#~ msgstr "https://catchthemes.com/support/"
+
+#~ msgid "https://catchthemes.com/theme-instructions/adventurous-pro/"
+#~ msgstr "https://catchthemes.com/theme-instructions/adventurous-pro/"
+
+#~ msgid "Theme Instruction"
+#~ msgstr "Theme-Anleitung"
+
+#~ msgid "https://www.facebook.com/catchthemes/"
+#~ msgstr "https://facebook.com/catchthemes"
+
+#~ msgid "Like Catch Themes on Facebook"
+#~ msgstr "\"Like\" Cath Themes auf Facebook"
+
+#~ msgid "https://twitter.com/catchthemes/"
+#~ msgstr "https://twitter.com/catchthemes/"
+
+#~ msgid "Follow Catch Themes on Twitter"
+#~ msgstr "Catch Themes auf Twitter verfolgen"
+
+#~ msgid "http://wordpress.org/support/view/theme-reviews/adventurous"
+#~ msgstr "http://wordpress.org/support/view/theme-reviews/adventurous"
+
+#~ msgid "Rate us 5 Star on WordPress"
+#~ msgstr "5 Sterne auf Wordpress vergeben"
+
+#~ msgid "5 Star Rating"
+#~ msgstr "5-Sterne-Bewertung"
+
+#~ msgid "Featured Content"
+#~ msgstr "Inhaltsexposees"
+
+#~ msgid "Featured Slider"
+#~ msgstr "Slider-Exposees"
+
+#~ msgid "Social Links"
+#~ msgstr "Verweise auf Soziale Medien"
+
+#~ msgid "Favicon"
+#~ msgstr "Favicon"
+
+#~ msgid "Disable Favicon?"
+#~ msgstr "Favicon deaktivieren?"
+
+#~ msgid "Check to disable"
+#~ msgstr "Markieren zum deaktivieren"
+
+#~ msgid "Fav Icon URL:"
+#~ msgstr "Favicon URL:"
+
+#~ msgid "Change Fav Icon"
+#~ msgstr "Favicon ändern"
+
+#~ msgid "Preview"
+#~ msgstr "Vorschau"
+
+#~ msgid "Save Changes"
+#~ msgstr "Änderungen speichern"
+
+#~ msgid "Web Clip Icon Options"
+#~ msgstr "Web Clip Icon-Optionen"
+
+#~ msgid "Disable Web Clip Icon?"
+#~ msgstr "Web Clip Icon deaktivieren?"
+
+#~ msgid "Web Clip Icon URL:"
+#~ msgstr "Web Clip URL:"
+
+#~ msgid "Change Web Clip Icon"
+#~ msgstr "Web Clip Icon ändern"
+
+#~ msgid ""
+#~ "Note: Web Clip Icon for Apple devices. Recommended Size - Width 144px and "
+#~ "Height 144px height, which will support High Resolution Devices like iPad "
+#~ "Retina."
+#~ msgstr ""
+#~ "Hinweis: Web Clip Icon für Apple-Geräte. Empfohlene Größe: 144px mal "
+#~ "144px, womit High Resolution Geräte wie iPad Retina unterstützt werden."
+
+#~ msgid "Menu Options"
+#~ msgstr "Menüoptionen"
+
+#~ msgid "Custom Menus"
+#~ msgstr "Benutzerdefinierte Menüs"
+
+#~ msgid "Click to Create Custom Menus"
+#~ msgstr "Klicken, um ein eigenes Menü zu erstellen"
+
+#~ msgid "Assign Locations"
+#~ msgstr "Platzierungen zuweisen"
+
+#~ msgid ""
+#~ "Note: You can assign your custom menu to Header Right Menu Location and "
+#~ "Header Secondary Menu Location. This will replace the WordPress default "
+#~ "page menu"
+#~ msgstr ""
+#~ "Hinweis: Ein eigenes Menü kann dem rechten Kopfbereich und dem sekundären "
+#~ "Kopfmenü zugewiesen werden. Das ersetzt das voreingestellte WordPress "
+#~ "Seitenmenü."
+
+#~ msgid "Click to Manage Menu Locations"
+#~ msgstr "Klicken, um die Menüplatzierungen einzustellen."
+
+#~ msgid "Header Options"
+#~ msgstr "Header-Optionen"
+
+#~ msgid "Disable Logo?"
+#~ msgstr "Logo deaktivieren?"
+
+#~ msgid "Logo url"
+#~ msgstr "Logo URL"
+
+#~ msgid "Change Logo"
+#~ msgstr "Logo ändern"
+
+#~ msgid "Disable Header Right Section?"
+#~ msgstr "Rechten Kopfbereich deaktivieren?"
+
+#~ msgid "Check to Disable"
+#~ msgstr "Markieren, um zu deaktivieren"
+
+#~ msgid "Enable Featured Header Image"
+#~ msgstr "Kopfthemenbild aktivieren"
+
+#~ msgid "Page/Post Featured Image Size"
+#~ msgstr "Seiten/Beitrag-Themenbildgröße"
+
+#~ msgid "Header Image"
+#~ msgstr "Header-Bild"
+
+#~ msgid "Click here to change header image"
+#~ msgstr "Hier klicken, um das Header-Themenbild zu ändern"
+
+#~ msgid "Click here to change Header Image"
+#~ msgstr "Hier klicken, um das Kopfbereich-Themenbild zu ändern"
+
+#~ msgid "Click here to add header image"
+#~ msgstr "Hier klicken, um ein Header-Themenbild hinzuzufügen"
+
+#~ msgid "Click here to add Header Image"
+#~ msgstr "Hier klicken, um das Kopfbereich-Themenbild hinzuzufügen"
+
+#~ msgid "There is no Header Image"
+#~ msgstr "Es gibt kein Header-Themenbild"
+
+#~ msgid "Featured Header Image Alt/Title Tag"
+#~ msgstr "Header-Themenbild: Alternativer Titel"
+
+#~ msgid "Featured Header Image Link URL"
+#~ msgstr "Header-Themenbild: URL-Verweis"
+
+#~ msgid "Target. Open Link in New Window?"
+#~ msgstr "Verweisziel; Verweis in einem neuen Fenster öffnen?"
+
+#~ msgid "Check to open in new window"
+#~ msgstr "Markieren, um den Inhalt in einem neuen Fenster anzuzeigen"
+
+#~ msgid "Reset Header Featured Image Options?"
+#~ msgstr "Header-Themenbild-Optionen zurücksetzen?"
+
+#~ msgid "Check to reset"
+#~ msgstr "Markieren zum zurücksetzen."
+
+#~ msgid "Content Featured Image Size"
+#~ msgstr "Größe des Inhalt-Themenbildes"
+
+#~ msgid "Promotion Headline Options"
+#~ msgstr "Optionen für die Themen-Kopfzeile"
+
+#~ msgid "Enable Promotion"
+#~ msgstr "Themen-Zeile aktivieren"
+
+#~ msgid "Headline Text"
+#~ msgstr "Kopfzeilen-Text"
+
+#~ msgid "The appropriate length for Headine is around 10 words."
+#~ msgstr "Die geeignete Länge der Kopfzeile liegt bei 10 Wörtern."
+
+#~ msgid "Subheadline Text"
+#~ msgstr "Text für die untere Kopfzeile"
+
+#~ msgid "The appropriate length for Headine is around 15 words."
+#~ msgstr "Die geeignete Länge der Kopfzeile liegt bei 15 Wörtern."
+
+#~ msgid "Button Text"
+#~ msgstr "Schaltflächen-Text"
+
+#~ msgid "The appropriate length for Headine is around 3 words."
+#~ msgstr "Die geeignete Länge des Schaltflächen-Textes liegt bei 3 Wörtern."
+
+#~ msgid "Button Link"
+#~ msgstr "Verweisziel der Schaltfläche"
+
+#~ msgid "Target. Open Link in New Window? "
+#~ msgstr "Verweisziel. Verweis in einem neuen Fenster öffnen?"
+
+#~ msgid "Disable Headline?"
+#~ msgstr "Kopfzeile deaktivieren?"
+
+#~ msgid "Disable Subheadline?"
+#~ msgstr "Untere Kopfzeile deaktivieren?"
+
+#~ msgid "Disable Button?"
+#~ msgstr "Schaltfläche deaktivieren?"
+
+#~ msgid "Homepage / Frontpage Settings"
+#~ msgstr "Startseiten-Optionen"
+
+#~ msgid "Disable Latest Posts?"
+#~ msgstr "Anzeige neuester Beiträge deaktivieren?"
+
+#~ msgid "Add Page instead of Latest Posts"
+#~ msgstr "Statische Seite hinzufügen statt der Anzeige neuester Beiträge"
+
+#~ msgid "Click Here to Set Static Front Page Instead of Latest Posts"
+#~ msgstr ""
+#~ "Hier klicken, um die statische Startseite zu bestimmen, anstatt die "
+#~ "neuesten Beiträge anzuzeigen"
+
+#~ msgid "Homepage posts categories:"
+#~ msgstr "Kategorien für die Beiträge der Startseite:"
+
+#~ msgid ""
+#~ "Only posts that belong to the categories selected here will be displayed "
+#~ "on the front page."
+#~ msgstr "Es werden nur Beiträge angezeigt, die diesen Kategorien entsprechen"
+
+#~ msgid "--Disabled--"
+#~ msgstr "--Deaktiviert--"
+
+#~ msgid "You may select multiple categories by holding down the CTRL key."
+#~ msgstr ""
+#~ "Durch gedrückthalten der STRG-Taste können mehrere Kategoren ausgewählt "
+#~ "werden."
+
+#~ msgid "Layout Options"
+#~ msgstr "Layout-Optionen"
+
+#~ msgid "Sidebar Layout Options"
+#~ msgstr "Layout-Optionen für die Seitenleiste"
+
+#~ msgid "Content Layout"
+#~ msgstr "Inhaltslayout"
+
+#~ msgid "Reset Layout?"
+#~ msgstr "Layout zurücksetzen?"
+
+#~ msgid "Search Text Settings"
+#~ msgstr "Suchtext-Einstellungen"
+
+#~ msgid "Default Display Text in Search"
+#~ msgstr "Voreingestellter Anzeigetext im Feld \"Suche\""
+
+#~ msgid "Excerpt / More Tag Settings"
+#~ msgstr "Einstellungen für den Hinweis auf Auszug / weiteren Text"
+
+#~ msgid "More Tag Text"
+#~ msgstr "\"Weiterer Text\"-Hinweis"
+
+#~ msgid "Excerpt length(words)"
+#~ msgstr "Auszugslänge (Anzahl Worte)"
+
+#~ msgid "Reset Excerpt?"
+#~ msgstr "Auszugseinstellungen zurücksetzen?"
+
+#~ msgid "Custom CSS"
+#~ msgstr "Benutzerdefiniertes CSS"
+
+#~ msgid "Enter your custom CSS styles."
+#~ msgstr "Eigene CSS-Stile definieren."
+
+#~ msgid "CSS Tutorial from W3Schools."
+#~ msgstr "W3Schools-CSS-Tutorial."
+
+#~ msgid "http://www.w3schools.com/css/default.asp"
+#~ msgstr "http://www.w3schools.com/css/default.asp"
+
+#~ msgid "CSS Tutorial"
+#~ msgstr "CSS-Tutorial"
+
+#~ msgid "Click Here to Read"
+#~ msgstr "Hier klicken, um zu lesen"
+
+#~ msgid "Featured Settings"
+#~ msgstr "Einstellungen zur Inhaltsexposition"
+
+#~ msgid "Enable Featured Content"
+#~ msgstr "Inhaltsexposition aktivieren"
+
+#~ msgid "Featured Content Headline Text"
+#~ msgstr "Titelzeile der Inhaltsexposees "
+
+#~ msgid "Leave empty if you want to remove headline."
+#~ msgstr "Leer lassen, um die Themenzeile zu entfernen"
+
+#~ msgid "Featured Content Subheadline Text"
+#~ msgstr "Beschreibung der Inhaltsexposees"
+
+#~ msgid "Number of Featured Content"
+#~ msgstr "Anzahl Inhaltsexposees"
+
+#~ msgid "Featured Content Layout"
+#~ msgstr "Layout der Exposees"
+
+#~ msgid "Featured Content Options"
+#~ msgstr "Optionen der Inhaltsexposees"
+
+#~ msgid "Featured Content #%s"
+#~ msgstr "Inhaltsexposition #%s"
+
+#~ msgid "Change Image"
+#~ msgstr "Bild ändern"
+
+#~ msgid "Link URL"
+#~ msgstr "URL des Verweises"
+
+#~ msgid "Add in the Target URL for the content"
+#~ msgstr "Den URL-Verweis zu diesem Inhalt hinzufügen"
+
+#~ msgid "Title"
+#~ msgstr "Titel"
+
+#~ msgid "Leave empty if you want to remove title"
+#~ msgstr "Leer lassen, um den Titel nicht anzuzeigen"
+
+#~ msgid "Content"
+#~ msgstr "Inhalt des Exposees"
+
+#~ msgid "The appropriate length for Content is around 10 words."
+#~ msgstr "Die geeignete Länge des Exposees liegt bei 10 Wörtern."
+
+#~ msgid "Slider Options"
+#~ msgstr "Slider-Optionen"
+
+#~ msgid "Select Slider Type"
+#~ msgstr "Slidertyp wählen"
+
+#~ msgid "Enable Slider"
+#~ msgstr "Slider aktivieren"
+
+#~ msgid "Disable Text in Slider?"
+#~ msgstr "Text in Slider deaktivieren?"
+
+#~ msgid "Number of Slides"
+#~ msgstr "Anzahl Bilder"
+
+#~ msgid "Transition Effect:"
+#~ msgstr "Übergangseffekt:"
+
+#~ msgid "Transition Delay"
+#~ msgstr "Übergangsverzögerung"
+
+#~ msgid "second(s)"
+#~ msgstr "Sekunde(n)"
+
+#~ msgid "Transition Length"
+#~ msgstr "Übergangsdauer"
+
+#~ msgid "Featured Post Slider Options"
+#~ msgstr "Optionen für den Slider hervorgehobener Beiträge"
+
+#~ msgid "Exclude Slider post from Homepage posts?"
+#~ msgstr "Den Slider von der Startseite ausschließen?"
+
+#~ msgid "Check to exclude"
+#~ msgstr "Markieren, um auszuschließen"
+
+#~ msgid "Featured Post Slider #%s"
+#~ msgstr "Inhaltsexpositionsslider #%s"
+
+#~ msgid "Click Here To Edit"
+#~ msgstr "Zum bearbeiten hier klicken"
+
+#~ msgid ""
+#~ "Note: Here You can put your Post IDs which displays on Homepage as slider."
+#~ msgstr ""
+#~ "Hinweis: Hier die ID jener Beiträge angeben, die auf der Startseite im "
+#~ "Slider erscheinen sollen."
+
+#~ msgid "Featured Category Slider Options"
+#~ msgstr "Optionen für den Slider hervorgehobener Kategorien"
+
+#~ msgid "Select Slider Categories"
+#~ msgstr "Kategorien für den Slider auswählen"
+
+#~ msgid ""
+#~ "Use this only is you want to display posts from Specific Categories in "
+#~ "Featured Slider"
+#~ msgstr ""
+#~ "Nur verwenden, wenn Beiträge bestimmter Kategorien im Exposee-Slider "
+#~ "angezeigt werden sollen"
+
+#~ msgid ""
+#~ "Note: Here you can select the categories from which latest posts will "
+#~ "display on Featured Slider."
+#~ msgstr ""
+#~ "Hinweis: Hier können die Kategorien ausgewählt werden, deren zugeordnete "
+#~ "neueste Beiträge im Exposee-Slider angezeigt werden."
+
+#~ msgid "Predefine Social Icons"
+#~ msgstr "Social-Media-Icons vordefinition"
+
+#~ msgid "Youtube"
+#~ msgstr "YouTube"
+
+#~ msgid "Linkedin"
+#~ msgstr "Linkedin"
+
+#~ msgid "Slideshare"
+#~ msgstr "Slideshare"
+
+#~ msgid "Foursquare"
+#~ msgstr "Foursquare"
+
+#~ msgid "Goodreads"
+#~ msgstr "Goodreads"
+
+#~ msgid "Soundcloud"
+#~ msgstr "Soundcloud"
+
+#~ msgid "%s"
+#~ msgstr "%s"
+
+#, fuzzy
+#~ msgid "Check to disable scroll up"
+#~ msgstr "Markieren zum deaktivieren"
+
+#, fuzzy
+#~ msgid "Adventurous Pro"
+#~ msgstr "Adventurous"
+
+#~ msgid "Adventurous"
+#~ msgstr "Adventurous"
+
+#, fuzzy
+#~ msgid "https://catchthemes.com/themes/adventurous"
+#~ msgstr "https://catchthemes.com/themes/adventurous-pro/"
+
+#~ msgid "Category Archives: %s"
+#~ msgstr "Kategorienarchiv: %s"
+
+#~ msgid "Tag Archives: %s"
+#~ msgstr "Lemmaarchiv: %s"
+
+#~ msgid "Author Archives: %s"
+#~ msgstr "Autorenarchiv: %s"
+
+#~ msgid "Daily Archives: %s"
+#~ msgstr "Tagesarchiv: %s"
+
+#~ msgid "Monthly Archives: %s"
+#~ msgstr "Monatsarchiv: %s"
+
+#~ msgid "Yearly Archives: %s"
+#~ msgstr "Jahresarchiv: %s"
+
+#~ msgid "Page %s"
+#~ msgstr "Seite %s"

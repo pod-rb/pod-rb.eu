@@ -1,0 +1,1489 @@
+# Copyright (C) 2016 Catch Themes and Dan Frolec
+# This file is distributed under the  GNU General Public License.
+msgid ""
+msgstr ""
+"Project-Id-Version: Adventurous\n"
+"Report-Msgid-Bugs-To: https://catchthemes.com/contact-us/\n"
+"POT-Creation-Date: 2017-10-10 14:24+0545\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Dan Frolec <dan@frolec.cz>\n"
+"Language-Team: Catch Themes <info@catchthemes.com>\n"
+"Language: cs_CZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Creation-Date: 2016-02-19 23:11+0545\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;esc_attr_e;esc_attr__\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Poedit 2.0.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oops! Tato strana nebyla nalezena."
+
+#: ../404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr "Vypadá to, že zde se nic nenachází."
+
+#: ../404.php:28
+msgid "Most Used Categories"
+msgstr "Nejčastější Kategorie"
+
+#: ../404.php:36
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Podívej se do měsíčních archivů. %1$s"
+
+#: ../comments.php:36
+#, php-format
+msgctxt "comments title"
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr ""
+
+#: ../comments.php:56 ../comments.php:76
+msgid "Comment navigation"
+msgstr "Navigace komentářů"
+
+#: ../comments.php:57 ../comments.php:77
+msgid "&larr; Older Comments"
+msgstr "&larr; Starší komentáře"
+
+#: ../comments.php:58 ../comments.php:78
+msgid "Newer Comments &rarr;"
+msgstr "Novější komentáře &rarr;"
+
+#: ../comments.php:88
+msgid "Comments are closed."
+msgstr "Komentáře jsou uzavřeny."
+
+#: ../content-aside.php:20 ../content-audio.php:20 ../content-chat.php:21
+#: ../content-gallery.php:24 ../content-gallery.php:41
+#: ../content-gallery.php:42 ../content-image.php:22 ../content-search.php:16
+#: ../content-video.php:23 ../content.php:31
+#: ../inc/adventurous-functions.php:140
+#, php-format
+msgid "Permalink to %s"
+msgstr "Link na %s"
+
+#: ../content-aside.php:26 ../content-audio.php:32 ../content-chat.php:33
+#: ../content-gallery.php:48 ../content-image.php:34 ../content-link.php:29
+#: ../content-page.php:24 ../content-quote.php:25 ../content-single.php:29
+#: ../content-status.php:33 ../content-video.php:35 ../content.php:51
+#: ../image.php:92
+msgid "Pages:"
+msgstr "Stránky:"
+
+#: ../content-aside.php:39 ../content-audio.php:45 ../content-chat.php:46
+#: ../content-gallery.php:62 ../content-image.php:47 ../content-link.php:41
+#: ../content-quote.php:37 ../content-single.php:45 ../content-status.php:45
+#: ../content-video.php:48 ../content.php:65
+msgid "Leave a reply"
+msgstr "Odpovědět"
+
+#: ../content-aside.php:39 ../content-audio.php:45 ../content-chat.php:46
+#: ../content-gallery.php:62 ../content-image.php:47 ../content-link.php:41
+#: ../content-quote.php:37 ../content-single.php:45 ../content-status.php:45
+#: ../content-video.php:48 ../content.php:65
+msgid "1 Reply"
+msgstr "1 odpověď"
+
+#: ../content-aside.php:39 ../content-audio.php:45 ../content-chat.php:46
+#: ../content-gallery.php:62 ../content-image.php:47 ../content-link.php:41
+#: ../content-quote.php:37 ../content-status.php:45 ../content-video.php:48
+msgid "% Replies;"
+msgstr "% odpovědí;"
+
+#: ../content-aside.php:41 ../content-audio.php:47 ../content-chat.php:48
+#: ../content-gallery.php:64 ../content-image.php:49 ../content-link.php:43
+#: ../content-page.php:33 ../content-quote.php:39 ../content-search.php:24
+#: ../content-single.php:48 ../content-status.php:47 ../content-video.php:50
+#: ../content.php:68 ../image.php:38 ../image.php:111
+#: ../inc/adventurous-template-tags.php:189
+msgid "Edit"
+msgstr "Upravit"
+
+#: ../content-audio.php:21
+msgid "All Audio Posts"
+msgstr "Všechny audio příspěvky"
+
+#: ../content-audio.php:21
+msgid "Audio"
+msgstr "Audio"
+
+#: ../content-chat.php:22
+msgid "All Chat Posts"
+msgstr "Všechny textové příspěvky"
+
+#: ../content-chat.php:22
+msgid "Chat"
+msgstr "Chat"
+
+#: ../content-gallery.php:25
+msgid "All Gallery Posts"
+msgstr "Všechny příspěvky v galerii"
+
+#: ../content-gallery.php:25
+msgid "Gallery"
+msgstr "Galerie"
+
+#: ../content-gallery.php:42
+#, php-format
+msgid "This gallery contains <a %1$s>%2$s photo</a>."
+msgid_plural "This gallery contains <a %1$s>%2$s photos</a>."
+msgstr[0] "Tato galerie obsahuje <a %1$s>%2$s fotografii</a>."
+msgstr[1] "Tato galerie obsahuje <a %1$s>%2$s fotografií</a>."
+msgstr[2] "Tato galerie obsahuje <a %1$s>%2$s fotografií</a>."
+
+#: ../content-image.php:23
+msgid "All Image Posts"
+msgstr "Všechny obrazové příspěvky"
+
+#: ../content-image.php:23
+msgid "Image"
+msgstr "Obrázek"
+
+#: ../content-link.php:23
+msgid "All Link Posts"
+msgstr "Všechny příspěvky s linky"
+
+#: ../content-link.php:23
+msgid "Link"
+msgstr "Link"
+
+#: ../content-single.php:45 ../content.php:65
+msgid "% Replies"
+msgstr "% odpovědí"
+
+#: ../content-single.php:61 ../content.php:75
+#, php-format
+msgid "About %s"
+msgstr "O %s"
+
+#: ../content-single.php:65 ../content.php:79
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Prohlížet všechny příspěvky %s <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../content-status.php:27
+msgid "All Status Posts"
+msgstr "Všechny příspěvky o stavu"
+
+#: ../content-status.php:27
+msgid "Status"
+msgstr "Stav"
+
+#: ../content-video.php:24
+msgid "All Video Posts"
+msgstr "Všechny příspěvky s video"
+
+#: ../content-video.php:24
+msgid "Video"
+msgstr "Video"
+
+#: ../content.php:23
+msgid "Featured post"
+msgstr "Oblíbený příspěvěk"
+
+#: ../functions.php:119
+msgid "Header Right Menu"
+msgstr "Pravé menu v Hlavičce"
+
+#: ../functions.php:120
+msgid "Header Secondary Menu"
+msgstr "Druhé menu v Hlavičce"
+
+#: ../image.php:28
+#, php-format
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\" pubdate>%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-"
+"size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s"
+"\" rel=\"gallery\">%7$s</a>"
+msgstr ""
+"Publikováno <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\" pubdate>%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-"
+"size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s"
+"\" rel=\"gallery\">%7$s</a>"
+
+#: ../image.php:42
+msgid "&larr; Previous"
+msgstr "&larr; předchozí"
+
+#: ../image.php:43
+msgid "Next &rarr;"
+msgstr "Další &rarr;"
+
+#: ../image.php:103
+#, php-format
+msgid ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a "
+"comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" "
+"title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Napsat "
+"comment</a> nebo nechat vzkaz <a class=\"trackback-link\" href=\"%s\" title="
+"\"Trackback URL for your post\" rel=\"trackback\">Vzkaz URL</a>."
+
+#: ../image.php:105
+#, php-format
+msgid ""
+"Comments are closed, but you can leave a trackback: <a class=\"trackback-link"
+"\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback"
+"\">Trackback URL</a>."
+msgstr ""
+"Komentáře jsou uzavřeny, ale je možné nechat vzkaz: <a class=\"trackback-link"
+"\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Vzkaz "
+"URL</a>."
+
+#: ../image.php:107
+msgid ""
+"Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond"
+"\" title=\"Post a comment\">post a comment</a>."
+msgstr ""
+"Odkazy jsou uzavřeny, ale je možné <a class=\"comment-link\" href=\"#respond"
+"\" title=\"Post a comment\">napsat komentář</a>."
+
+#: ../image.php:109
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Komentáře i vzkazy jsou uzavřeny."
+
+#: ../inc/adventurous-custom-header.php:35
+msgid "Highway"
+msgstr "Highway"
+
+#: ../inc/adventurous-custom-header.php:41
+msgid "Buddha"
+msgstr "Buddha"
+
+#: ../inc/adventurous-default-options.php:96
+msgid "Copyright"
+msgstr "Copyright"
+
+#: ../inc/adventurous-default-options.php:96
+msgid "All Rights Reserved"
+msgstr "Všechna práva vyhrazena"
+
+#: ../inc/adventurous-default-options.php:96
+msgid "Adventurous Theme by"
+msgstr "Adventurous šablona od"
+
+#: ../inc/adventurous-default-options.php:144
+msgid "https://catchthemes.com"
+msgstr "https://catchthemes.com"
+
+#: ../inc/adventurous-default-options.php:144
+msgid "Catch Themes"
+msgstr "Catch Themes"
+
+#: ../inc/adventurous-functions.php:628
+msgid "Facebook"
+msgstr "Facebook"
+
+#: ../inc/adventurous-functions.php:633
+msgid "Twitter"
+msgstr "Twitter"
+
+#: ../inc/adventurous-functions.php:638
+msgid "Google+"
+msgstr "Google+"
+
+#: ../inc/adventurous-functions.php:643
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: ../inc/adventurous-functions.php:648
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: ../inc/adventurous-functions.php:653
+msgid "YouTube"
+msgstr "YouTube"
+
+#: ../inc/adventurous-functions.php:658
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#: ../inc/adventurous-functions.php:663
+msgid "SlideShare"
+msgstr "SlideShare"
+
+#: ../inc/adventurous-functions.php:668
+msgid "FourSquare"
+msgstr "FourSquare"
+
+#: ../inc/adventurous-functions.php:673
+msgid "Flickr"
+msgstr "Flickr"
+
+#: ../inc/adventurous-functions.php:678
+msgid "Tumblr"
+msgstr "Tumblr"
+
+#: ../inc/adventurous-functions.php:683
+msgid "deviantART"
+msgstr "deviantART"
+
+#: ../inc/adventurous-functions.php:688
+msgid "Dribbble"
+msgstr "Dribbble"
+
+#: ../inc/adventurous-functions.php:693
+msgid "MySpace"
+msgstr "MySpace"
+
+#: ../inc/adventurous-functions.php:698
+msgid "WordPress"
+msgstr "WordPress"
+
+#: ../inc/adventurous-functions.php:703
+msgid "RSS"
+msgstr "RSS"
+
+#: ../inc/adventurous-functions.php:708
+msgid "Delicious"
+msgstr "Delicious"
+
+#: ../inc/adventurous-functions.php:713
+msgid "Last.fm"
+msgstr "Last.fm"
+
+#: ../inc/adventurous-functions.php:718
+msgid "Instagram"
+msgstr "Instagram"
+
+#: ../inc/adventurous-functions.php:723
+msgid "GitHub"
+msgstr "GitHub"
+
+#: ../inc/adventurous-functions.php:728
+msgid "Vkontakte"
+msgstr "Vkontakte"
+
+#: ../inc/adventurous-functions.php:733
+msgid "My World"
+msgstr "My World"
+
+#: ../inc/adventurous-functions.php:738
+msgid "Odnoklassniki"
+msgstr "Odnoklassniki"
+
+#: ../inc/adventurous-functions.php:743
+msgid "GoodReads"
+msgstr "GoodReads"
+
+#: ../inc/adventurous-functions.php:748
+msgid "Skype"
+msgstr "Skype"
+
+#: ../inc/adventurous-functions.php:753
+msgid "SoundCloud"
+msgstr "SoundCloud"
+
+#: ../inc/adventurous-functions.php:758
+msgid "Email"
+msgstr "Email"
+
+#: ../inc/adventurous-functions.php:763
+msgid "Contact"
+msgstr "Kontakt"
+
+#: ../inc/adventurous-functions.php:768
+msgid "Xing"
+msgstr "Xing"
+
+#: ../inc/adventurous-functions.php:773
+msgid "Meetup"
+msgstr "Meetup"
+
+#: ../inc/adventurous-functions.php:795
+msgid "ID"
+msgstr "ID"
+
+#: ../inc/adventurous-menus.php:11
+msgid "Primary Menu"
+msgstr "Hlavní menu"
+
+#: ../inc/adventurous-menus.php:12
+msgid "Skip to content"
+msgstr "Přejít na obsah"
+
+#: ../inc/adventurous-menus.php:44
+msgid "Secondary Menu"
+msgstr "Druhé menu"
+
+#: ../inc/adventurous-metabox.php:14 ../inc/adventurous-metabox.php:20
+msgid "Adventurous Options"
+msgstr "Adventurous možnosti"
+
+#: ../inc/adventurous-metabox.php:34
+msgid "Default"
+msgstr "Výchozí nastavení"
+
+#: ../inc/adventurous-metabox.php:39
+msgid "Enable"
+msgstr "Zapnout"
+
+#: ../inc/adventurous-metabox.php:44
+msgid "Disable"
+msgstr "Vypnout"
+
+#: ../inc/adventurous-metabox.php:55 ../inc/adventurous-metabox.php:86
+#, php-format
+msgid "Default Layout Set in <a href=\"%s\">Theme Options</a>"
+msgstr "Výchozí nastavení šablony v <a href=\"%s\">Nastavení šablony</a>"
+
+#: ../inc/adventurous-metabox.php:61
+msgid "Right sidebar"
+msgstr "Pravá lišta"
+
+#: ../inc/adventurous-metabox.php:67
+msgid "Left sidebar"
+msgstr "Levá lišta"
+
+#: ../inc/adventurous-metabox.php:73
+msgid "No sidebar"
+msgstr "Bez lišty"
+
+#: ../inc/adventurous-metabox.php:91
+msgid "Featured Image"
+msgstr "Vybraný obrázek"
+
+#: ../inc/adventurous-metabox.php:96
+msgid "Full Image"
+msgstr "Celý obrázek"
+
+#: ../inc/adventurous-metabox.php:101
+msgid "Slider Image"
+msgstr "Obrázek slideru"
+
+#: ../inc/adventurous-metabox.php:106
+msgid "Disable Image"
+msgstr "Vypnout obrázek"
+
+#: ../inc/adventurous-metabox.php:123
+msgid "Sidebar Layout"
+msgstr "Uspořádání lišty"
+
+#: ../inc/adventurous-metabox.php:153
+msgid "Header Featured Image Options"
+msgstr "Nastavení vybraného obrázku hlavičky"
+
+#: ../inc/adventurous-metabox.php:181
+msgid "Content Featured Image Options"
+msgstr "Nastavení vybraného obrázku obsahu"
+
+#: ../inc/adventurous-slider.php:240
+msgid ""
+"You have selected Post Slider but you haven't added the Post ID in "
+"\"Appearance => Theme Options => Featured Slider => Featured Post Slider "
+"Options\""
+msgstr ""
+"Vybral jsi Slider Příspěvků, ale nezadal ID příspěvku v “Appearance => Theme "
+"Options => Featured Slider => Featured Post Slider Options”"
+
+#: ../inc/adventurous-slider.php:248
+msgid ""
+"You have selected Category Slider but you haven't selected any categories in "
+"\"Appearance => Theme Options => Featured Slider => Featured Category Slider "
+"Options\""
+msgstr ""
+"Vybral jsi Slider Kategorií, ale nezadal žádnou kategorii v “”Appearance => "
+"Theme Options => Featured Slider => Featured Category Slider Options”"
+
+#: ../inc/adventurous-template-tags.php:51
+#: ../inc/adventurous-template-tags.php:109
+msgid "Post navigation"
+msgstr "Navigace příspěvků"
+
+#: ../inc/adventurous-template-tags.php:55
+#: ../inc/adventurous-template-tags.php:113
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr "&larr; [Link na předchozí článek]"
+
+#: ../inc/adventurous-template-tags.php:56
+#: ../inc/adventurous-template-tags.php:114
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr "&larr; [Link na následující článek]"
+
+#: ../inc/adventurous-template-tags.php:65
+#: ../inc/adventurous-template-tags.php:123
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Starší příspěvky"
+
+#: ../inc/adventurous-template-tags.php:69
+#: ../inc/adventurous-template-tags.php:127
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Novější příspěvky <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/adventurous-template-tags.php:157
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: ../inc/adventurous-template-tags.php:157
+msgid "(Edit)"
+msgstr "(Upravit)"
+
+#: ../inc/adventurous-template-tags.php:172
+msgid "Post author"
+msgstr "Autor článku"
+
+#: ../inc/adventurous-template-tags.php:178
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s ve %2$s"
+
+#: ../inc/adventurous-template-tags.php:184
+msgid "Your comment is awaiting moderation."
+msgstr "Komentář čeká na autorizaci."
+
+#: ../inc/adventurous-template-tags.php:193
+msgid "Reply"
+msgstr "Odpověď"
+
+#: ../inc/adventurous-template-tags.php:222
+#: ../inc/adventurous-template-tags.php:295
+#, php-format
+msgid "View all posts by %s"
+msgstr "Prohlížet všechny příspěvky od %s"
+
+#: ../inc/adventurous-template-tags.php:227
+#, php-format
+msgid ""
+"<span class=\"on-date\">Posted on %1$s</span><span class=\"by-author\"> by "
+"%2$s</span>"
+msgstr ""
+"<span class=\"on-date\">Napsáno %1$s</span><span class=\"by-author\"> autor  "
+"%2$s</span>"
+
+#: ../inc/adventurous-template-tags.php:249
+#: ../inc/adventurous-template-tags.php:252
+#: ../inc/adventurous-template-tags.php:281
+#: ../inc/adventurous-template-tags.php:284
+msgid ", "
+msgstr ", "
+
+#: ../inc/adventurous-template-tags.php:257
+#, php-format
+msgid ""
+"<span class=\"in-category\">Posted in %1$s</span><span class=\"sep\"> | </"
+"span><span class=\"in-tag\">Tagged %2$s</span>"
+msgstr ""
+"<span class=\"in-category\">Napsáno %1$s</span><span class=\"sep\"> | </"
+"span><span class=\"in-tag\">Označeno %2$s</span>"
+
+#: ../inc/adventurous-template-tags.php:259
+#, php-format
+msgid "<span class=\"in-category\">Posted in %1$s</span>"
+msgstr "<span class=\"in-category\">Napsáno v %1$s</span>"
+
+#: ../inc/adventurous-template-tags.php:301
+#, php-format
+msgid ""
+"<span class=\"on-date\">Posted on %3$s</span><span class=\"in-category\"> "
+"under %1$s</span><span class=\"sep\"> | </span><span class=\"in-tag\">Tagged "
+"%2$s</span><span class=\"sep\"> | </span><span class=\"by-author\"> By %4$s</"
+"span>"
+msgstr ""
+"<span class=\"on-date\">Napsáno v %3$s</span><span class=\"in-category\"> "
+"under %1$s</span><span class=\"sep\"> | </span><span class=\"in-tag"
+"\">Označeno %2$s</span><span class=\"sep\"> | </span><span class=\"by-author"
+"\"> autor %4$s</span>"
+
+#: ../inc/adventurous-template-tags.php:303
+#, php-format
+msgid ""
+"<span class=\"on-date\">Posted on %3$s</span><span class=\"in-category\"> "
+"under in %1$s</span><span class=\"sep\"> | </span><span class=\"by-author\"> "
+"By %4$s</span>."
+msgstr ""
+"<span class=\"on-date\">Napsáno v %3$s</span><span class=\"in-category\"> "
+"pod %1$s</span><span class=\"sep\"> | </span><span class=\"by-author\"> "
+"autor %4$s</span>."
+
+#: ../inc/adventurous-template-tags.php:305
+#, php-format
+msgid ""
+"<span class=\"on-date\">Posted on %3$s</span><span class=\"sep\"> | </"
+"span><span class=\"by-author\"> By %4$s</span>."
+msgstr ""
+"<span class=\"on-date\">Napsáno %3$s</span><span class=\"sep\"> | </"
+"span><span class=\"by-author\"> autor %4$s</span>."
+
+#: ../inc/adventurous-widgets.php:14
+msgid "Main Sidebar"
+msgstr "Hlavní lišta"
+
+#: ../inc/adventurous-widgets.php:16
+msgid "Shows the Widgets at the side of Content"
+msgstr "Zobrazí Widgety na straně Obsahu"
+
+#: ../inc/adventurous-widgets.php:25
+msgid "Footer Area One"
+msgstr "Zápatí jedna"
+
+#: ../inc/adventurous-widgets.php:27 ../inc/adventurous-widgets.php:38
+#: ../inc/adventurous-widgets.php:49 ../inc/adventurous-widgets.php:60
+msgid "An optional widget area for your site footer"
+msgstr "Možná oblast pro vaše zápatí stránky"
+
+#: ../inc/adventurous-widgets.php:36
+msgid "Footer Area Two"
+msgstr "Zápatí dvě"
+
+#: ../inc/adventurous-widgets.php:47
+msgid "Footer Area Three"
+msgstr "Zápatí tři"
+
+#: ../inc/adventurous-widgets.php:58
+msgid "Footer Area Four"
+msgstr "Zápatí čtyři"
+
+#: ../inc/adventurous-widgets.php:88
+msgid "CT: Social Icons"
+msgstr "CT: ikony sociálních sítí"
+
+#: ../inc/adventurous-widgets.php:89
+msgid ""
+"Use this widget to add Social Icons from Social Icons Settings as a widget."
+msgstr "Použít tento widget pro zadání Ikon sociálních sítí."
+
+#: ../inc/adventurous-widgets.php:102
+msgid "Title (optional):"
+msgstr "Titulek (nepovinný):"
+
+#: ../inc/panel/customizer/customizer-custom-controls.php:34
+msgid "All Categories"
+msgstr ""
+
+#: ../inc/panel/customizer/customizer-custom-controls.php:48
+msgid ""
+"Hold down the Ctrl (windows) / Command (Mac) button to select multiple "
+"options."
+msgstr ""
+"Stisknout Ctrl (windows) / Command (Mac) tlačítko pro vybrání více možností."
+
+#: ../inc/panel/customizer/customizer-custom-controls.php:61
+msgid "Theme Instructions"
+msgstr "Instrukce Šablony"
+
+#: ../inc/panel/customizer/customizer-custom-controls.php:65
+msgid "Support"
+msgstr "Podpora"
+
+#: ../inc/panel/customizer/customizer-custom-controls.php:69
+msgid "Changelog"
+msgstr "Changelog"
+
+#: ../inc/panel/customizer/customizer-custom-controls.php:73
+msgid "Donate Now"
+msgstr "Podpořit teď"
+
+#: ../inc/panel/customizer/customizer-custom-controls.php:77
+msgid "Review"
+msgstr "Review"
+
+#: ../no-results.php:15
+msgid "Nothing Found"
+msgstr "Nic nenalezeno"
+
+#: ../no-results.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Připraven publikovat svůj první příspěvek? <a href=\"%1$s\">Začni tady</a>."
+
+#: ../no-results.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Sorry, ale pod těmito klíčovými slovy nebylo nic nalezeno. Prosím "
+"vyzkoušetjiné výrazy."
+
+#: ../no-results.php:30
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "Není možné nalézt hledaný výraz."
+
+#: ../search.php:18
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Výsledky hledání pro: %s"
+
+#: ../searchform.php:18
+msgid "Search"
+msgstr "Hledat"
+
+#: ../sidebar.php:64
+msgid "Archives"
+msgstr "Archiv"
+
+#~ msgid "One thought on &ldquo;%2$s&rdquo;"
+#~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "Reakce na &ldquo;%2$s&rdquo;"
+#~ msgstr[1] "%1$s reakcí na &ldquo;%2$s&rdquo;"
+#~ msgstr[2] "%1$s reakcí na &ldquo;%2$s&rdquo;"
+
+#~ msgid "Adventurous is a Simple, Clean and Responsive WordPress Theme"
+#~ msgstr "Adventurous je jednoduchá, čistá a adaptabilní WordPress šablona"
+
+#~ msgid ""
+#~ "This is Promotion Headline. You can edit this from \"Appearance => Theme "
+#~ "Options => Promotion Headline Options\""
+#~ msgstr ""
+#~ "Toto je Promoční Titulek. Je možné jej upravit v “Appearance => Theme "
+#~ "Options => Promotion Headline Options\""
+
+#~ msgid "Reviews"
+#~ msgstr "Hodnocení"
+
+#~ msgid "Continue Reading &rarr;"
+#~ msgstr "Pokračovat &rarr;"
+
+#~ msgid "Search &hellip;"
+#~ msgstr "Hledat &hellip;"
+
+#~ msgid "Y"
+#~ msgstr "Y"
+
+#~ msgid "Light (Blue)"
+#~ msgstr "Světlá (modrá)"
+
+#~ msgid "Dark"
+#~ msgstr "Tmavá"
+
+#~ msgid "Light (Black)"
+#~ msgstr "Světlá (černá)"
+
+#~ msgid "3 Columns"
+#~ msgstr "3 sloupce"
+
+#~ msgid "4 Columns"
+#~ msgstr "4 sloupce"
+
+#~ msgid "Homepage"
+#~ msgstr "Hlavní strana"
+
+#~ msgid "Excluding Homepage"
+#~ msgstr "Vyloučit z hlavní strany"
+
+#~ msgid "Entire Site"
+#~ msgstr "Celý web"
+
+#~ msgid "Entire Site, Page/Post Featured Image"
+#~ msgstr "Celý web, Vybraný obrázek Strany a Příspěvku"
+
+#~ msgid "Pages & Posts"
+#~ msgstr "Strany & Příspěvky"
+
+#~ msgid "Right Sidebar"
+#~ msgstr "Pravá lišta"
+
+#~ msgid "Left Sidebar"
+#~ msgstr "Levá lišta"
+
+#~ msgid "No Sidebar"
+#~ msgstr "Žádná lišta"
+
+#~ msgid "Full Content Display"
+#~ msgstr "Zobrazit celý obsah"
+
+#~ msgid "Excerpt/Blog Display"
+#~ msgstr "Zobrazit zkrácený/blog"
+
+#~ msgid "Demo Slider"
+#~ msgstr "Demo běhoun"
+
+#~ msgid "Post Slider"
+#~ msgstr "Slider příspěvků"
+
+#~ msgid "Category Slider"
+#~ msgstr "Slider kategorií"
+
+#~ msgid "fade"
+#~ msgstr "zamlžit"
+
+#~ msgid "wipe"
+#~ msgstr "setřít"
+
+#~ msgid "scrollUp"
+#~ msgstr "rolovatNahoru"
+
+#~ msgid "scrollDown"
+#~ msgstr "rolovatDolu"
+
+#~ msgid "scrollLeft"
+#~ msgstr "rolovatDoleva"
+
+#~ msgid "scrollRight"
+#~ msgstr "rolovatDoprava"
+
+#~ msgid "blindX"
+#~ msgstr "slepéX"
+
+#~ msgid "blindY"
+#~ msgstr "slepéY"
+
+#~ msgid "blindZ"
+#~ msgstr "slepéZ"
+
+#~ msgid "cover"
+#~ msgstr "pokrýt"
+
+#~ msgid "shuffle"
+#~ msgstr "zamíchat"
+
+#~ msgid "Theme Options"
+#~ msgstr "Nastavení šablony"
+
+#~ msgid "Options Saved"
+#~ msgstr "Nastavení uložena"
+
+#~ msgid "Theme Options By"
+#~ msgstr "Nastavení šablony od"
+
+#~ msgid "https://catchthemes.com/"
+#~ msgstr "https://catchthemes.com/"
+
+#~ msgid "https://catchthemes.com/themes/adventurous-pro/"
+#~ msgstr "https://catchthemes.com/themes/adventurous-pro/"
+
+#~ msgid "Upgrade to Adventurous Pro"
+#~ msgstr "Upgrade na Adventurous Pro"
+
+#~ msgid "https://catchthemes.com/donate/"
+#~ msgstr "https://catchthemes.com/donate/"
+
+#~ msgid "Donate to Adventurous"
+#~ msgstr "Podpořit Adventurous"
+
+#~ msgid "https://catchthemes.com/support/"
+#~ msgstr "https://catchthemes.com/support/"
+
+#~ msgid "https://catchthemes.com/theme-instructions/adventurous-pro/"
+#~ msgstr "https://catchthemes.com/theme-instructions/adventurous-pro/"
+
+#~ msgid "Theme Instruction"
+#~ msgstr "Instrukce šablony"
+
+#~ msgid "https://www.facebook.com/catchthemes/"
+#~ msgstr "https://www.facebook.com/catchthemes/"
+
+#~ msgid "Like Catch Themes on Facebook"
+#~ msgstr "Like Catch Themes na Facebooku"
+
+#~ msgid "https://twitter.com/catchthemes/"
+#~ msgstr "https://twitter.com/catchthemes/"
+
+#~ msgid "Follow Catch Themes on Twitter"
+#~ msgstr "Sleduj Catch Themes na Twitteru"
+
+#~ msgid "http://wordpress.org/support/view/theme-reviews/adventurous"
+#~ msgstr "http://wordpress.org/support/view/theme-reviews/adventurous"
+
+#~ msgid "Rate us 5 Star on WordPress"
+#~ msgstr "Ohodnoť nás 5***** na WordPressu"
+
+#~ msgid "5 Star Rating"
+#~ msgstr "5***** ohodnocení"
+
+#~ msgctxt "1: Customizer Link Start, 2: Customizer Link End"
+#~ msgid ""
+#~ "Theme Options Panel will be retired on future versions. Please use %1$s "
+#~ "Customizer %2$s instead."
+#~ msgstr ""
+#~ "Panel nastavení šablony nebude používán u budoucích verzí. Použijte %1$s "
+#~ "Customizer %2$s."
+
+#~ msgid "Featured Content"
+#~ msgstr "Oblíbený obsah"
+
+#~ msgid "Featured Slider"
+#~ msgstr "Oblíbený slider"
+
+#~ msgid "Social Links"
+#~ msgstr "Linky sociálních sítí"
+
+#~ msgid "Favicon"
+#~ msgstr "Favicon"
+
+#~ msgid "Disable Favicon?"
+#~ msgstr "Vypnout Favicon?"
+
+#~ msgid "Check to disable"
+#~ msgstr "Zaškrtni pro vypnutí"
+
+#~ msgid "Fav Icon URL:"
+#~ msgstr "Favicon URL:"
+
+#~ msgid "Insert as Fav Icon"
+#~ msgstr "Vložit Favicon"
+
+#~ msgid "Change Fav Icon"
+#~ msgstr "Změnit Favicon"
+
+#~ msgid "Preview"
+#~ msgstr "Náhled"
+
+#~ msgid "Save Changes"
+#~ msgstr "Uložit změny"
+
+#~ msgid "Web Clip Icon Options"
+#~ msgstr "Web Clip možnosti ikony"
+
+#~ msgid "Disable Web Clip Icon?"
+#~ msgstr "Vypnout Web Clip ikonu?"
+
+#~ msgid "Web Clip Icon URL:"
+#~ msgstr "Web Clip ikona URL:"
+
+#~ msgid "Insert as Web Clip Icon"
+#~ msgstr "Vložit jako Web Clip ikonu"
+
+#~ msgid "Change Web Clip Icon"
+#~ msgstr "Změnit Web Clip ikonu"
+
+#~ msgid ""
+#~ "Note: Web Clip Icon for Apple devices. Recommended Size - Width 144px and "
+#~ "Height 144px height, which will support High Resolution Devices like iPad "
+#~ "Retina."
+#~ msgstr ""
+#~ "Poznámka: Web Clip ikona pro Apple. Doporučená velikost - šířka 144px a "
+#~ "výška 144px, které budou podporovat přístroje s vysokým rozlišením jako "
+#~ "například iPad Retina."
+
+#~ msgid "Menu Options"
+#~ msgstr "Nastavení Menu"
+
+#~ msgid "Custom Menus"
+#~ msgstr "Uživatelská Menu"
+
+#~ msgid "Click to Create Custom Menus"
+#~ msgstr "Klikni pro vytvoření Uživatelských Menu"
+
+#~ msgid "Assign Locations"
+#~ msgstr "Přiřadit Lokace"
+
+#~ msgid ""
+#~ "Note: You can assign your custom menu to Header Right Menu Location and "
+#~ "Header Secondary Menu Location. This will replace the WordPress default "
+#~ "page menu"
+#~ msgstr ""
+#~ "Poznámka: můžeš přiřadit své Uživatelské menu k Lokaci Záhlaví Prvního "
+#~ "Menu a k Lokaci Záhlaví Druhého Menu. Tím nahradíš standardní WordPress "
+#~ "menu."
+
+#~ msgid "Click to Manage Menu Locations"
+#~ msgstr "Klikni pro úpravu Lokací Menu"
+
+#~ msgid "Header Options"
+#~ msgstr "Nastavení Záhlaví"
+
+#~ msgid "Disable Logo?"
+#~ msgstr "Vypnout Logo?"
+
+#~ msgid "Logo url"
+#~ msgstr "Logo url"
+
+#~ msgid "Insert as Logo"
+#~ msgstr "Vložit jako Logo"
+
+#~ msgid "Change Logo"
+#~ msgstr "Změnit Logo"
+
+#~ msgid "Disable Header Right Section?"
+#~ msgstr "Vypnout pravou část hlavičky?"
+
+#~ msgid "Check to Disable"
+#~ msgstr "Vypnout"
+
+#~ msgid "Enable Featured Header Image"
+#~ msgstr "Nastavit vybraný obrázek hlavičky"
+
+#~ msgid "Page/Post Featured Image Size"
+#~ msgstr "Velikost vybraného obrázku na stránce / v příspěvku "
+
+#~ msgid "Header Image"
+#~ msgstr "Obrázek v hlavičce"
+
+#~ msgid "Click here to change header image"
+#~ msgstr "Klikni zde pro změnu obrázku hlavičky"
+
+#~ msgid "Click here to change Header Image"
+#~ msgstr "Klikni zde pro změnu obrázku hlavičky"
+
+#~ msgid "Click here to add header image"
+#~ msgstr "Klikni zde pro přidání obrázku hlavičky"
+
+#~ msgid "Click here to add Header Image"
+#~ msgstr "Klikni zde pro přidání obrázku hlavičky"
+
+#~ msgid "There is no Header Image"
+#~ msgstr "Žádný obrázek hlavičky"
+
+#~ msgid "Featured Header Image Alt/Title Tag"
+#~ msgstr "Vybraný obrázek hlavičky - Alt/titulní štítek"
+
+#~ msgid "Featured Header Image Link URL"
+#~ msgstr "Vybraný obrázek hlavičky - link URL"
+
+#~ msgid "Target. Open Link in New Window?"
+#~ msgstr "Cíl. Otevřít link v novém okně?"
+
+#~ msgid "Check to open in new window"
+#~ msgstr "Otevřít link v novém okně"
+
+#~ msgid "Reset Header Featured Image Options?"
+#~ msgstr "Resetovat nastavení vybraného obrázku hlavičky?"
+
+#~ msgid "Check to reset"
+#~ msgstr "Resetovat"
+
+#~ msgid "Content Featured Image Size"
+#~ msgstr "Velikost vybraného obrázku obsahu"
+
+#~ msgid "Promotion Headline Options"
+#~ msgstr "Nastavení promočního titulku"
+
+#~ msgid "Enable Promotion"
+#~ msgstr "Zvolit promoci"
+
+#~ msgid "Headline Text"
+#~ msgstr "Text titulku"
+
+#~ msgid "The appropriate length for Headine is around 10 words."
+#~ msgstr "Vhodná délka textu pro titulek je okolo 10 slov."
+
+#~ msgid "Subheadline Text"
+#~ msgstr "Text podtitulku"
+
+#~ msgid "The appropriate length for Headine is around 15 words."
+#~ msgstr "Vhodná délka textu pro titulek je okolo 15 slov."
+
+#~ msgid "Button Text"
+#~ msgstr "Text tlačítka"
+
+#~ msgid "The appropriate length for Headine is around 3 words."
+#~ msgstr "Vhodná délka textu pro titulek je okolo 3 slov."
+
+#~ msgid "Button Link"
+#~ msgstr "Link tlačítka"
+
+#~ msgid "Target. Open Link in New Window? "
+#~ msgstr "Cíl. Otevřít link v novém okně?"
+
+#~ msgid "Disable Headline?"
+#~ msgstr "Vypnout titulek?"
+
+#~ msgid "Disable Subheadline?"
+#~ msgstr "Vypnout podtitulek?"
+
+#~ msgid "Disable Button?"
+#~ msgstr "Vypnout tlačítko?"
+
+#~ msgid "Homepage / Frontpage Settings"
+#~ msgstr "Nastavení domovské / titulní strany"
+
+#~ msgid "Disable Latest Posts?"
+#~ msgstr "Vypnout poslední příspěvky?"
+
+#~ msgid "Add Page instead of Latest Posts"
+#~ msgstr "Přidat stranu místo posledních příspěvků"
+
+#~ msgid "Click Here to Set Static Front Page Instead of Latest Posts"
+#~ msgstr ""
+#~ "Klikni zde pro nastavení statické titulní strany místo posledních "
+#~ "příspěvků"
+
+#~ msgid "Homepage posts categories:"
+#~ msgstr "Domovská strana kategorie:"
+
+#~ msgid ""
+#~ "Only posts that belong to the categories selected here will be displayed "
+#~ "on the front page."
+#~ msgstr ""
+#~ "Pouze příspěvky, které patří do vybraných kategorií budou zobrazeny na "
+#~ "titulní straně."
+
+#~ msgid "--Disabled--"
+#~ msgstr "—Vypnuto—"
+
+#~ msgid "You may select multiple categories by holding down the CTRL key."
+#~ msgstr "Je možné vybrat více kategorií pomocí tlačítka CTRL."
+
+#~ msgid "Layout Options"
+#~ msgstr "Nastavení uspořádání"
+
+#~ msgid "Sidebar Layout Options"
+#~ msgstr "Nastavení postranní lišty"
+
+#~ msgid "Content Layout"
+#~ msgstr "Uspořádání obsahu"
+
+#~ msgid "Reset Layout?"
+#~ msgstr "Resetovat uspořádání?"
+
+#~ msgid "Search Text Settings"
+#~ msgstr "Nastavení hledání textu"
+
+#~ msgid "Default Display Text in Search"
+#~ msgstr "Standardní zobrazení textu v hledání"
+
+#~ msgid "Excerpt / More Tag Settings"
+#~ msgstr "Nastavení štítku pro výňatek / více"
+
+#~ msgid "More Tag Text"
+#~ msgstr "Text štítku více"
+
+#~ msgid "Excerpt length(words)"
+#~ msgstr "Délka výňatku (počet slov)"
+
+#~ msgid "Reset Excerpt?"
+#~ msgstr "Resetovat výňatek?"
+
+#~ msgid "Custom CSS"
+#~ msgstr "Uživatelská CSS"
+
+#~ msgid "Enter your custom CSS styles."
+#~ msgstr "Vložit vlastní uživatelské CSS styly."
+
+#~ msgid "CSS Tutorial from W3Schools."
+#~ msgstr "CSS návod od W3Schools."
+
+#~ msgid "http://www.w3schools.com/css/default.asp"
+#~ msgstr "http://www.w3schools.com/css/default.asp"
+
+#~ msgid "CSS Tutorial"
+#~ msgstr "CSS návod"
+
+#~ msgid "Click Here to Read"
+#~ msgstr "Klikni zde pro čtení"
+
+#~ msgid "Featured Settings"
+#~ msgstr "Vybraná nastavení"
+
+#~ msgid "Enable Featured Content"
+#~ msgstr "Nastavit vybraný obsah"
+
+#~ msgid "Featured Content Headline Text"
+#~ msgstr "Text hlavičky vybraného obsahu"
+
+#~ msgid "Leave empty if you want to remove headline."
+#~ msgstr "Ponechat prázdné pro odstranění titulku."
+
+#~ msgid "Featured Content Subheadline Text"
+#~ msgstr "Text podtitulku vybraného obsahu"
+
+#~ msgid "Leave empty if you want to remove Subheadline"
+#~ msgstr "Ponechat prázdné pro odstranění podtitulku."
+
+#~ msgid "Number of Featured Content"
+#~ msgstr "Počet vybraného obsahu"
+
+#~ msgid "Featured Content Layout"
+#~ msgstr "Uspořádání vybraného obsahu"
+
+#~ msgid "Featured Content Options"
+#~ msgstr "Nastavení vybraného obsahu"
+
+#~ msgid "Featured Content #%s"
+#~ msgstr "Vybraný obsah #%s"
+
+#~ msgid "Insert Image"
+#~ msgstr "Vložit obrázek"
+
+#~ msgid "Change Image"
+#~ msgstr "Změnit obrázek"
+
+#~ msgid "Link URL"
+#~ msgstr "Link URL"
+
+#~ msgid "Add in the Target URL for the content"
+#~ msgstr "Vložit cílový URL pro obsah"
+
+#~ msgid "Title"
+#~ msgstr "Název"
+
+#~ msgid "Leave empty if you want to remove title"
+#~ msgstr "Ponechat prázdné pro odstranění názvu"
+
+#~ msgid "Content"
+#~ msgstr "Obsah"
+
+#~ msgid "The appropriate length for Content is around 10 words."
+#~ msgstr "Vhodná délka textu pro Obsah je okolo 10 slov."
+
+#~ msgid "Slider Options"
+#~ msgstr "Nastavení slideru"
+
+#~ msgid "Select Slider Type"
+#~ msgstr "Vybrat typ slideru"
+
+#~ msgid "Enable Slider"
+#~ msgstr "Zapnout slider"
+
+#~ msgid "Disable Text in Slider?"
+#~ msgstr "Vypnout text v slideru?"
+
+#~ msgid "Number of Slides"
+#~ msgstr "Počet rotací slideru"
+
+#~ msgid "Transition Effect:"
+#~ msgstr "Přechodový efekt:"
+
+#~ msgid "Transition Delay"
+#~ msgstr "Zpoždění přechodu"
+
+#~ msgid "second(s)"
+#~ msgstr "vteřin"
+
+#~ msgid "Transition Length"
+#~ msgstr "Délka přechodu"
+
+#~ msgid "Featured Post Slider Options"
+#~ msgstr "Nastavení Slideru Vybraný Příspěvek"
+
+#~ msgid "Exclude Slider post from Homepage posts?"
+#~ msgstr "Vynechat Slider příspěvků z příspěvků na domovské straně?"
+
+#~ msgid "Check to exclude"
+#~ msgstr "Vynechat"
+
+#~ msgid "Featured Post Slider #%s"
+#~ msgstr "Slider Vybraný Příspěvek #%s"
+
+#~ msgid "Click Here To Edit"
+#~ msgstr "Upravit"
+
+#~ msgid ""
+#~ "Note: Here You can put your Post IDs which displays on Homepage as slider."
+#~ msgstr ""
+#~ "Pozn: tady je možné zadat ID Příspěvků, které se zobrazují na domovské "
+#~ "straně jako slider. "
+
+#~ msgid "Featured Category Slider Options"
+#~ msgstr "Nastavení Slideru Vybraná Kategorie"
+
+#~ msgid "Select Slider Categories"
+#~ msgstr "Vybrat Slider Kategorií"
+
+#~ msgid ""
+#~ "Use this only is you want to display posts from Specific Categories in "
+#~ "Featured Slider"
+#~ msgstr ""
+#~ "Použít pouze pro zobrazení příspěvků z Vybraných Kategorií ve Vybraném "
+#~ "Slideru"
+
+#~ msgid ""
+#~ "Note: Here you can select the categories from which latest posts will "
+#~ "display on Featured Slider."
+#~ msgstr ""
+#~ "Pozn: Tady je možné vybrat kategorie, z nichž se budou zobrazovat "
+#~ "příspěvky ve Vybraném Slideru."
+
+#~ msgid "Predefine Social Icons"
+#~ msgstr "Předdefinovat Ikony Sociálních sítí"
+
+#~ msgid "Youtube"
+#~ msgstr "Youtube"
+
+#~ msgid "Linkedin"
+#~ msgstr "Linkedin"
+
+#~ msgid "Slideshare"
+#~ msgstr "Slideshare"
+
+#~ msgid "Foursquare"
+#~ msgstr "Foursquare"
+
+#~ msgid "Goodreads"
+#~ msgstr "Goodreads"
+
+#~ msgid "Soundcloud"
+#~ msgstr "Soundcloud"
+
+#~ msgid "%s"
+#~ msgstr "%s"
+
+#~ msgid "Basic theme Options"
+#~ msgstr "Základní nastavení Šablony"
+
+#~ msgid "Webclip Icon Options"
+#~ msgstr "Nastavení Ikony Webclipu"
+
+#~ msgid ""
+#~ "Web Clip Icon for Apple devices. Recommended Size - Width 144px and "
+#~ "Height 144px height, which will support High Resolution Devices like iPad "
+#~ "Retina"
+#~ msgstr ""
+#~ "Web Clip Ikona pro Apple přístroje. Doporučená velikost - šířka 144px a "
+#~ "výška 144px, která bude podporovat přístroje s vysokým rozlišením jako "
+#~ "iPad Retina"
+
+#~ msgid "Homepage/Frontpage Settings"
+#~ msgstr "Nastavení Domovské / Titulní strany"
+
+#~ msgid "Featured Content Settings"
+#~ msgstr "Nastavení Vybraného Obsahu"
+
+#~ msgid "Add your social links here"
+#~ msgstr "Přidat své linky na sociální sítě"
+
+#~ msgid "Predefined Social Icons"
+#~ msgstr "Předdefinované Ikony Sociálních sítí"
+
+#~ msgid "Check to Open Link in New Tab/Window"
+#~ msgstr "Otevřít link v novém okně?"
+
+#~ msgid "Check to Reset Header Featured Image Options"
+#~ msgstr "Resetovat Nastavení Vybraného obrázku Hlavičky"
+
+#~ msgid "Please refresh the customizer after saving if reset option is used"
+#~ msgstr "Prosím obnovit “customizer” po uložení, pokud byl proveden reset"
+
+#~ msgid "Check to Disable Header Right Sidebar"
+#~ msgstr "Vypnout Hlavičku Pravé Lišty"
+
+#~ msgid "Appropriate Words: 10"
+#~ msgstr "Vhodný počet slov: 10"
+
+#~ msgid "Appropriate Words: 15"
+#~ msgstr "Vhodný počet slov: 15"
+
+#~ msgid "Button Text "
+#~ msgstr "Text Tlačítka"
+
+#~ msgid "Appropriate Words: 3"
+#~ msgstr "Vhodný počet slov: 3"
+
+#~ msgid "Add link for your homepage headline button"
+#~ msgstr "Vložit link pro tlačítko domovské stránky"
+
+#~ msgid "Check to Open Link in New Window/Tab? "
+#~ msgstr "Otevřít link v novém okně?"
+
+#~ msgid "Check to Disable Homepage Headline"
+#~ msgstr "Vypnout Titulek na Domovské straně"
+
+#~ msgid "Check to Disable Homepage Subheadline"
+#~ msgstr "Vypnout Podtitulek na Domovské straně"
+
+#~ msgid "Check to Disable Homepage Button"
+#~ msgstr "Vypnout Tlačítko Domovské strany"
+
+#~ msgid "Check to Disable Latest Posts"
+#~ msgstr "Vypnout Poslední Příspěvky"
+
+#~ msgid ""
+#~ "Only posts that belong to the categories selected here will be displayed "
+#~ "on the front page"
+#~ msgstr ""
+#~ "Pouze příspěvky, které patří do vybraných kategorií budou zobrazeny na "
+#~ "titulní straně."
+
+#~ msgid "Check to Reset Layout"
+#~ msgstr "Resetovat Uspořádání"
+
+#~ msgid "Check to Reset Excerpt"
+#~ msgstr "Resetovat Výňatky"
+
+#~ msgid "Enter your custom CSS styles"
+#~ msgstr "Vložit vlastní uživatelské CSS styly"
+
+#~ msgid "Leave empty if you want to remove headline"
+#~ msgstr "Ponechat prázdné pro odstranění titulku"
+
+#~ msgid "Featured Content Subheadline Text "
+#~ msgstr "Text Podtitulku Vybraného Obsahu"
+
+#~ msgid "Transition Effect"
+#~ msgstr "Přechodový efekt"
+
+#~ msgid ""
+#~ "Customizer page needs to be refreshed after saving if number of slides is "
+#~ "changed"
+#~ msgstr ""
+#~ "Customizer strana musí být obnovena po uložení pokud byl změněn počet "
+#~ "rotací"
+
+#~ msgid "Check to Exclude Slider posts from Homepage posts"
+#~ msgstr "Vynechat Slider Příspěvky z Příspěvků na Domovské straně"
+
+#~ msgid "Check to Disable Favicon"
+#~ msgstr "Vypnout Favicon"
+
+#~ msgid "Fav Icon"
+#~ msgstr "Fav Icon"
+
+#~ msgid "Check to Disable Web Clip Icon"
+#~ msgstr "Vypnout Ikonu Webclipu"
+
+#~ msgid "Web Clip Icon"
+#~ msgstr "Ikona Webclipu"
+
+#~ msgid "Logo"
+#~ msgstr "Logo"
+
+#~ msgid "Check to Disable Logo"
+#~ msgstr "Vypnout Logo"
+
+#~ msgid ""
+#~ "Caution: Reset all settings to default. Refresh the page after save to "
+#~ "view full effects."
+#~ msgstr ""
+#~ "Pozor: Resetovat všechna nastavení na výchozí. Po uložení je nutno "
+#~ "obnovit stranu pro zobrazení všech změn."
+
+#~ msgid "Reset all settings"
+#~ msgstr "Reset všech nastavení"
+
+#~ msgid "Check to reset all settings to default"
+#~ msgstr "Zaškrtni pro nastavení na výchozí hodnoty"
+
+#~ msgid "Important Links"
+#~ msgstr "Důležité linky"
+
+#, fuzzy
+#~ msgid "Adventurous Pro"
+#~ msgstr "Adventurous"
+
+#~ msgid "Adventurous"
+#~ msgstr "Adventurous"
+
+#, fuzzy
+#~ msgid "https://catchthemes.com/themes/adventurous"
+#~ msgstr "https://catchthemes.com/themes/adventurous-pro/"
+
+#, fuzzy
+#~ msgid "Refresh the customizer page after saving to view reset effects"
+#~ msgstr "Prosím obnovit “customizer” po uložení, pokud byl proveden reset"
+
+#~ msgid "Category Archives: %s"
+#~ msgstr "Archiv kategorií %s"
+
+#~ msgid "Tag Archives: %s"
+#~ msgstr "Archiv štítků %s"
+
+#~ msgid "Author Archives: %s"
+#~ msgstr "Archiv autora %s"
+
+#~ msgid "Daily Archives: %s"
+#~ msgstr "Denní archiv %s"
+
+#~ msgid "Monthly Archives: %s"
+#~ msgstr "Měsíční archiv %s"
+
+#~ msgid "Yearly Archives: %s"
+#~ msgstr "Roční archiv %s"
+
+#~ msgid "Upgrade To Pro &raquo;"
+#~ msgstr "Upgrade na Pro &raquo;"

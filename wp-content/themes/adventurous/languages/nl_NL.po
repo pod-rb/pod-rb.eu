@@ -1,0 +1,1321 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Adventurous\n"
+"Report-Msgid-Bugs-To: https://catchthemes.com/contact-us/\n"
+"POT-Creation-Date: 2017-10-10 14:24+0545\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Sakin Shrestha <info@catchthemes.com>\n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;esc_attr_e;esc_attr__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oeps! Die pagina kan niet worden gevonden."
+
+#: ../404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Het lijkt erop dat er niks gevonden is op deze locatie. Misschien zoekt u "
+"een van de links hieronder?"
+
+#: ../404.php:28
+msgid "Most Used Categories"
+msgstr "Meest gebruikte categorieën"
+
+#: ../404.php:36
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Probeer eens te zoeken in de maandelijkse archieven. %1$s"
+
+#: ../comments.php:36
+#, php-format
+msgctxt "comments title"
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr ""
+
+#: ../comments.php:56 ../comments.php:76
+msgid "Comment navigation"
+msgstr "Navigatie door reacties"
+
+#: ../comments.php:57 ../comments.php:77
+msgid "&larr; Older Comments"
+msgstr "&larr; Eerdere reacties"
+
+#: ../comments.php:58 ../comments.php:78
+msgid "Newer Comments &rarr;"
+msgstr "Nieuwere reacties %rarr;"
+
+#: ../comments.php:88
+msgid "Comments are closed."
+msgstr "Reacties zijn gesloten."
+
+#: ../content-aside.php:20 ../content-audio.php:20 ../content-chat.php:21
+#: ../content-gallery.php:24 ../content-gallery.php:41
+#: ../content-gallery.php:42 ../content-image.php:22 ../content-search.php:16
+#: ../content-video.php:23 ../content.php:31
+#: ../inc/adventurous-functions.php:140
+#, php-format
+msgid "Permalink to %s"
+msgstr "Link naar %s"
+
+#: ../content-aside.php:26 ../content-audio.php:32 ../content-chat.php:33
+#: ../content-gallery.php:48 ../content-image.php:34 ../content-link.php:29
+#: ../content-page.php:24 ../content-quote.php:25 ../content-single.php:29
+#: ../content-status.php:33 ../content-video.php:35 ../content.php:51
+#: ../image.php:92
+msgid "Pages:"
+msgstr "Pagina's:"
+
+#: ../content-aside.php:39 ../content-audio.php:45 ../content-chat.php:46
+#: ../content-gallery.php:62 ../content-image.php:47 ../content-link.php:41
+#: ../content-quote.php:37 ../content-single.php:45 ../content-status.php:45
+#: ../content-video.php:48 ../content.php:65
+msgid "Leave a reply"
+msgstr "Reageer"
+
+#: ../content-aside.php:39 ../content-audio.php:45 ../content-chat.php:46
+#: ../content-gallery.php:62 ../content-image.php:47 ../content-link.php:41
+#: ../content-quote.php:37 ../content-single.php:45 ../content-status.php:45
+#: ../content-video.php:48 ../content.php:65
+msgid "1 Reply"
+msgstr "1 reactie"
+
+#: ../content-aside.php:39 ../content-audio.php:45 ../content-chat.php:46
+#: ../content-gallery.php:62 ../content-image.php:47 ../content-link.php:41
+#: ../content-quote.php:37 ../content-status.php:45 ../content-video.php:48
+msgid "% Replies;"
+msgstr "% reacties;"
+
+#: ../content-aside.php:41 ../content-audio.php:47 ../content-chat.php:48
+#: ../content-gallery.php:64 ../content-image.php:49 ../content-link.php:43
+#: ../content-page.php:33 ../content-quote.php:39 ../content-search.php:24
+#: ../content-single.php:48 ../content-status.php:47 ../content-video.php:50
+#: ../content.php:68 ../image.php:38 ../image.php:111
+#: ../inc/adventurous-template-tags.php:189
+msgid "Edit"
+msgstr "Bewerken"
+
+#: ../content-audio.php:21
+msgid "All Audio Posts"
+msgstr "Alle geluidsberichten"
+
+#: ../content-audio.php:21
+msgid "Audio"
+msgstr "Geluid"
+
+#: ../content-chat.php:22
+msgid "All Chat Posts"
+msgstr "Alle chatberichten"
+
+#: ../content-chat.php:22
+msgid "Chat"
+msgstr "Chat"
+
+#: ../content-gallery.php:25
+msgid "All Gallery Posts"
+msgstr "Alle galerijberichten"
+
+#: ../content-gallery.php:25
+msgid "Gallery"
+msgstr "Galerij"
+
+#: ../content-gallery.php:42
+#, php-format
+msgid "This gallery contains <a %1$s>%2$s photo</a>."
+msgid_plural "This gallery contains <a %1$s>%2$s photos</a>."
+msgstr[0] "Deze galerij bevat <a %1$s>%2$s foto</a>"
+msgstr[1] "Deze galerij bevat <a %1$s>%2$s foto's</a>"
+
+#: ../content-image.php:23
+msgid "All Image Posts"
+msgstr "Alle fotoberichten"
+
+#: ../content-image.php:23
+msgid "Image"
+msgstr "Foto"
+
+#: ../content-link.php:23
+msgid "All Link Posts"
+msgstr "Alle linkberichten"
+
+#: ../content-link.php:23
+msgid "Link"
+msgstr "Links"
+
+#: ../content-single.php:45 ../content.php:65
+msgid "% Replies"
+msgstr "% Reacties"
+
+#: ../content-single.php:61 ../content.php:75
+#, php-format
+msgid "About %s"
+msgstr "Over %s"
+
+#: ../content-single.php:65 ../content.php:79
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+"Bekijk alle berichten gesorteerd op %s <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../content-status.php:27
+msgid "All Status Posts"
+msgstr "Alle statusberichten"
+
+#: ../content-status.php:27
+msgid "Status"
+msgstr "Status"
+
+#: ../content-video.php:24
+msgid "All Video Posts"
+msgstr "Alle videoberichten"
+
+#: ../content-video.php:24
+msgid "Video"
+msgstr "Video"
+
+#: ../content.php:23
+msgid "Featured post"
+msgstr "Uitgelicht bericht"
+
+#: ../functions.php:119
+msgid "Header Right Menu"
+msgstr "Header rechtse zijbalk"
+
+#: ../functions.php:120
+msgid "Header Secondary Menu"
+msgstr "Header Secondary Menu"
+
+#: ../image.php:28
+#, php-format
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\" pubdate>%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-"
+"size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s"
+"\" rel=\"gallery\">%7$s</a>"
+msgstr ""
+"Gepubliceerd op<span class=\"entry-date\"><time class=\"entry-date\" "
+"datetime=\"%1$s\" pubdate>%2$s</time></span> om <a href=\"%3$s\" title="
+"\"Link naar volledige afbeelding\">%4$s &times; %5$s</a> in <a href=\"%6$s\" "
+"title=\"Terug naar %7$s\" rel=\"gallery\">%7$s</a> "
+
+#: ../image.php:42
+msgid "&larr; Previous"
+msgstr "&larr; Vorige"
+
+#: ../image.php:43
+msgid "Next &rarr;"
+msgstr "Volgende &rarr;"
+
+#: ../image.php:103
+#, php-format
+msgid ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a "
+"comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" "
+"title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Plaats een reactie"
+"\">Plaats een reactie</a> of een trackback: <a class=\"trackback-link\" href="
+"\"%s\" title=\"Trackback URL voor dit bericht\" rel=\"trackback\">Trackback "
+"URL</a>. "
+
+#: ../image.php:105
+#, php-format
+msgid ""
+"Comments are closed, but you can leave a trackback: <a class=\"trackback-link"
+"\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback"
+"\">Trackback URL</a>."
+msgstr ""
+"Reacties zijn gesloten, maar u kunt een trackback achterlaten: <a class="
+"\"trackback-link\" href=\"%s\" title=\"Trackback URL voor dit bericht\" rel="
+"\"trackback\">Trackback URL</a>."
+
+#: ../image.php:107
+msgid ""
+"Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond"
+"\" title=\"Post a comment\">post a comment</a>."
+msgstr ""
+"Trackbacks zijn gesloten, maar u kunt <a class=\"comment-link\" href="
+"\"#respond\" title=\"Plaats een reactie\">een reactie plaatsen</a>."
+
+#: ../image.php:109
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Zowel reacties als trackbacks zijn gesloten."
+
+#: ../inc/adventurous-custom-header.php:35
+msgid "Highway"
+msgstr "Highway"
+
+#: ../inc/adventurous-custom-header.php:41
+msgid "Buddha"
+msgstr "Buddha"
+
+#: ../inc/adventurous-default-options.php:96
+msgid "Copyright"
+msgstr "Copyright"
+
+#: ../inc/adventurous-default-options.php:96
+msgid "All Rights Reserved"
+msgstr "Alle rechten voorbehouden"
+
+#: ../inc/adventurous-default-options.php:96
+msgid "Adventurous Theme by"
+msgstr "Adventurous Theme by"
+
+#: ../inc/adventurous-default-options.php:144
+msgid "https://catchthemes.com"
+msgstr "https://catchthemes.com"
+
+#: ../inc/adventurous-default-options.php:144
+msgid "Catch Themes"
+msgstr "Catch Themes"
+
+#: ../inc/adventurous-functions.php:628
+msgid "Facebook"
+msgstr "Facebook"
+
+#: ../inc/adventurous-functions.php:633
+msgid "Twitter"
+msgstr "Twitter"
+
+#: ../inc/adventurous-functions.php:638
+msgid "Google+"
+msgstr "Google+"
+
+#: ../inc/adventurous-functions.php:643
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: ../inc/adventurous-functions.php:648
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: ../inc/adventurous-functions.php:653
+msgid "YouTube"
+msgstr "YouTube"
+
+#: ../inc/adventurous-functions.php:658
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#: ../inc/adventurous-functions.php:663
+msgid "SlideShare"
+msgstr "SlideShare"
+
+#: ../inc/adventurous-functions.php:668
+msgid "FourSquare"
+msgstr "FourSquare"
+
+#: ../inc/adventurous-functions.php:673
+msgid "Flickr"
+msgstr "Flickr"
+
+#: ../inc/adventurous-functions.php:678
+msgid "Tumblr"
+msgstr "Tumblr"
+
+#: ../inc/adventurous-functions.php:683
+msgid "deviantART"
+msgstr "deviantART"
+
+#: ../inc/adventurous-functions.php:688
+msgid "Dribbble"
+msgstr "Dribbble"
+
+#: ../inc/adventurous-functions.php:693
+msgid "MySpace"
+msgstr "MySpace"
+
+#: ../inc/adventurous-functions.php:698
+msgid "WordPress"
+msgstr "Wordpress"
+
+#: ../inc/adventurous-functions.php:703
+msgid "RSS"
+msgstr "RSS"
+
+#: ../inc/adventurous-functions.php:708
+msgid "Delicious"
+msgstr "Delicious"
+
+#: ../inc/adventurous-functions.php:713
+msgid "Last.fm"
+msgstr "Last.fm"
+
+#: ../inc/adventurous-functions.php:718
+msgid "Instagram"
+msgstr "Instagram"
+
+#: ../inc/adventurous-functions.php:723
+msgid "GitHub"
+msgstr "GitHub"
+
+#: ../inc/adventurous-functions.php:728
+msgid "Vkontakte"
+msgstr "Vkontakte"
+
+#: ../inc/adventurous-functions.php:733
+msgid "My World"
+msgstr "My World"
+
+#: ../inc/adventurous-functions.php:738
+msgid "Odnoklassniki"
+msgstr "Odnoklassniki"
+
+#: ../inc/adventurous-functions.php:743
+msgid "GoodReads"
+msgstr "GoodReads"
+
+#: ../inc/adventurous-functions.php:748
+msgid "Skype"
+msgstr "Skype"
+
+#: ../inc/adventurous-functions.php:753
+msgid "SoundCloud"
+msgstr "SoundCloud"
+
+#: ../inc/adventurous-functions.php:758
+msgid "Email"
+msgstr "Email"
+
+#: ../inc/adventurous-functions.php:763
+msgid "Contact"
+msgstr "Contact"
+
+#: ../inc/adventurous-functions.php:768
+msgid "Xing"
+msgstr "Xing"
+
+#: ../inc/adventurous-functions.php:773
+msgid "Meetup"
+msgstr "Meetup"
+
+#: ../inc/adventurous-functions.php:795
+msgid "ID"
+msgstr "ID"
+
+#: ../inc/adventurous-menus.php:11
+msgid "Primary Menu"
+msgstr "Hoofdmenu"
+
+#: ../inc/adventurous-menus.php:12
+msgid "Skip to content"
+msgstr "Doorgaan naar inhoud"
+
+#: ../inc/adventurous-menus.php:44
+msgid "Secondary Menu"
+msgstr "Submenu"
+
+#: ../inc/adventurous-metabox.php:14 ../inc/adventurous-metabox.php:20
+msgid "Adventurous Options"
+msgstr "Adventurous Options"
+
+#: ../inc/adventurous-metabox.php:34
+msgid "Default"
+msgstr "Standaard"
+
+#: ../inc/adventurous-metabox.php:39
+msgid "Enable"
+msgstr "Inschakelen"
+
+#: ../inc/adventurous-metabox.php:44
+msgid "Disable"
+msgstr "Uitschakelen"
+
+#: ../inc/adventurous-metabox.php:55 ../inc/adventurous-metabox.php:86
+#, php-format
+msgid "Default Layout Set in <a href=\"%s\">Theme Options</a>"
+msgstr "Standaard layout geselecteerd in <a href=\"%s\">Thema-opties</a>"
+
+#: ../inc/adventurous-metabox.php:61
+msgid "Right sidebar"
+msgstr "Rechtse sidebar"
+
+#: ../inc/adventurous-metabox.php:67
+msgid "Left sidebar"
+msgstr "Linkse sidebar"
+
+#: ../inc/adventurous-metabox.php:73
+msgid "No sidebar"
+msgstr "Geen sidebar"
+
+#: ../inc/adventurous-metabox.php:91
+msgid "Featured Image"
+msgstr "Uitgelichte afbeelding"
+
+#: ../inc/adventurous-metabox.php:96
+msgid "Full Image"
+msgstr "Volledige afbeelding"
+
+#: ../inc/adventurous-metabox.php:101
+msgid "Slider Image"
+msgstr "Slider afbeelding"
+
+#: ../inc/adventurous-metabox.php:106
+msgid "Disable Image"
+msgstr "Afbeelding uitschakelen"
+
+#: ../inc/adventurous-metabox.php:123
+msgid "Sidebar Layout"
+msgstr "Sidebar-layout"
+
+#: ../inc/adventurous-metabox.php:153
+msgid "Header Featured Image Options"
+msgstr "Opties voor uitgelichte afbeelding in de header"
+
+#: ../inc/adventurous-metabox.php:181
+msgid "Content Featured Image Options"
+msgstr "Opties voor uitgelichte afbeelding in berichten"
+
+#: ../inc/adventurous-slider.php:240
+msgid ""
+"You have selected Post Slider but you haven't added the Post ID in "
+"\"Appearance => Theme Options => Featured Slider => Featured Post Slider "
+"Options\""
+msgstr ""
+"You have selected Post Slider but you haven't added the Post ID in "
+"\"Appearance => Theme Options => Featured Slider => Featured Post Slider "
+"Options\""
+
+#: ../inc/adventurous-slider.php:248
+msgid ""
+"You have selected Category Slider but you haven't selected any categories in "
+"\"Appearance => Theme Options => Featured Slider => Featured Category Slider "
+"Options\""
+msgstr ""
+"You have selected Category Slider but you haven't selected any categories in "
+"\"Appearance => Theme Options => Featured Slider => Featured Category Slider "
+"Options\""
+
+#: ../inc/adventurous-template-tags.php:51
+#: ../inc/adventurous-template-tags.php:109
+msgid "Post navigation"
+msgstr "Berichtennavigatie"
+
+#: ../inc/adventurous-template-tags.php:55
+#: ../inc/adventurous-template-tags.php:113
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr "&larr;"
+
+#: ../inc/adventurous-template-tags.php:56
+#: ../inc/adventurous-template-tags.php:114
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: ../inc/adventurous-template-tags.php:65
+#: ../inc/adventurous-template-tags.php:123
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Oudere berichten"
+
+#: ../inc/adventurous-template-tags.php:69
+#: ../inc/adventurous-template-tags.php:127
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Nieuwere berichten <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/adventurous-template-tags.php:157
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: ../inc/adventurous-template-tags.php:157
+msgid "(Edit)"
+msgstr "(Bewerken)"
+
+#: ../inc/adventurous-template-tags.php:172
+msgid "Post author"
+msgstr "Auteur van dit bericht:"
+
+#: ../inc/adventurous-template-tags.php:178
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s op %2$s"
+
+#: ../inc/adventurous-template-tags.php:184
+msgid "Your comment is awaiting moderation."
+msgstr "Jouw reactie wacht op moderatie."
+
+#: ../inc/adventurous-template-tags.php:193
+msgid "Reply"
+msgstr "Reageren"
+
+#: ../inc/adventurous-template-tags.php:222
+#: ../inc/adventurous-template-tags.php:295
+#, php-format
+msgid "View all posts by %s"
+msgstr "Bekijk alle berichten op %s"
+
+#: ../inc/adventurous-template-tags.php:227
+#, php-format
+msgid ""
+"<span class=\"on-date\">Posted on %1$s</span><span class=\"by-author\"> by "
+"%2$s</span>"
+msgstr ""
+"<span class=\"on-date\">Geplaatst op %1$s</span><span class=\"by-author\"> "
+"door %2$s</span>"
+
+#: ../inc/adventurous-template-tags.php:249
+#: ../inc/adventurous-template-tags.php:252
+#: ../inc/adventurous-template-tags.php:281
+#: ../inc/adventurous-template-tags.php:284
+msgid ", "
+msgstr ", "
+
+#: ../inc/adventurous-template-tags.php:257
+#, php-format
+msgid ""
+"<span class=\"in-category\">Posted in %1$s</span><span class=\"sep\"> | </"
+"span><span class=\"in-tag\">Tagged %2$s</span>"
+msgstr ""
+"<span class=\"in-category\">Geplaatst in %1$s</span><span class=\"sep\"> | </"
+"span><span class=\"in-tag\">Tags %2$s</span> "
+
+#: ../inc/adventurous-template-tags.php:259
+#, php-format
+msgid "<span class=\"in-category\">Posted in %1$s</span>"
+msgstr "<span class=\"in-category\">Geplaatst in %1$s</span>"
+
+#: ../inc/adventurous-template-tags.php:301
+#, php-format
+msgid ""
+"<span class=\"on-date\">Posted on %3$s</span><span class=\"in-category\"> "
+"under %1$s</span><span class=\"sep\"> | </span><span class=\"in-tag\">Tagged "
+"%2$s</span><span class=\"sep\"> | </span><span class=\"by-author\"> By %4$s</"
+"span>"
+msgstr ""
+"<span class=\"on-date\">Geplaatst op %3$s</span><span class=\"in-category\"> "
+"in %1$s</span><span class=\"sep\"> | </span><span class=\"in-tag\">Tags "
+"%2$s</span><span class=\"sep\"> | </span><span class=\"by-author\"> Door "
+"%4$s</span>"
+
+#: ../inc/adventurous-template-tags.php:303
+#, php-format
+msgid ""
+"<span class=\"on-date\">Posted on %3$s</span><span class=\"in-category\"> "
+"under in %1$s</span><span class=\"sep\"> | </span><span class=\"by-author\"> "
+"By %4$s</span>."
+msgstr ""
+"<span class=\"on-date\">Geplaatst op %3$s</span><span class=\"in-category\"> "
+"in %1$s</span><span class=\"sep\"> | </span><span class=\"by-author\"> Door "
+"%4$s</span>. "
+
+#: ../inc/adventurous-template-tags.php:305
+#, php-format
+msgid ""
+"<span class=\"on-date\">Posted on %3$s</span><span class=\"sep\"> | </"
+"span><span class=\"by-author\"> By %4$s</span>."
+msgstr ""
+"<span class=\"on-date\">Geplaatst op %3$s</span><span class=\"sep\"> | </"
+"span><span class=\"by-author\"> Door %4$s</span>."
+
+#: ../inc/adventurous-widgets.php:14
+msgid "Main Sidebar"
+msgstr "Standaard sidebar"
+
+#: ../inc/adventurous-widgets.php:16
+msgid "Shows the Widgets at the side of Content"
+msgstr "Toont de widgets naast de content"
+
+#: ../inc/adventurous-widgets.php:25
+msgid "Footer Area One"
+msgstr "Footerruimte 1"
+
+#: ../inc/adventurous-widgets.php:27 ../inc/adventurous-widgets.php:38
+#: ../inc/adventurous-widgets.php:49 ../inc/adventurous-widgets.php:60
+msgid "An optional widget area for your site footer"
+msgstr "Een optionele widgetruimte voor de footer van uw site"
+
+#: ../inc/adventurous-widgets.php:36
+msgid "Footer Area Two"
+msgstr "Footerruimte 2"
+
+#: ../inc/adventurous-widgets.php:47
+msgid "Footer Area Three"
+msgstr "Footerruimte 3"
+
+#: ../inc/adventurous-widgets.php:58
+msgid "Footer Area Four"
+msgstr "Footerruimte 4"
+
+#: ../inc/adventurous-widgets.php:88
+msgid "CT: Social Icons"
+msgstr ""
+
+#: ../inc/adventurous-widgets.php:89
+msgid ""
+"Use this widget to add Social Icons from Social Icons Settings as a widget."
+msgstr ""
+
+#: ../inc/adventurous-widgets.php:102
+msgid "Title (optional):"
+msgstr "Titel (optioneel):"
+
+#: ../inc/panel/customizer/customizer-custom-controls.php:34
+msgid "All Categories"
+msgstr ""
+
+#: ../inc/panel/customizer/customizer-custom-controls.php:48
+msgid ""
+"Hold down the Ctrl (windows) / Command (Mac) button to select multiple "
+"options."
+msgstr ""
+
+#: ../inc/panel/customizer/customizer-custom-controls.php:61
+msgid "Theme Instructions"
+msgstr ""
+
+#: ../inc/panel/customizer/customizer-custom-controls.php:65
+msgid "Support"
+msgstr "Support"
+
+#: ../inc/panel/customizer/customizer-custom-controls.php:69
+msgid "Changelog"
+msgstr ""
+
+#: ../inc/panel/customizer/customizer-custom-controls.php:73
+msgid "Donate Now"
+msgstr "Doneer nu"
+
+#: ../inc/panel/customizer/customizer-custom-controls.php:77
+msgid "Review"
+msgstr ""
+
+#: ../no-results.php:15
+msgid "Nothing Found"
+msgstr "Geen resultaten gevonden"
+
+#: ../no-results.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Klaar om je eerste bericht te publiceren? <a href=\"%1$s\">Begin hier</a>. "
+
+#: ../no-results.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Sorry, maar er zijn geen overeenkomsten gevonden met deze zoektermen. "
+"Probeer het nog eens met andere zoektermen."
+
+#: ../no-results.php:30
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Het lijkt erop dat we niet kunnen vinden wat je zoekt. Misschien helpt het "
+"om te zoeken in de zoek-balk."
+
+#: ../search.php:18
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Zoekresultaten voor: %s"
+
+#: ../searchform.php:18
+msgid "Search"
+msgstr "Zoeken"
+
+#: ../sidebar.php:64
+msgid "Archives"
+msgstr "Archieven"
+
+#~ msgid "One thought on &ldquo;%2$s&rdquo;"
+#~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "Een gedachte over  &ldquo;%2$s&rdquo;"
+#~ msgstr[1] "%1$s gedachten over  &ldquo;%2$s&rdquo;"
+
+#~ msgid "Adventurous is a Simple, Clean and Responsive WordPress Theme"
+#~ msgstr "Adventurous is a Simple, Clean and Responsive WordPress Theme"
+
+#~ msgid ""
+#~ "This is Promotion Headline. You can edit this from \"Appearance => Theme "
+#~ "Options => Promotion Headline Options\""
+#~ msgstr ""
+#~ "This is Promotion Headline. You can edit this from \"Appearance => Theme "
+#~ "Options => Promotion Headline Options\""
+
+#~ msgid "Reviews"
+#~ msgstr "Reviews"
+
+#~ msgid "Continue Reading &rarr;"
+#~ msgstr "Lees verder &rarr;"
+
+#~ msgid "Search &hellip;"
+#~ msgstr "Zoek &hellip;"
+
+#~ msgid "Y"
+#~ msgstr "Y"
+
+#~ msgid "3 Columns"
+#~ msgstr "3 kolommen"
+
+#~ msgid "4 Columns"
+#~ msgstr "4 kolommen"
+
+#~ msgid "Homepage"
+#~ msgstr "Homepagina"
+
+#~ msgid "Excluding Homepage"
+#~ msgstr "Homepagina uitgezonderd"
+
+#~ msgid "Entire Site"
+#~ msgstr "Gehele site"
+
+#~ msgid "Entire Site, Page/Post Featured Image"
+#~ msgstr "Gehele site, uitgelichte afbeeldingen van pagina/bericht"
+
+#~ msgid "Pages & Posts"
+#~ msgstr "Pagina's en berichten"
+
+#~ msgid "Right Sidebar"
+#~ msgstr "Rechter sidebar"
+
+#~ msgid "Left Sidebar"
+#~ msgstr "Linker sidebar"
+
+#~ msgid "No Sidebar"
+#~ msgstr "Geen sidebar"
+
+#~ msgid "Full Content Display"
+#~ msgstr "Volledige content-weergave"
+
+#~ msgid "Excerpt/Blog Display"
+#~ msgstr "Blog-weergave"
+
+#~ msgid "Demo Slider"
+#~ msgstr "Demo Slider"
+
+#~ msgid "Post Slider"
+#~ msgstr "Berichtenslider"
+
+#~ msgid "Category Slider"
+#~ msgstr "Categorieslider"
+
+#~ msgid "fade"
+#~ msgstr "vervagen"
+
+#~ msgid "wipe"
+#~ msgstr "vegen"
+
+#~ msgid "scrollUp"
+#~ msgstr "scrollen omhoog"
+
+#~ msgid "scrollDown"
+#~ msgstr "scrollen omlaag"
+
+#~ msgid "scrollLeft"
+#~ msgstr "scrollen links"
+
+#~ msgid "scrollRight"
+#~ msgstr "scrollen rechts"
+
+#~ msgid "blindX"
+#~ msgstr "blinderen X"
+
+#~ msgid "blindY"
+#~ msgstr "blinderen Y"
+
+#~ msgid "blindZ"
+#~ msgstr "blinderen Z"
+
+#~ msgid "cover"
+#~ msgstr "bedekken"
+
+#~ msgid "shuffle"
+#~ msgstr "willekeurig"
+
+#~ msgid "Theme Options"
+#~ msgstr "Thema-opties"
+
+#~ msgid "Options Saved"
+#~ msgstr "Instellingen opgeslagen"
+
+#~ msgid "Theme Options By"
+#~ msgstr "Thema-opties op"
+
+#~ msgid "https://catchthemes.com/"
+#~ msgstr "https://catchthemes.com"
+
+#~ msgid "https://catchthemes.com/themes/adventurous-pro/"
+#~ msgstr "https://catchthemes.com/themes/adventurous-pro/"
+
+#~ msgid "Upgrade to Adventurous Pro"
+#~ msgstr "Upgrade naar Adventurous Pro"
+
+#~ msgid "https://catchthemes.com/donate/"
+#~ msgstr "https://catchthemes.com/donate/"
+
+#~ msgid "Donate to Adventurous"
+#~ msgstr "Doneer aan Adventurous"
+
+#~ msgid "https://catchthemes.com/support/"
+#~ msgstr "https://catchthemes.com/support/"
+
+#~ msgid "https://catchthemes.com/theme-instructions/adventurous-pro/"
+#~ msgstr "https://catchthemes.com/theme-instructions/adventurous-pro/"
+
+#~ msgid "Theme Instruction"
+#~ msgstr "Thema-instructies"
+
+#~ msgid "https://www.facebook.com/catchthemes/"
+#~ msgstr "https://facebook.com/catchthemes"
+
+#~ msgid "Like Catch Themes on Facebook"
+#~ msgstr "Vind Cath Themes leuk op Facebook"
+
+#~ msgid "https://twitter.com/catchthemes/"
+#~ msgstr "https://twitter.com/catchthemes/"
+
+#~ msgid "Follow Catch Themes on Twitter"
+#~ msgstr "Volg Catch Themes op Twitter"
+
+#~ msgid "http://wordpress.org/support/view/theme-reviews/adventurous"
+#~ msgstr "http://wordpress.org/support/view/theme-reviews/adventurous"
+
+#~ msgid "Rate us 5 Star on WordPress"
+#~ msgstr "Geef ons 5 sterren op Wordpress"
+
+#~ msgid "5 Star Rating"
+#~ msgstr "5-sterrenwaardering"
+
+#~ msgid "Featured Content"
+#~ msgstr "Uitgelichte content"
+
+#~ msgid "Featured Slider"
+#~ msgstr "Uitgelichte slider"
+
+#~ msgid "Social Links"
+#~ msgstr "Sociale links"
+
+#~ msgid "Favicon"
+#~ msgstr "Favicon"
+
+#~ msgid "Disable Favicon?"
+#~ msgstr "Favicon uitschakelen?"
+
+#~ msgid "Check to disable"
+#~ msgstr "Vink aan om uit te schakelen"
+
+#~ msgid "Fav Icon URL:"
+#~ msgstr "Favicon URL:"
+
+#~ msgid "Change Fav Icon"
+#~ msgstr "Verander Favicon"
+
+#~ msgid "Preview"
+#~ msgstr "Preview"
+
+#~ msgid "Save Changes"
+#~ msgstr "wijzigingen opslaan"
+
+#~ msgid "Web Clip Icon Options"
+#~ msgstr "Opties voor Web Clip Icon"
+
+#~ msgid "Disable Web Clip Icon?"
+#~ msgstr "Web Clip Icon uitschakelen?"
+
+#~ msgid "Web Clip Icon URL:"
+#~ msgstr "Web Clip URL:"
+
+#~ msgid "Change Web Clip Icon"
+#~ msgstr "Verander Web Clip Icon"
+
+#~ msgid ""
+#~ "Note: Web Clip Icon for Apple devices. Recommended Size - Width 144px and "
+#~ "Height 144px height, which will support High Resolution Devices like iPad "
+#~ "Retina."
+#~ msgstr ""
+#~ "Web Clip Icon voor Apple-apparaten. Aangeraden grootte: 144px bij 144px, "
+#~ "zodat ook iPad Retina en andere apparaten met een hoge resolutie "
+#~ "ondersteund worden."
+
+#~ msgid "Menu Options"
+#~ msgstr "Menu Options"
+
+#~ msgid "Custom Menus"
+#~ msgstr "Custom Menus"
+
+#~ msgid "Click to Create Custom Menus"
+#~ msgstr "Click to Create Custom Menus"
+
+#~ msgid "Assign Locations"
+#~ msgstr "Assign Locations"
+
+#~ msgid ""
+#~ "Note: You can assign your custom menu to Header Right Menu Location and "
+#~ "Header Secondary Menu Location. This will replace the WordPress default "
+#~ "page menu"
+#~ msgstr ""
+#~ "Note: You can assign your custom menu to Header Right Menu Location and "
+#~ "Header Secondary Menu Location. This will replace the WordPress default "
+#~ "page menu"
+
+#~ msgid "Click to Manage Menu Locations"
+#~ msgstr "Click to Manage Menu Locations"
+
+#~ msgid "Header Options"
+#~ msgstr "Header opties"
+
+#~ msgid "Disable Logo?"
+#~ msgstr "Disable Logo?"
+
+#~ msgid "Logo url"
+#~ msgstr "Logo url"
+
+#~ msgid "Change Logo"
+#~ msgstr "Change Logo"
+
+#~ msgid "Disable Header Right Section?"
+#~ msgstr "Disable Header Right Section?"
+
+#~ msgid "Check to Disable"
+#~ msgstr "Vink aan om uit te schakelen"
+
+#~ msgid "Enable Featured Header Image"
+#~ msgstr "Schakel uitgelichte afbeeldingen header in"
+
+#~ msgid "Page/Post Featured Image Size"
+#~ msgstr "Grootte uitgelichte afbeelding pagina/berichten"
+
+#~ msgid "Header Image"
+#~ msgstr "Hoofding Afbeelding"
+
+#~ msgid "Click here to change header image"
+#~ msgstr "Click here to change header image"
+
+#~ msgid "Click here to change Header Image"
+#~ msgstr "Click here to change Header Image"
+
+#~ msgid "Click here to add header image"
+#~ msgstr "Click here to add header image"
+
+#~ msgid "Click here to add Header Image"
+#~ msgstr "Click here to add Header Image"
+
+#~ msgid "There is no Header Image"
+#~ msgstr "There is no Header Image"
+
+#~ msgid "Featured Header Image Alt/Title Tag"
+#~ msgstr "Header uitgelichte afbeelding alt/title tag"
+
+#~ msgid "Featured Header Image Link URL"
+#~ msgstr "Header uitgelichte afbeelding link URL:"
+
+#~ msgid "Target. Open Link in New Window?"
+#~ msgstr "Open in een nieuw venster?"
+
+#~ msgid "Check to open in new window"
+#~ msgstr "Vink aan om te openen in een nieuw venster"
+
+#~ msgid "Reset Header Featured Image Options?"
+#~ msgstr "Reset opties voor header uitgelichte afbeeldingen?"
+
+#~ msgid "Check to reset"
+#~ msgstr "Vink aan om te resetten"
+
+#~ msgid "Content Featured Image Size"
+#~ msgstr "Content uitgelichte afbeelding grootte"
+
+#~ msgid "Promotion Headline Options"
+#~ msgstr "Promotion Headline Options"
+
+#~ msgid "Enable Promotion"
+#~ msgstr "Enable Promotion"
+
+#~ msgid "Headline Text"
+#~ msgstr "Headline Text"
+
+#~ msgid "The appropriate length for Headine is around 10 words."
+#~ msgstr "De geschikte lengte voor de titel is ongeveer 10 woorden."
+
+#~ msgid "Subheadline Text"
+#~ msgstr "Subheadline Text"
+
+#~ msgid "The appropriate length for Headine is around 15 words."
+#~ msgstr "De geschikte lengte voor een ondertitel is ongeveer 15 woorden."
+
+#~ msgid "Button Text"
+#~ msgstr "Button Text"
+
+#~ msgid "The appropriate length for Headine is around 3 words."
+#~ msgstr "De geschikte lengte voor de tekst op de knop is ongeveer 3 woorden."
+
+#~ msgid "Button Link"
+#~ msgstr "Button Link"
+
+#~ msgid "Target. Open Link in New Window? "
+#~ msgstr "Open in een nieuw venster?"
+
+#~ msgid "Disable Headline?"
+#~ msgstr "Disable Headline?"
+
+#~ msgid "Disable Subheadline?"
+#~ msgstr "Disable Subheadline?"
+
+#~ msgid "Disable Button?"
+#~ msgstr "Disable Button?"
+
+#~ msgid "Homepage / Frontpage Settings"
+#~ msgstr "Homepagina-opties"
+
+#~ msgid "Disable Latest Posts?"
+#~ msgstr "Disable Latest Posts?"
+
+#~ msgid "Add Page instead of Latest Posts"
+#~ msgstr "Voeg een statische pagina toe in plaats van meest recente berichten"
+
+#~ msgid "Click Here to Set Static Front Page Instead of Latest Posts"
+#~ msgstr ""
+#~ "Klik hier om een statische homepagina in te stellen in plaats van de "
+#~ "recente berichten weer te geven"
+
+#~ msgid "Homepage posts categories:"
+#~ msgstr "Homepagina categorieën voor berichten:"
+
+#~ msgid ""
+#~ "Only posts that belong to the categories selected here will be displayed "
+#~ "on the front page."
+#~ msgstr ""
+#~ "Alleen berichten die in deze categorieën geplaatst zijn worden op de "
+#~ "homepagina getoond."
+
+#~ msgid "--Disabled--"
+#~ msgstr "--Uitgeschakeld--"
+
+#~ msgid "You may select multiple categories by holding down the CTRL key."
+#~ msgstr ""
+#~ "Je kunt meerdere categorieën selecteren door de CTRL-toets ingedrukt te "
+#~ "houden"
+
+#~ msgid "Layout Options"
+#~ msgstr "Layout-opties"
+
+#~ msgid "Sidebar Layout Options"
+#~ msgstr "Sidebar layout-opties"
+
+#~ msgid "Content Layout"
+#~ msgstr "Content layout"
+
+#~ msgid "Reset Layout?"
+#~ msgstr "Layout resetten?"
+
+#~ msgid "Search Text Settings"
+#~ msgstr "Zoeken-tekstinstellingen"
+
+#~ msgid "Default Display Text in Search"
+#~ msgstr "Standaard tekst in Zoek-balk"
+
+#~ msgid "Excerpt / More Tag Settings"
+#~ msgstr "Afbreken/meer-tag opties"
+
+#~ msgid "More Tag Text"
+#~ msgstr "Meer-tag tekst"
+
+#~ msgid "Excerpt length(words)"
+#~ msgstr "Afbreken na ... woorden"
+
+#~ msgid "Reset Excerpt?"
+#~ msgstr "Afbreekaantal resetten?"
+
+#~ msgid "Custom CSS"
+#~ msgstr "Aangepaste CSS"
+
+#~ msgid "Enter your custom CSS styles."
+#~ msgstr "Voer je eigen CSS in."
+
+#~ msgid "CSS Tutorial from W3Schools."
+#~ msgstr "CSS tutorial van W3Schools."
+
+#~ msgid "http://www.w3schools.com/css/default.asp"
+#~ msgstr "http://www.w3schools.com/css/default.asp"
+
+#~ msgid "CSS Tutorial"
+#~ msgstr "CSS tutorial"
+
+#~ msgid "Click Here to Read"
+#~ msgstr "Klik hier om te lezen"
+
+#~ msgid "Featured Settings"
+#~ msgstr "Featured Settings"
+
+#~ msgid "Enable Featured Content"
+#~ msgstr "Enable Featured Content"
+
+#~ msgid "Featured Content Headline Text"
+#~ msgstr "Featured Content Headline Text"
+
+#~ msgid "Leave empty if you want to remove headline."
+#~ msgstr "Leave empty if you want to remove headline."
+
+#~ msgid "Featured Content Subheadline Text"
+#~ msgstr "Featured Content Subheadline Text"
+
+#~ msgid "Number of Featured Content"
+#~ msgstr "Aantal uitgelichte berichten"
+
+#~ msgid "Featured Content Layout"
+#~ msgstr "Layout uitgelichte content"
+
+#~ msgid "Featured Content Options"
+#~ msgstr "Featured Content Options"
+
+#~ msgid "Featured Content #%s"
+#~ msgstr "Uitgelichte content #%s"
+
+#~ msgid "Change Image"
+#~ msgstr "Verander afbeelding"
+
+#~ msgid "Link URL"
+#~ msgstr "Link URL"
+
+#~ msgid "Add in the Target URL for the content"
+#~ msgstr "Voeg de link toe aan dit bericht"
+
+#~ msgid "Title"
+#~ msgstr "Titel"
+
+#~ msgid "Leave empty if you want to remove title"
+#~ msgstr "Laat leeg als je de titel wilt weghalen"
+
+#~ msgid "Content"
+#~ msgstr "Korte beschrijving"
+
+#~ msgid "The appropriate length for Content is around 10 words."
+#~ msgstr "De geschikte lengte voor de beschrijving is ongeveer 10 woorden"
+
+#~ msgid "Slider Options"
+#~ msgstr "Slider opties"
+
+#~ msgid "Select Slider Type"
+#~ msgstr "Selecteer slidertype"
+
+#~ msgid "Enable Slider"
+#~ msgstr "Slider inschakelen"
+
+#~ msgid "Disable Text in Slider?"
+#~ msgstr "Disable Text in Slider?"
+
+#~ msgid "Number of Slides"
+#~ msgstr "Aantal slides"
+
+#~ msgid "Transition Effect:"
+#~ msgstr "Overgangseffect:"
+
+#~ msgid "Transition Delay"
+#~ msgstr "Overgangstijd"
+
+#~ msgid "second(s)"
+#~ msgstr "seconde(n)"
+
+#~ msgid "Transition Length"
+#~ msgstr "Duur van overgang"
+
+#~ msgid "Featured Post Slider Options"
+#~ msgstr "Uitgelichte berichten-slider opties"
+
+#~ msgid "Exclude Slider post from Homepage posts?"
+#~ msgstr "Posts in de slider niet meer weergeven op de homepagina?"
+
+#~ msgid "Check to exclude"
+#~ msgstr ""
+#~ "Klik aan om de posts in de slider niet meer weer te geven bij de recente "
+#~ "berichten"
+
+#~ msgid "Featured Post Slider #%s"
+#~ msgstr "Uitgelicht bericht #%s"
+
+#~ msgid "Click Here To Edit"
+#~ msgstr "Klik hier om te bewerken"
+
+#~ msgid ""
+#~ "Note: Here You can put your Post IDs which displays on Homepage as slider."
+#~ msgstr ""
+#~ "Hier kun je de ID's van de berichten die in de slider moeten komen "
+#~ "neerzetten."
+
+#~ msgid "Featured Category Slider Options"
+#~ msgstr "Uitgelichte categorie-slider opties"
+
+#~ msgid "Select Slider Categories"
+#~ msgstr "Selecteer categorieën voor de slider"
+
+#~ msgid ""
+#~ "Use this only is you want to display posts from Specific Categories in "
+#~ "Featured Slider"
+#~ msgstr ""
+#~ "Gebruik dit alleen als je slechts berichten uit bepaalde categorieën in "
+#~ "de slider wilt hebben"
+
+#~ msgid ""
+#~ "Note: Here you can select the categories from which latest posts will "
+#~ "display on Featured Slider."
+#~ msgstr ""
+#~ "Je kunt hier categorieën selecteren waaruit de meest recente berichten in "
+#~ "de slider moeten komen"
+
+#~ msgid "Predefine Social Icons"
+#~ msgstr "Stel sociale iconen in"
+
+#~ msgid "Youtube"
+#~ msgstr "YouTube"
+
+#~ msgid "Linkedin"
+#~ msgstr "Linkedin"
+
+#~ msgid "Slideshare"
+#~ msgstr "Slideshare"
+
+#~ msgid "Foursquare"
+#~ msgstr "Foursquare"
+
+#~ msgid "Goodreads"
+#~ msgstr "Goodreads"
+
+#~ msgid "Soundcloud"
+#~ msgstr "Soundcloud"
+
+#~ msgid "%s"
+#~ msgstr "%s"
+
+#, fuzzy
+#~ msgid "Adventurous Pro"
+#~ msgstr "Adventurous"
+
+#~ msgid "Adventurous"
+#~ msgstr "Adventurous"
+
+#, fuzzy
+#~ msgid "https://catchthemes.com/themes/adventurous"
+#~ msgstr "https://catchthemes.com/themes/adventurous-pro/"
+
+#~ msgid "Category Archives: %s"
+#~ msgstr "Archieven naar categorie: %s"
+
+#~ msgid "Tag Archives: %s"
+#~ msgstr "Archieven naar tags: %s"
+
+#~ msgid "Author Archives: %s"
+#~ msgstr "Archieven naar auteurs: %s"
+
+#~ msgid "Daily Archives: %s"
+#~ msgstr "Dagelijkse archieven: %s"
+
+#~ msgid "Monthly Archives: %s"
+#~ msgstr "Maandelijkse archieven: %s"
+
+#~ msgid "Yearly Archives: %s"
+#~ msgstr "Jaarlijkse archieven: %s"
+
+#~ msgid "Page %s"
+#~ msgstr "Pagina %s"

@@ -1,0 +1,348 @@
+# Translation of Plugins - SSL Insecure Content Fixer - Stable (latest release) in Bulgarian
+# This file is distributed under the same license as the Plugins - SSL Insecure Content Fixer - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-05-15 00:33:53+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: bg\n"
+"Project-Id-Version: Plugins - SSL Insecure Content Fixer - Stable (latest release)\n"
+
+#: views/ssl-tests.php:40
+msgid "It looks like your server is behind Windows Azure ARR. The recommended setting for HTTPS detection is %s."
+msgstr "Изглежда, че сървърът се намира зад Windows Azure ARR. Препоръчителната настройка за откриване на HTTPS е %s."
+
+#: views/settings-fields-common.php:103
+msgctxt "proxy settings"
+msgid "HTTP_X_ARR_SSL (Windows Azure ARR)"
+msgstr "HTTP_X_ARR_SSL (Windows Azure ARR)"
+
+#: views/settings-fields-common.php:67
+msgctxt "fix level settings"
+msgid "includes AJAX calls, which can cause compatibility and performance problems"
+msgstr "включва AJAX заявките, което може да причини проблеми със съвместимостта и производителността"
+
+#: views/settings-fields-common.php:64
+msgctxt "fix level settings"
+msgid "The biggest potential to break things, but sometimes necessary"
+msgstr "С най-голям потенциал за причиняване на проблеми, но понякога нужно"
+
+#: views/settings-fields-common.php:63
+msgctxt "fix level settings"
+msgid "Capture All"
+msgstr "Пълно прихващане"
+
+#: views/settings-fields-common.php:57
+msgctxt "fix level settings"
+msgid "excludes AJAX calls, which can cause compatibility and performance problems"
+msgstr "изключва прихващането на AJAX заявки, което елиминира потенциален източник на проблеми със съвместимостта и производителността"
+
+#: views/settings-fields-common.php:54
+msgctxt "fix level settings"
+msgid "Everything on the page, from the header to the footer:"
+msgstr "Всичко в страницата, от главата до долния край:"
+
+#: views/requires-pcre.php:3
+msgid "SSL Insecure Content Fixer requires <a target=\"_blank\" href=\"%1$s\">PCRE</a> version %2$s or higher; your website has PCRE version %3$s"
+msgstr "SSL Insecure Content Fixer изисква <a target=\"_blank\" href=\"%1$s\">PCRE</a> версия %2$s или по-нова; вашият сайт използва PCRE версия %3$s"
+
+#: views/requires-extensions.php:3
+msgid "SSL Insecure Content Fixer requires these missing PHP extensions. Please contact your website host to have these extensions installed."
+msgstr "SSL Insecure Content Fixer се нуждае от тези липсващи PHP разширения. Поискайте от вашия доставчик на хостинг услуги да активира тези разширения."
+
+#: views/ssl-tests.php:36
+msgid "It looks like your server is behind Amazon CloudFront, not configured to send HTTP_X_FORWARDED_PROTO. The recommended setting for HTTPS detection is %s."
+msgstr "Изглежда, че вашият сървър използва Amazon CloudFront и не е конфигуриран да изпраща HTTP_X_FORWARDED_PROTO. Препоръчителната настройка за откриване на HTTPS е %s."
+
+#: views/settings-fields-common.php:104
+msgctxt "proxy settings"
+msgid "HTTP_CF_VISITOR (Cloudflare Flexible SSL); deprecated, since Cloudflare sends HTTP_X_FORWARDED_PROTO now"
+msgstr "HTTP_CF_VISITOR (Cloudflare Flexible SSL); изваден от употреба, понеже Cloudflare вече изпраща HTTP_X_FORWARDED_PROTO"
+
+#: views/settings-fields-common.php:102
+msgctxt "proxy settings"
+msgid "HTTP_CLOUDFRONT_FORWARDED_PROTO (Amazon CloudFront HTTPS cached content)"
+msgstr "HTTP_CLOUDFRONT_FORWARDED_PROTO (Amazon CloudFront HTTPS кеширано съдържание)"
+
+#. Author URI of the plugin/theme
+msgid "https://shop.webaware.com.au/"
+msgstr "https://shop.webaware.com.au/"
+
+#. Author of the plugin/theme
+msgid "WebAware"
+msgstr "WebAware"
+
+#. Description of the plugin/theme
+msgid "Clean up WordPress website HTTPS insecure content"
+msgstr "Поправя WordPress съдържание, което не се изпраща чрез HTTPS"
+
+#. Plugin URI of the plugin/theme
+msgid "https://ssl.webaware.net.au/"
+msgstr "https://ssl.webaware.net.au/"
+
+#. Plugin Name of the plugin/theme
+msgid "SSL Insecure Content Fixer"
+msgstr "SSL Insecure Content Fixer"
+
+#: views/ssl-tests.php:54
+msgid "Your server environment shows this:"
+msgstr "Полето за Environment променливи на сървъра съдържа следното:"
+
+#: views/ssl-tests.php:50
+msgid "If you know of a way to detect HTTPS on your server, please <a href=\"%s\" target=\"_blank\">tell me about it</a>."
+msgstr "Ако знаете метод за откриване на HTTPS на вашия сървър, моля <a href=\"%s\" target=\"_blank\">информирайте автора</a>."
+
+#: views/ssl-tests.php:49
+msgid "Your server cannot detect HTTPS. The recommended setting for HTTPS detection is %s."
+msgstr "Вашият сървър не може да открие HTTPS. Препоръчаната настройка за откриване на HTTPS е %s."
+
+#: views/ssl-tests.php:45
+msgid "It looks like your server uses Cloudflare Flexible SSL. The recommended setting for HTTPS detection is %s."
+msgstr "Изглежда, че вашият сървър използва CloudFlare Flexible SSL. Препоръчителната настройка за откриване на HTTPS е %s."
+
+#: views/ssl-tests.php:28 views/ssl-tests.php:32
+msgid "It looks like your server is behind a reverse proxy. The recommended setting for HTTPS detection is %s."
+msgstr "Изглежда, че вашият сървър се намира зад обратно прокси (reverse proxy). Препоръчителната настройка за откриване на HTTPS е %s."
+
+#: views/ssl-tests.php:24
+msgid "Your server can detect HTTPS normally. The recommended setting for HTTPS detection is %s."
+msgstr "Вашият сървър открива HTTPS нормално. Препоръчаната настройка за откриване на HTTPS е %s."
+
+#: views/ssl-tests.php:21
+msgid "Tests completed."
+msgstr "Тестовете завършиха."
+
+#: views/ssl-tests.php:16
+msgid "Running tests..."
+msgstr "Изпълнение на тестовете..."
+
+#: views/ssl-tests.php:13
+msgid "This page checks to see whether WordPress can detect HTTPS."
+msgstr "Тази страница проверява дали WordPress може да открие HTTPS."
+
+#: views/ssl-tests.php:11
+msgid "SSL Insecure Content Fixer tests"
+msgstr "Тестове на SSL Insecure Content Fixer"
+
+#: views/settings-form.php:11
+msgid "SSL Insecure Content Fixer settings"
+msgstr "Настройки на SSL Insecure Content Fixer"
+
+#: views/settings-form-network.php:16
+msgid "These settings affect all sites on this network that have not been set individually."
+msgstr "Тези настройки засягат всички сайтове в блог мрежата, които не са конфигурирани самостоятелно."
+
+#. translators: heading for multisite network admin settings
+#: views/settings-form-network.php:13
+msgid "SSL Insecure Content Fixer multisite network settings"
+msgstr "Настройки за блог мрежа на SSL Insecure Content Fixer"
+
+#: views/settings-fields-common.php:105 views/ssl-tests.php:49
+msgctxt "proxy settings"
+msgid "unable to detect HTTPS"
+msgstr "няма възможност за установяване на HTTPS"
+
+#: views/settings-fields-common.php:101
+msgctxt "proxy settings"
+msgid "HTTP_X_FORWARDED_SSL (e.g. reverse proxy)"
+msgstr "HTTP_X_FORWARDED_SSL (напр. reverse proxy)"
+
+#: views/settings-fields-common.php:100
+msgctxt "proxy settings"
+msgid "HTTP_X_FORWARDED_PROTO (e.g. load balancer, reverse proxy, NginX)"
+msgstr "HTTP_X_FORWARDED_PROTO (напр. load balancer, reverse proxy, NginX)"
+
+#. translators: standard WordPress function means no reverse proxy, just plain
+#. website access
+#: views/settings-fields-common.php:99 views/ssl-tests.php:24
+msgctxt "proxy settings"
+msgid "standard WordPress function"
+msgstr "стандартна функция на WordPress"
+
+#: views/settings-fields-common.php:95
+msgctxt "proxy settings"
+msgid "Select how WordPress should detect that a page is loaded via HTTPS"
+msgstr "Изберете метода, по който WordPress да установява дали дадена страница се зарежда през HTTPS"
+
+#: views/settings-fields-common.php:93
+msgctxt "proxy settings"
+msgid "HTTPS detection"
+msgstr "Откриване на HTTPS"
+
+#: views/settings-fields-common.php:86
+msgctxt "plugin fix settings"
+msgid "WooCommerce  + Google Chrome HTTP_HTTPS bug (fixed in WooCommerce v2.3.13)"
+msgstr "Бъг в WooCommerce  + Google Chrome HTTP_HTTPS (коригиран в WooCommerce v2.3.13)"
+
+#: views/settings-fields-common.php:78
+msgctxt "plugin fix settings"
+msgid "Select only the fixes your website needs."
+msgstr "Изберете само корекциите, от които се нуждае вашият сайт."
+
+#: views/settings-fields-common.php:76
+msgctxt "plugin fix settings"
+msgid "Fixes for specific plugins and themes"
+msgstr "Поправки за конкретни плъгини и теми"
+
+#: views/settings-fields-common.php:56 views/settings-fields-common.php:66
+msgctxt "fix level settings"
+msgid "capture the whole page and fix scripts, stylesheets, and other resources"
+msgstr "прехваща цялата страница и коригира грешки в скриптове, стилове и други ресурси"
+
+#: views/settings-fields-common.php:53
+msgctxt "fix level settings"
+msgid "Capture"
+msgstr "Прихващане"
+
+#: views/settings-fields-common.php:47
+msgctxt "fix level settings"
+msgid "resources in any widgets"
+msgstr "ресурси във всякакви видове \"джаджи\""
+
+#: views/settings-fields-common.php:45
+msgctxt "fix level settings"
+msgid "Everything that Content does, plus:"
+msgstr "Всички операции от ниво Съдържание, плюс"
+
+#: views/settings-fields-common.php:44
+msgctxt "fix level settings"
+msgid "Widgets"
+msgstr "\"Джаджи\" (widgets)"
+
+#: views/settings-fields-common.php:38
+msgctxt "fix level settings"
+msgid "resources in \"Text\" widgets"
+msgstr "ресурси в текстови \"джаджи\" (widgets)"
+
+#: views/settings-fields-common.php:37
+msgctxt "fix level settings"
+msgid "resources in the page content"
+msgstr "ресурси в съдържанието на публикациите"
+
+#: views/settings-fields-common.php:35
+msgctxt "fix level settings"
+msgid "Everything that Simple does, plus:"
+msgstr "Всички операции от стандартното ниво, плюс:"
+
+#: views/settings-fields-common.php:34
+msgctxt "fix level settings"
+msgid "Content"
+msgstr "Съдържание"
+
+#: views/settings-fields-common.php:28
+msgctxt "fix level settings"
+msgid "images loaded by the plugin Image Widget"
+msgstr "изображения, зареждани от разширението Image Widget"
+
+#: views/settings-fields-common.php:27
+msgctxt "fix level settings"
+msgid "data returned from <code>wp_upload_dir()</code> (e.g. for some CAPTCHA images)"
+msgstr "данни, връщани от <code>wp_upload_dir()</code> (напр. някои CAPTCHA изображения)"
+
+#: views/settings-fields-common.php:26
+msgctxt "fix level settings"
+msgid "images and other media loaded by calling <code>wp_get_attachment_image()</code>, <code>wp_get_attachment_image_src()</code>, etc."
+msgstr "изображения и други видове медиа, зареждани чрез извикване на <code>wp_get_attachment_image()</code>, <code>wp_get_attachment_image_src()</code> и т.н."
+
+#: views/settings-fields-common.php:25
+msgctxt "fix level settings"
+msgid "stylesheets registered using <code>wp_register_style()</code> or <code>wp_enqueue_style()</code>"
+msgstr "стилове (stylesheets), регистрирани чрез <code>wp_register_style()</code> или <code>wp_enqueue_style()</code>"
+
+#: views/settings-fields-common.php:24
+msgctxt "fix level settings"
+msgid "scripts registered using <code>wp_register_script()</code> or <code>wp_enqueue_script()</code>"
+msgstr "скриптове, регистрирани чрез <code>wp_register_script()</code> или <code>wp_enqueue_script()</code>"
+
+#: views/settings-fields-common.php:22
+msgctxt "fix level settings"
+msgid "The fastest method with the least impact on website performance"
+msgstr "Най-бързият метод с най-малко влияние върху скоростта на сайта"
+
+#: views/settings-fields-common.php:21
+msgctxt "fix level settings"
+msgid "Simple"
+msgstr "Стандартно"
+
+#: views/settings-fields-common.php:16
+msgctxt "fix level settings"
+msgid "No insecure content will be fixed"
+msgstr "Несигурното съдържание не се поправя"
+
+#: views/settings-fields-common.php:15
+msgctxt "fix level settings"
+msgid "Off"
+msgstr "Изключено"
+
+#: views/settings-fields-common.php:10
+msgid "Select the level of fixing. Try the Simple level first, it has the least impact on your website performance."
+msgstr "Избиране на нивото на поправка. Опитайте най-напред със стандартно ниво – този набор настройки оказва най-малко влияние върху производителността на сайта."
+
+#: views/settings-fields-common.php:8
+msgid "Fix insecure content"
+msgstr "Поправка на несигурно съдържание"
+
+#: includes/class.SSLInsecureContentFixerAdmin.php:244
+msgctxt "settings error"
+msgid "HTTPS detection setting is invalid"
+msgstr "Настройката за откриване на HTTPS е невалидна"
+
+#: includes/class.SSLInsecureContentFixerAdmin.php:239
+msgctxt "settings error"
+msgid "Fix level is invalid"
+msgstr "Нивото на поправка е невалидно"
+
+#: includes/class.SSLInsecureContentFixerAdmin.php:222
+msgctxt "proxy settings"
+msgid "* detected as recommended setting"
+msgstr "* препоръчана настройка"
+
+#: includes/class.SSLInsecureContentFixerAdmin.php:200
+msgid "Multisite network settings updated."
+msgstr "Настройките на блог мрежата са актуализирани."
+
+#: includes/class.SSLInsecureContentFixerAdmin.php:153
+#: includes/class.SSLInsecureContentFixerAdmin.php:166
+msgctxt "menu link"
+msgid "SSL Insecure Content"
+msgstr "SSL Insecure Content"
+
+#: includes/class.SSLInsecureContentFixerAdmin.php:141
+msgctxt "plugin details links"
+msgid "Donate"
+msgstr "Дарение"
+
+#: includes/class.SSLInsecureContentFixerAdmin.php:140
+msgctxt "plugin details links"
+msgid "Translate"
+msgstr "Превод"
+
+#: includes/class.SSLInsecureContentFixerAdmin.php:139
+msgctxt "plugin details links"
+msgid "Rating"
+msgstr "Рейтинг"
+
+#: includes/class.SSLInsecureContentFixerAdmin.php:138
+msgctxt "plugin details links"
+msgid "Get help"
+msgstr "Потърсете помощ"
+
+#: includes/class.SSLInsecureContentFixerAdmin.php:137
+msgctxt "plugin details links"
+msgid "Instructions"
+msgstr "Инструкции"
+
+#: includes/class.SSLInsecureContentFixerAdmin.php:134
+#: includes/class.SSLInsecureContentFixerAdmin.php:157
+msgctxt "menu link"
+msgid "SSL Tests"
+msgstr "Тестване на SSL"
+
+#: includes/class.SSLInsecureContentFixerAdmin.php:129
+#: includes/class.SSLInsecureContentFixerAdmin.php:177
+msgctxt "plugin details links"
+msgid "Settings"
+msgstr "Настройки"
