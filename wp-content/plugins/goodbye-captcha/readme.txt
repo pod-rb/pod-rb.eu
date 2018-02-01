@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: captcha, antispam, anti-spam, spam, mailpoet, antispambot, brute force, comment spam, jetpack contact form, contact form 7, ninja forms, formidable forms, wp bruiser
 Requires at least: 4.0
 Tested up to: 4.9
-Stable tag: 3.1.14
+Stable tag: 3.1.15
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -222,6 +222,10 @@ Studies shown that visual CAPTCHAs take around 5-10 seconds to complete and audi
 
 == Changelog ==
 * Added integration with [HTML Forms Plugin](https://wordpress.org/plugins/html-forms/)
+
+= 3.1.15 =
+**Fixes**
+- Fixed the incompatibility with [Gravity Forms Extension](http://www.wpbruiser.com/downloads/gravity-forms/)
 
 = 3.1.14 =
 **Improvements**
