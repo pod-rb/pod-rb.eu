@@ -33,3 +33,12 @@ function orbisius_ctc_adventurous_child_theme_enqueue_styles() {
 }
 
 add_action( 'wp_enqueue_scripts', 'orbisius_ctc_adventurous_child_theme_enqueue_styles' );
+
+
+add_action('rsssl_fixer_output', 'rsssl_exclude_http_url');
+
+function rsssl_exclude_http_url($html) {
+	//replace the https url back to http
+	$html = str_replace('data-href="https://pod-rb.eu', 'data-href="http://pod-rb.eu', $html);
+	return $html;
+}
