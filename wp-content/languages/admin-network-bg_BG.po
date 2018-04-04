@@ -24,7 +24,7 @@ msgstr "Следните сайтове ще бъдат изтрити:"
 msgid "User could not be added to this site."
 msgstr "Потребителят не може да бъде добавен към този сайт."
 
-#: wp-admin/network/site-new.php:250
+#: wp-admin/network/site-new.php:252
 msgid "The username and a link to set the password will be mailed to this email address."
 msgstr "Потребителското име и връзка за въвеждане на парола ще бъдат изпратени на този имейл адрес."
 
@@ -543,7 +543,7 @@ msgstr "Изтриване на темите"
 msgid "Yes, delete these themes"
 msgstr "Да, потвърждавам изтриването"
 
-#: wp-admin/network/settings.php:418
+#: wp-admin/network/settings.php:420
 msgid "Enable menus"
 msgstr "Включване на менютата"
 
@@ -872,6 +872,14 @@ msgstr "като <code>%1$s/site1</code> и <code>%1$s/site2</code>"
 msgid "Server Address"
 msgstr "Адрес на сървъра"
 
+#: wp-admin/network.php:71
+msgid "Network"
+msgstr "Мрежа"
+
+#: wp-admin/network.php:64
+msgid "The choice of subdirectory sites is disabled if this setup is more than a month old because of permalink problems with &#8220;/blog/&#8221; from the main site. This disabling will be addressed in a future version."
+msgstr "Изборът за мрежа от поддиректории е забранен, в случай че текущата инсталация е по-стара от един месец, поради проблем при постоянните връзки с &#8220;/blog/&#8221; от основния сайт. Тази забрана ще бъде преразгледана в бъдеща версия на WordPress."
+
 #: wp-admin/network.php:61
 msgid "The next screen for Network Setup will give you individually-generated lines of code to add to your wp-config.php and .htaccess files. Make sure the settings of your FTP client make files starting with a dot visible, so that you can find .htaccess; you may have to create this file if it really is not there. Make backup copies of those two files."
 msgstr "Следващата стъпка от „Конфигуриране на мрежата“ ще ви даде генерирани кодове, които да добавите към wp-config.php и .htaccess файловете. Уверете се, че FTP клиента ви е настроен да показва файловете, започващи с точка, така че да можете да намерите .htaccess (може да се наложи да създадете този файл, ако действително не съществува). Направете си резервно копие на файловете, преди да ги редактирате."
@@ -883,14 +891,6 @@ msgstr "Изберете поддомейни или поддиректории 
 #: wp-admin/network.php:63
 msgid "Once you add this code and refresh your browser, multisite should be enabled. This screen, now in the Network Admin navigation menu, will keep an archive of the added code. You can toggle between Network Admin and Site Admin by clicking on the Network Admin or an individual site name under the My Sites dropdown in the Toolbar."
 msgstr "Когато добавите този код и презаредите браузъра си, мулти-сайтовете трябва да са активни. Този екран (сега в навигационното меню на „Мрежов администратор“) ще пази архив на добавения код. Можете да превключвате между „Мрежов администратор“ и „Администратор на сайт“ като щракнете върху „Мрежов администратор“ или върху името на сайта от падащото меню „Моите сайтове“ в лентата с инструменти."
-
-#: wp-admin/network.php:71
-msgid "Network"
-msgstr "Мрежа"
-
-#: wp-admin/network.php:64
-msgid "The choice of subdirectory sites is disabled if this setup is more than a month old because of permalink problems with &#8220;/blog/&#8221; from the main site. This disabling will be addressed in a future version."
-msgstr "Изборът за мрежа от поддиректории е забранен, в случай че текущата инсталация е по-стара от един месец, поради проблем при постоянните връзки с &#8220;/blog/&#8221; от основния сайт. Тази забрана ще бъде преразгледана в бъдеща версия на WordPress."
 
 #: wp-admin/network.php:59
 msgid "This screen allows you to configure a network as having subdomains (<code>site1.example.com</code>) or subdirectories (<code>example.com/site1</code>). Subdomains require wildcard subdomains to be enabled in Apache and DNS records, if your host allows it."
@@ -1074,13 +1074,13 @@ msgstr "Този екран разрешава или забранява изб�
 msgid "Menu setting enables/disables the plugin menus from appearing for non super admins, so that only super admins, not site admins, have access to activate plugins."
 msgstr "Настройките показват/скриват менютата, така че единствено администратори на мрежата, но не и сайт-администратори, да имат право да активират разширенията."
 
-#: wp-admin/network/settings.php:50
-msgid "Registration settings can disable/enable public signups. If you let others sign up for a site, install spam plugins. Spaces, not commas, should separate names banned as sites for this network."
-msgstr "Настройките за регистрация могат да разрешават/забраняват публичните регистрации. Ако разрешите външните регистрации, инсталирайте анти-спам разширения на съответния сайт. Имената на сайтове, които са забранени, трябва да бъдат разделени с интервали (а не със запетаи)."
-
 #: wp-admin/network/themes.php:223
 msgid "If the network admin disables a theme that is in use, it can still remain selected on that site. If another theme is chosen, the disabled theme will not appear in the site&#8217;s Appearance > Themes screen."
 msgstr "Ако мрежовият администратор изключи за мрежата тема, която се ползва, тя може да остане активна на съответния сайт. Ако е избрана друга тема, изключената няма да се показва във „Външен вид“ > „Теми“ на сайта."
+
+#: wp-admin/network/settings.php:50
+msgid "Registration settings can disable/enable public signups. If you let others sign up for a site, install spam plugins. Spaces, not commas, should separate names banned as sites for this network."
+msgstr "Настройките за регистрация могат да разрешават/забраняват публичните регистрации. Ако разрешите външните регистрации, инсталирайте анти-спам разширения на съответния сайт. Имената на сайтове, които са забранени, трябва да бъдат разделени с интервали (а не със запетаи)."
 
 #: wp-admin/network/settings.php:48
 msgid "This screen sets and changes options for the network as a whole. The first site is the main site in the network and network options are pulled from that original site&#8217;s options."
@@ -1219,7 +1219,7 @@ msgstr "Регистрацията e изключена"
 msgid "Logged in users may register new sites"
 msgstr "Влезлите потребители могат да създават нови сайтове"
 
-#: wp-admin/network/settings.php:396
+#: wp-admin/network/settings.php:398
 msgid "Enable administration menus"
 msgstr "Включване на административните менюта"
 
@@ -1300,7 +1300,7 @@ msgstr "Забранени имена"
 msgid "Add New Users"
 msgstr "Добавяне на нови потребители"
 
-#: wp-admin/network/site-new.php:262
+#: wp-admin/network/site-new.php:264
 msgid "Add Site"
 msgstr "Добавяне на сайт"
 
@@ -1324,7 +1324,7 @@ msgstr "Адрес (URL) на първия коментар"
 msgid "First Comment Author"
 msgstr "Автор на първия коментар"
 
-#: wp-admin/network/site-new.php:246
+#: wp-admin/network/site-new.php:248
 msgid "Admin Email"
 msgstr "Имейл на администратора"
 
@@ -1356,6 +1356,6 @@ msgstr "Забранени имейл домейни"
 msgid "Limited Email Registrations"
 msgstr "Ограничен брой регистрации на имейли"
 
-#: wp-admin/network/site-new.php:250
+#: wp-admin/network/site-new.php:252
 msgid "A new user will be created if the above email address is not in the database."
 msgstr "Ако този имейл адрес не е регистриран в базата, с него ще бъде създаден нов потребител."
