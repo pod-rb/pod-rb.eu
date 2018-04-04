@@ -42,3 +42,9 @@ function rsssl_exclude_http_url($html) {
 	$html = str_replace('data-href="https://pod-rb.eu', 'data-href="http://pod-rb.eu', $html);
 	return $html;
 }
+
+//Get latest posts for the last 30 days instead of 2 (a widget in sidebar displays a list of them)
+function jetpackme_top_posts_timeframe() {
+    return '30';
+}
+add_filter( 'jetpack_top_posts_days', 'jetpackme_top_posts_timeframe' );
