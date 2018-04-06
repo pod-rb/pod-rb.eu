@@ -1,6 +1,7 @@
 <?php
 
 if (!defined('ABSPATH')) exit;
+if (!class_exists('BVUpgraderSkin')) :
 class BVUpgraderSkin extends WP_Upgrader_Skin {
 	public $action = '';
 	public $plugin_info = array();
@@ -36,7 +37,7 @@ class BVUpgraderSkin extends WP_Upgrader_Skin {
 	}
 
 	function error($errors) {
-		global $blogvault;
+		global $bvresp;
 		$key = $this->get_key();
 		$message = array();
 		$message['error'] = true;
@@ -46,16 +47,17 @@ class BVUpgraderSkin extends WP_Upgrader_Skin {
 			$message['data'] = $errors->get_error_data();
 			$message['code'] = $errors->get_error_code();
 		}
-		$blogvault->addArrayToStatus($this->action.':'.$key, $message);
+		$bvresp->addArrayToStatus($this->action.':'.$key, $message);
 	}
 
 	function feedback($string) {
-		global $blogvault;
+		global $bvresp;
 		if ( empty($string) )
 			return;
 		$key = $this->get_key();
 		$message = array();
 		$message['message'] = $string;
-		$blogvault->addArrayToStatus($this->action.':'.$key, $message);
+		$bvresp->addArrayToStatus($this->action.':'.$key, $message);
 	}
 }
+endif;

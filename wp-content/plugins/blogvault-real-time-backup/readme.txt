@@ -4,7 +4,7 @@ Tags: backup, security, restore, database backup, WordPress backup, WordPress se
 Plugin URI: https://blogvault.net/
 Donate link: https://app.blogvault.net/home/signup
 Requires at least: 4.0
-Tested up to: 4.8
+Tested up to: 4.9.4
 Stable tag: trunk
 License: GPLv2 or later
 License URI: [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)
@@ -97,6 +97,13 @@ Never! We will be with you for any queries at any time. **[Click here](https://b
 
 
 == CHANGELOG ==
+
+= 1.61 =
+* Better handling for request IP
+
+= 1.53 =
+* Restructuring plugin completely
+* Better security
 
 = 1.49 =
 * Updated WooCommerce Dynamic Sync

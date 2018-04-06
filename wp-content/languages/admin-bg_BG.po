@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 4.9.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-02-05 09:38:10+0000\n"
+"PO-Revision-Date: 2018-03-22 13:41:14+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,37 +30,37 @@ msgstr "Europe/Sofia"
 msgid "This changeset cannot be further modified."
 msgstr "Тези промени няма да могат да бъдат редактирани повече."
 
-#: wp-admin/about.php:262
+#: wp-admin/about.php:316
 msgid "Improvements to Roles and Capabilities"
 msgstr "Подобрения на потребителските роли и възможности"
 
-#: wp-admin/about.php:263
+#: wp-admin/about.php:317
 msgid "New capabilities have been introduced that allow granular management of plugins and translation files. In addition, the site switching process in multisite has been fine-tuned to update the available roles and capabilities in a more reliable and coherent way."
 msgstr "Въведени са възможности за независимо управление на разширения и файлове за превод. В допълнение, процесът за преминаване между сайтове в multisite е рафиниран, за да включва всички налични роли и възможности по-надеждно и съгласувано. "
 
-#: wp-admin/about.php:259
+#: wp-admin/about.php:313
 msgid "WordPress 4.9 includes an upgraded version of MediaElement.js, which removes dependencies on jQuery, improves accessibility, modernizes the UI, and fixes many bugs."
 msgstr "WordPress 4.9 включва актуализирана версия на MediaElement.js, който премахва зависимости в jQuery, подобрява достъпността и модернизира потребителския интерфейс. Отстранени са и много грешки."
 
-#: wp-admin/about.php:258
+#: wp-admin/about.php:312
 msgid "MediaElement.js upgraded to 4.2.6"
 msgstr "MediaElement.js е актуализиран до версия 4.2.6"
 
-#: wp-admin/about.php:255
+#: wp-admin/about.php:309
 msgid "We&#8217;ve introduced a new code editing library, CodeMirror, for use within core. Use it to improve any code writing or editing experiences within your plugins, like CSS or JavaScript include fields."
 msgstr "Въведохме нова библиотека за редакция на код за употреба в ядрото: CodeMirror. Използвайте я, за да подобрите изживяването при писане или редактиране на код в разширенията, както например CSS или JavaScript include полета."
 
-#: wp-admin/about.php:254
+#: wp-admin/about.php:308
 msgid "CodeMirror available for use in your themes and plugins"
 msgstr "CodeMirror е наличен за употреба в темите и разширенията. "
 
 #. translators: %s:
 #. https://make.wordpress.org/core/2017/11/01/improvements-to-the-customize-js-api-in-4-9/
-#: wp-admin/about.php:248
+#: wp-admin/about.php:302
 msgid "We&#8217;ve made numerous improvements to the Customizer JS API in WordPress 4.9, eliminating many pain points and making it just as easy to work with as the PHP API. There are also new base control templates, a date/time control, and section/panel/global notifications to name a few. <a href=\"%s\">Check out the full list.</a>"
 msgstr "Подготвили сме множество подобрения по JS API на Персонализатора във WordPress 4.9, като сме елиминирали множество проблеми и сме го направили по лесен за работа, брагодарение на PHP API. Някои от подобренията включват нов начин за променяне на шаблоните, дата/час и известяване за секция, панел и глобални известия. <a href=\"%s\">Проверете пълния списък оттук.</a>"
 
-#: wp-admin/about.php:244
+#: wp-admin/about.php:298
 msgid "Customizer JS API Improvements"
 msgstr "Подобрения към JS API на Персонализатора"
 
@@ -68,7 +68,7 @@ msgstr "Подобрения към JS API на Персонализатора"
 msgid "This data is used to provide general enhancements to WordPress, which includes helping to protect your site by finding and automatically installing new updates. It is also used to calculate statistics, such as those shown on the <a href=\"%s\">WordPress.org stats page</a>."
 msgstr "Данните се използват за общи подобрения по WordPress, включително подобрена сигурност чрез автоматично инсталиране на нови актуализации. Също така се използват за генериране на статистики, като тези, показани на <a href=\"%s\">страницата със статистики на WordPress.org</a>."
 
-#: wp-admin/about.php:157
+#: wp-admin/about.php:211
 msgid "When you edit themes and plugins directly, WordPress 4.9 will politely warn you that this is a dangerous practice. It will recommend that you backup your files before saving, so they don&#8217;t get overwritten by the next update. Take the safe route: your future self will thank you. Your team and customers will thank you."
 msgstr "Когато редактирате теми и разширения директно, WordPress 4.9 любезно ще ви предупреди, че това се смята за опасна практика. Ще ви препоръча да си направите резервно копие на файловете, така че да не изгубите промените си при следващо обновление. Бъдете предпазливи: няма да съжалявате в бъдеще. Екипът и клиентите ви ще останат доволни."
 
@@ -145,52 +145,52 @@ msgid "Enter the address here if you <a href=\"%s\">want your site home page to 
 msgstr "Въведете адреса тук, ако <a href=\"%s\">искате началната страница на сайта ви да бъде различна от инсталационната директория на WordPress</a>."
 
 #. translators: %s: smiling face with smiling eyes emoji
-#: wp-admin/about.php:237
+#: wp-admin/about.php:291
 msgid "Developer Happiness %s"
 msgstr "Щастието на програмиста %s"
 
-#: wp-admin/about.php:227
+#: wp-admin/about.php:281
 msgid "https://wordpress.org/plugins/gutenberg/"
 msgstr "https://wordpress.org/plugins/gutenberg/"
 
-#: wp-admin/about.php:226
+#: wp-admin/about.php:280
 msgid "WordPress is working on a new way to create and control your content and we&#8217;d love to have your help. Interested in being an <a href=\"%s\">early tester</a> or getting involved with the Gutenberg project? <a href=\"%s\">Contribute on GitHub</a>."
 msgstr "WordPress работи по нов начин за създаване и управление на съдържанието и много бихме се радвали на вашата помощ. Искате ли да участвате в <a href=\"%s\">ранното тестване</a> или в проекта Gutenberg? <a href=\"%s\">Дайте своя принос в GitHub</a>."
 
 #. translators: %s: handshake emoji
-#: wp-admin/about.php:220
+#: wp-admin/about.php:274
 msgid "Lend a Hand with Gutenberg %s"
 msgstr "Помогнете за Gutenberg %s"
 
-#: wp-admin/about.php:187
+#: wp-admin/about.php:241
 msgid "Site Building Improvements"
 msgstr "Подобрения в изграждането на сайта"
 
-#: wp-admin/about.php:195
+#: wp-admin/about.php:249
 msgid "More Reliable Theme Switching"
 msgstr "По-надеждно превключване между различни теми"
 
-#: wp-admin/about.php:172
+#: wp-admin/about.php:226
 msgid "The New Gallery Widget"
 msgstr "Джаджа за нова галерия"
 
-#: wp-admin/about.php:164
+#: wp-admin/about.php:218
 msgid "Even More Widget Updates"
 msgstr "Още повече актуализации за джаджи"
 
-#: wp-admin/about.php:134
+#: wp-admin/about.php:188
 msgid "Coding Enhancements"
 msgstr "Добавки за писане на код"
 
-#: wp-admin/about.php:127
+#: wp-admin/about.php:181
 msgid "Were you lured away from your desk before you saved your new draft design? Fear not, when you return, WordPress 4.9 will politely ask whether or not you&#8217;d like to save your unsaved changes."
 msgstr "Станахте от бюрото, преди да запазите новия си проект? Не се бойте, когато се върнете, WordPress 4.9 ще ви попита учтиво дали искате или не &#8217; да запазите незаписаните промени."
 
-#: wp-admin/about.php:126
+#: wp-admin/about.php:180
 msgid "A Prompt to Protect Your Work"
 msgstr "Бърз отговор, за да защитите своята работа"
 
-#: wp-admin/about.php:119
+#: wp-admin/about.php:173
 msgid "Design Locking To Guard Your Changes"
 msgstr "Заключване на дизайна, за да запазите вашите промени"
 
@@ -202,75 +202,75 @@ msgstr "Приемаме поверителността и прозрачнос�
 msgid "From time to time, your WordPress site may send data to WordPress.org &#8212; including, but not limited to &#8212; the version of WordPress you are using, and a list of installed plugins and themes."
 msgstr "От време на време вашият сайт може да изпраща данни на WordPress.org &#8212;, включително, но не само &#8212; версията на WordPress, която използвате, както и списък с инсталирани разширения и теми."
 
-#: wp-admin/about.php:203
+#: wp-admin/about.php:257
 msgid "Were you confused by the steps to create a new menu? Perhaps no longer! We&#8217;ve ironed out the UX for a smoother menu creation process. Newly updated copy will guide you."
 msgstr "Объркани сте от стъпките за създаване на ново меню? Най-вероятно вече няма да сте! Подобрихме потребителския интерфейс, за да направим процеса по създаване на менюта по-лек. Можете да следвате обновените разяснения."
 
-#: wp-admin/about.php:202
+#: wp-admin/about.php:256
 msgid "Better Menu Instructions = Less Confusion"
 msgstr "По-добри инструкции за меню = по-малко объркване"
 
-#: wp-admin/about.php:196
+#: wp-admin/about.php:250
 msgid "When you switch themes, widgets sometimes think they can just up and move location. Improvements in WordPress 4.9 offer more persistent menu and widget placement when you decide it&#8217;s time for a new theme. Additionally, you can preview installed themes or download, install, and preview new themes right. Nothing says handy like being able to preview before you deploy. "
 msgstr "Когато превключвате теми, понякога джаджите могат просто да променят местоположението си. Подобренията в WordPress 4.9 предлагат по-устойчиво меню и разположение на джаджи, когато решите, че е време за нова тема. Освен това можете да прегледате инсталираните теми или да изтеглите, инсталирате и прегледате нови теми правилно. Няма съмнение, че е по-удобно да визуализирате, преди да разположите."
 
-#: wp-admin/about.php:180
+#: wp-admin/about.php:234
 msgid "Want to add media to your text widget? Embed images, video, and audio directly into the widget along with your text, with our simple but useful Add Media button. Woo!"
 msgstr "Искате ли да добавите файл към текстовата ви джаджа? Вградете изображения, видео и аудио директно към джаджа заедно с вашия текст, с нашия прост, но полезен бутон Добавяне на медия."
 
-#: wp-admin/about.php:179
+#: wp-admin/about.php:233
 msgid "Press a Button, Add Media"
 msgstr "Натиснете бутон, за да добавите файл към библиотеката"
 
-#: wp-admin/about.php:173
+#: wp-admin/about.php:227
 msgid "An incremental improvement to the media changes hatched in WordPress 4.8, you can now add a gallery via widget. Yes!"
 msgstr "Като допълнение към промените при работата с файлове, които се появиха в WordPress 4.8, вече можете да добавите галерия чрез джаджа. О, да!"
 
-#: wp-admin/about.php:150
+#: wp-admin/about.php:204
 msgid "The dreaded white screen. You&#8217;ll avoid it when working on themes and plugin code because WordPress 4.9 will warn you about saving an error. You&#8217;ll sleep better at night."
 msgstr "Ужасяващият бял екран. Ще имате възможност да си спестите това, когато работите върху кода на темата или разширенията, защото WordPress 4.9 ще ви предупреди, когато се опитвате да запазите грешка. Така ще спите по-спокойно през нощта."
 
-#: wp-admin/about.php:156
+#: wp-admin/about.php:210
 msgid "Warning: Potential Danger Ahead!"
 msgstr "Внимание: Възможност за грешка!"
 
-#: wp-admin/about.php:149
+#: wp-admin/about.php:203
 msgid "Sandbox for Safety"
 msgstr "Работа в режим за разработчици с цел подобрена сигурност"
 
-#: wp-admin/about.php:143
+#: wp-admin/about.php:197
 msgid "You&#8217;ve got a display problem but can&#8217;t quite figure out exactly what went wrong in the CSS you lovingly wrote. With syntax highlighting and error checking for CSS editing and the Custom HTML widget introduced in WordPress 4.8.1, you&#8217;ll pinpoint coding errors quickly. Practically guaranteed to help you scan code more easily and suss out and fix code errors quickly."
 msgstr "Имате проблем при визуализацията, но не можете да определите къде точно е грешката в CSS кода, който сте написали. Със синтактичните подсказки, проверките за грешки в CSS редактора и джаджата за допълнителен HTML ще можете да определите грешките си точно и бързо. Гарантирано ще ви помогне да сканирате кода по-бързо и да оправите проблемите."
 
-#: wp-admin/about.php:142
+#: wp-admin/about.php:196
 msgid "Syntax Highlighting and Error Checking? Yes, Please!"
 msgstr "Синтактично оцветяване на кода и проверка за грешки? Да!"
 
-#: wp-admin/about.php:120
+#: wp-admin/about.php:174
 msgid "Ever encounter a scenario where two designers walk into a project and designer A overrides designer B&#8217;s beautiful changes? WordPress 4.9&#8217;s design lock feature (similar to post locking) secures your draft design so that no one can make changes to it or erase all your hard work."
 msgstr "Случвало ли ви се е да се сблъскате със ситуация, където двама дизайнера работят в един и същи момент и дизайнер А презапише красивите промени на дизайнер Б? WordPress 4.9 добавя опцията за заключане на Персонализатора (подобно на заключването на публикациите), така че вашите незавършени промени няма да бъдат презаписани и изтрити."
 
-#: wp-admin/about.php:113
+#: wp-admin/about.php:167
 msgid "Need to get some feedback on proposed site design changes? WordPress 4.9 gives you a preview link you can send to your team and customers so that you can collect and integrate feedback before you schedule the changes to go live. Can we say collaboration&#43;&#43;?"
 msgstr "Имате ли нужда да получите обратна връзка за предложени промени по дизайна? WordPress 4.9 ще ви предостави линк за предварителен изглед, който можете да споделите с вашия екип или клиенти, и да получите обратна връзка и да направите корекции, преди да планирате промените да станат публични. Сътрудничество на едно по-добро ниво?"
 
-#: wp-admin/about.php:106
+#: wp-admin/about.php:160
 msgid "Yes, you read that right. Just like you can draft and revise posts and schedule them to go live on the date and time you choose, you can now tinker with your site&#8217;s design and schedule those design changes to go live as you please."
 msgstr "Да, правилно прочетохте. Точно както можете да създавате чернови на публикации, да ги редактирате и да настроите дата и час, в които да бъдат публикувани, вече можете да правите промени и по дизайна на сайта и да планирате публикуването им, когато пожелаете."
 
-#: wp-admin/about.php:112
+#: wp-admin/about.php:166
 msgid "Collaborate with Design Preview Links"
 msgstr "Съвместна работа чрез връзки за предварителен преглед на персонализатора"
 
-#: wp-admin/about.php:97
+#: wp-admin/about.php:151
 msgid "Customizer Workflow Improved"
 msgstr "Подобрения по работния процес на Персонализатора"
 
-#: wp-admin/about.php:105
+#: wp-admin/about.php:159
 msgid "Draft and Schedule Site Design Customizations"
 msgstr "Записване на чернова и бъдещо публикуване на промени в дизайна"
 
-#: wp-admin/about.php:84
+#: wp-admin/about.php:138
 msgid "Welcome to an improved Customizer workflow with design drafts, locking, scheduling, and preview links. What&#8217;s more, code syntax highlighting and error checking will make for a clean and smooth site building experience. Finally, if all that wasn&#8217;t pretty great, we&#8217;ve got a great new Gallery widget and improvements to theme browsing and switching."
 msgstr "Добре дошли във подобрения Персонализатор с работен процес, позволяващ чернови на дизайна, заключване, планиране и връзки за предварителен преглед. Другите новости са синтактичните подсказки на кода и проверка за грешки, което ще ви позволи да направите чисто и плавно изграждането на сайта. И не само това: има нова джаджа за галерия и подобрения по преглеждането на теми и превключването им."
 
@@ -280,7 +280,7 @@ msgid "Thank you for updating to the latest version! WordPress %s will smooth yo
 msgstr "Благодарим ви, че обновихте до последна версия. WordPress %s ще подобри вашата работа по дизайна и ще ви предпази от грешки в кода."
 
 #. translators: %s: party popper emoji
-#: wp-admin/about.php:79
+#: wp-admin/about.php:133
 msgid "Major Customizer Improvements, Code Error Checking, and More! %s"
 msgstr "Големи подобрения по персонализатора, проверка за грешки в кода и още много! %s"
 
@@ -555,7 +555,7 @@ msgstr "Няма описание"
 msgid "View posts by %s"
 msgstr "Преглеждане на публикациите от %s"
 
-#: wp-admin/includes/class-wp-users-list-table.php:492
+#: wp-admin/includes/class-wp-users-list-table.php:496
 msgctxt "name"
 msgid "Unknown"
 msgstr "Непознат"
@@ -1704,7 +1704,7 @@ msgid "Welcome to %s. This is your first post. Edit or delete it, then start blo
 msgstr "Добре дошли в %s. Това е първата ви публикация. Изберете дали да я редактирате или изтриете. Можете да започнете да публикувате!"
 
 #. translators: %s: WordPress version number
-#: wp-admin/about.php:390
+#: wp-admin/about.php:444
 msgid "<strong>Version %s</strong> addressed one security issue."
 msgstr "<strong>Версия %s</strong> се премахва един проблем със сигурността."
 
@@ -1721,15 +1721,15 @@ msgstr "Може да смените снимката на профила си �
 msgid "Profile Picture"
 msgstr "Снимка на профила"
 
-#: wp-admin/about.php:34 wp-admin/about.php:387
+#: wp-admin/about.php:34 wp-admin/about.php:441
 msgid "Maintenance and Security Releases"
 msgstr "Версии за поддръжка и сигурност"
 
-#: wp-admin/about.php:384
+#: wp-admin/about.php:438
 msgid "Security Releases"
 msgstr "Версии за сигурност"
 
-#: wp-admin/about.php:381
+#: wp-admin/about.php:435
 msgid "Maintenance Releases"
 msgstr "Версии за поддръжка"
 
@@ -1777,7 +1777,7 @@ msgid "We&#8217;re going to use this information to create a %s file."
 msgstr "Ще използваме тази информация, за да се създадем %s файл."
 
 #. translators: %s: wp-content/uploads
-#: wp-admin/options-media.php:112
+#: wp-admin/options-media.php:114
 msgid "Default is %s"
 msgstr "По подразбиране е %s"
 
@@ -2096,7 +2096,7 @@ msgstr "Странициране"
 msgid "View all drafts"
 msgstr "Преглед на всички чернови"
 
-#: wp-admin/includes/class-wp-users-list-table.php:566
+#: wp-admin/includes/class-wp-users-list-table.php:570
 msgctxt "no user roles"
 msgid "None"
 msgstr "Без"
@@ -2401,7 +2401,7 @@ msgstr[1] "Темата позволява %s менюта. Изберете к�
 msgid "Live Preview &#8220;%s&#8221;"
 msgstr "Преглед &#8220;%s&#8221;"
 
-#: wp-admin/includes/class-wp-users-list-table.php:505
+#: wp-admin/includes/class-wp-users-list-table.php:509
 msgid "%s post by this author"
 msgid_plural "%s posts by this author"
 msgstr[0] "%s публикация от този автор"
@@ -2904,7 +2904,7 @@ msgstr "j M @ H:i"
 
 #. translators: Do not translate USERNAME, ADMIN_URL, EMAIL, SITENAME, SITEURL:
 #. those are placeholders.
-#: wp-admin/includes/misc.php:1161
+#: wp-admin/includes/misc.php:1163
 msgid ""
 "Howdy ###USERNAME###,\n"
 "\n"
@@ -5312,7 +5312,7 @@ msgstr "Файлът е твърде голям. Файловете трябва
 msgid "If you reached this screen by accident and meant to visit one of your own sites, here are some shortcuts to help you find your way."
 msgstr "Ако достигнете случайно до този екран, а сте смятали да посетите някой от вашите сайтове, тук ще видите някои препратки за бърз достъп, които ще ви помогнат да се ориентирате."
 
-#: wp-admin/includes/misc.php:1208
+#: wp-admin/includes/misc.php:1210
 msgid "[%s] New Admin Email Address"
 msgstr "[%s] Нов администраторски email адрес"
 
@@ -5540,20 +5540,21 @@ msgid "Show Toolbar when viewing site"
 msgstr "Показване на лентата с инструменти в сайта"
 
 #. translators: 1: WordPress version number, 2: plural number of bugs.
-#: wp-admin/about.php:395
+#: wp-admin/about.php:57 wp-admin/about.php:75 wp-admin/about.php:449
 msgid "<strong>Version %1$s</strong> addressed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed %2$s bugs."
 msgstr[0] "<strong>Версия %1$s</strong> поправя %2$s бъг."
 msgstr[1] "<strong>Версия %1$s</strong> поправя %2$s бъга."
 
 #. translators: %s: Codex URL
-#: wp-admin/about.php:50 wp-admin/about.php:68 wp-admin/about.php:407
+#: wp-admin/about.php:50 wp-admin/about.php:68 wp-admin/about.php:86
+#: wp-admin/about.php:104 wp-admin/about.php:122 wp-admin/about.php:461
 msgid "For more information, see <a href=\"%s\">the release notes</a>."
 msgstr "За повече информация, вижте <a href=\"%s\">бележките към обновлението</a>."
 
 #. translators: 1: WordPress version number, 2: plural number of bugs. Singular
 #. security issue.
-#: wp-admin/about.php:399
+#: wp-admin/about.php:453
 msgid "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bugs."
 msgstr[0] "<strong>Версия %1$s</strong> решава проблем със сигурността и поправя %2$s бъг."
@@ -5562,7 +5563,8 @@ msgstr[1] "<strong>Версия %1$s</strong> решава проблем със
 #. translators: 1: WordPress version number, 2: plural number of bugs.
 #. translators: 1: WordPress version number, 2: plural number of bugs. More
 #. than one security issue.
-#: wp-admin/about.php:39 wp-admin/about.php:57 wp-admin/about.php:403
+#: wp-admin/about.php:39 wp-admin/about.php:93 wp-admin/about.php:111
+#: wp-admin/about.php:457
 msgid "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bugs."
 msgstr[0] "<strong>Версия %1$s</strong> решава няколко проблема със сигурността и поправя %2$s бъг."
@@ -5573,19 +5575,19 @@ msgid "Welcome to your WordPress Dashboard! This is the screen you will see when
 msgstr "Добре дошли в таблото на WordPress! Това е екранът, който ще виждате, когато влизате във вашия сайт и който ви дава достъп до всички функции за управление на сайта. Може да получите помощ за всеки екран, като натиснете секцията \"Помощ\" над заглавието на екрана."
 
 #. translators: %s: WordPress version number
-#: wp-admin/about.php:392
+#: wp-admin/about.php:446
 msgid "<strong>Version %s</strong> addressed some security issues."
 msgstr "<strong>Версия %1$s</strong> решава проблем със сигурността."
 
-#: wp-admin/about.php:383
+#: wp-admin/about.php:437
 msgid "Security Release"
 msgstr "Версия с добавки за защита"
 
-#: wp-admin/about.php:380
+#: wp-admin/about.php:434
 msgid "Maintenance Release"
 msgstr "Версия с добавки за поддръжка"
 
-#: wp-admin/about.php:386
+#: wp-admin/about.php:440
 msgid "Maintenance and Security Release"
 msgstr "Версия с добавки за поддръжка и защита"
 
@@ -5602,7 +5604,7 @@ msgstr "Този екран ви дава възможност да промен
 msgid "Welcome to WordPress %1$s. <a href=\"%2$s\">Learn more</a>."
 msgstr "Добре дошли в WordPress %1$s. <a href=\"%2$s\">Научете повече</a>."
 
-#: wp-admin/about.php:273
+#: wp-admin/about.php:327
 msgid "Return to Updates"
 msgstr "Обратно към новите версии"
 
@@ -5874,11 +5876,11 @@ msgstr "Понеже това е мулти-сайт инсталация, мо�
 msgid "Welcome to WordPress %s"
 msgstr "Добре дошли в WordPress %s"
 
-#: wp-admin/about.php:273
+#: wp-admin/about.php:327
 msgid "Return to Dashboard &rarr; Updates"
 msgstr "Обратно към Табло &rarr; Обновления"
 
-#: wp-admin/about.php:276
+#: wp-admin/about.php:330
 msgid "Go to Dashboard &rarr; Home"
 msgstr "Към таблото &rarr; Начало"
 
@@ -7718,7 +7720,7 @@ msgstr "Моля въведете валидно име на менюто."
 msgid "Delete Plugin"
 msgstr "Изтриване на разширение"
 
-#: wp-admin/about.php:276
+#: wp-admin/about.php:330
 msgid "Go to Dashboard"
 msgstr "Към таблото"
 
@@ -8221,7 +8223,7 @@ msgid_plural "Inactive <span class=\"count\">(%s)</span>"
 msgstr[0] "Изключенo <span class=\"count\">(%s)</span>"
 msgstr[1] "Изключени <span class=\"count\">(%s)</span>"
 
-#: wp-admin/options-media.php:131
+#: wp-admin/options-media.php:133
 msgid "Organize my uploads into month- and year-based folders"
 msgstr "Организиране на качени файлове в директории по месец и година"
 
@@ -8434,43 +8436,43 @@ msgstr "Настройки за качени файлове"
 msgid "Image sizes"
 msgstr "Размери на изображения"
 
-#: wp-admin/options-media.php:53
+#: wp-admin/options-media.php:53 wp-admin/options-media.php:54
 msgid "Thumbnail size"
 msgstr "Малко изображение"
 
-#: wp-admin/options-media.php:65 wp-admin/options-media.php:66
+#: wp-admin/options-media.php:67 wp-admin/options-media.php:68
 msgid "Medium size"
 msgstr "Средно изображение"
 
-#: wp-admin/options-media.php:67 wp-admin/options-media.php:78
+#: wp-admin/options-media.php:69 wp-admin/options-media.php:80
 msgid "Max Width"
 msgstr "Максимална широчина"
 
-#: wp-admin/options-media.php:70 wp-admin/options-media.php:81
+#: wp-admin/options-media.php:72 wp-admin/options-media.php:83
 msgid "Max Height"
 msgstr "Максимална височина"
 
-#: wp-admin/options-media.php:76 wp-admin/options-media.php:77
+#: wp-admin/options-media.php:78 wp-admin/options-media.php:79
 msgid "Large size"
 msgstr "Голямо изображение"
 
-#: wp-admin/options-media.php:94
+#: wp-admin/options-media.php:96
 msgid "Embeds"
 msgstr "Вмъкване на мултимедия"
 
-#: wp-admin/options-media.php:101
+#: wp-admin/options-media.php:103
 msgid "Uploading Files"
 msgstr "Качване на файлове"
 
-#: wp-admin/options-media.php:108
+#: wp-admin/options-media.php:110
 msgid "Store uploads in this folder"
 msgstr "Запазване на качените файлове в тази директория"
 
-#: wp-admin/options-media.php:118
+#: wp-admin/options-media.php:120
 msgid "Full URL path to files"
 msgstr "Пълен адрес (URL) до качените файлове"
 
-#: wp-admin/options-media.php:120
+#: wp-admin/options-media.php:122
 msgid "Configuring this is optional. By default, it should be blank."
 msgstr "Настройката на това поле не е задължителна. По подразбиране е празно"
 
@@ -8796,7 +8798,7 @@ msgstr "Обновяване структурата на базата от да�
 msgid "User(s) already exists."
 msgstr "Потребителят вече съществува."
 
-#: wp-admin/options-media.php:60
+#: wp-admin/options-media.php:62
 msgid "Crop thumbnail to exact dimensions (normally thumbnails are proportional)"
 msgstr "Изрязване до точно тези размери (обикновено умалените изображения са със същите пропорции)"
 

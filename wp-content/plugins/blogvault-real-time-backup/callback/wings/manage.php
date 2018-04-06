@@ -1,30 +1,27 @@
 <?php
 
 if (!defined('ABSPATH')) exit;
-class BVManageSite {
+if (!class_exists('BVManageCallback')) :
+class BVManageCallback {
+	function getError($err) {
+		global $bvcb;
+		return $bvcb->bvmain->lib->objectToArray($err);
+	}	
 
-	function __construct() {
-		global $wp_filesystem, $blogvault;
-		$this->include_files();
-
-		if (!$blogvault->is_pantheon() && !$wp_filesystem) {
-			WP_Filesystem();
-		}
+	function is_pantheon() {
+		return (!empty($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] !== 'dev');
 	}
 
-	static public function &init() {
-		static $instance = false;
-		if (!$instance) {
-			$instance = new BVManageSite();
+	function isServerWritable() {
+		if ($this->is_pantheon()) {
+			return false;
 		}
-		return $instance;
-	}
 
-	/***
-	 * PHP4 constructor.
-	 ***/
-	function BVManageSite() {
-		BVManageSite::__construct();
+		if ((!defined('FTP_HOST') || !defined('FTP_USER')) && (get_filesystem_method(array(), false) != 'direct')) {
+			return false;
+		} else {
+			return true;
+		}
 	}
 
 	function include_files() {
@@ -208,15 +205,15 @@ class BVManageSite {
 	}
 
 	function upgradeCore($args) {
-		global $blogvault, $wp_filesystem, $wp_version;
-		$core = $blogvault->getTransient('update_core');
+		global $wp_filesystem, $wp_version, $bvcb, $bvresp;
+		$core = $bvcb->bvmain->info->getTransient('update_core');
 		$core_update_index = intval($args['coreupdateindex']);
 		if (isset($core->updates) && !empty($core->updates)) {
 			$to_update = $core->updates[$core_update_index];
 		} else {
 			return array('status' => "Error", "message" => "Updates not available");
 		}
-		$blogvault->addStatus("Core_Upgrader", class_exists('Core_Upgrader'));
+		$bvresp->addStatus("Core_Upgrader", class_exists('Core_Upgrader'));
 		if (version_compare($wp_version, '3.1.9', '>')) {
 			$core   = new Core_Upgrader();
 			$result = $core->upgrade($to_update);
@@ -226,7 +223,7 @@ class BVManageSite {
 				return array('status' => 'Done');
 			}
 		} else {
-			$blogvault->addStatus("wp_update_core", function_exists('wp_update_core'));
+			$bvresp->addStatus("wp_update_core", function_exists('wp_update_core'));
 			if (function_exists('wp_update_core')) {
 				$result = wp_update_core($to_update);
 				if (is_wp_error($result)) {
@@ -236,7 +233,7 @@ class BVManageSite {
 				}
 			}
 
-			$blogvault->addStatus("WP_Upgrader", class_exists('WP_Upgrader'));
+			$bvresp->addStatus("WP_Upgrader", class_exists('WP_Upgrader'));
 			if (class_exists('WP_Upgrader')) {
 				$upgrader = new WP_Upgrader();
 
@@ -286,7 +283,6 @@ class BVManageSite {
 	}
 
 	function upgradePlugins($plugins) {
-		global $blogvault;
 		$result = array();
 		if (class_exists('Plugin_Upgrader')) {
 			if (array_key_exists('bvskin', $_REQUEST)) {
@@ -310,7 +306,6 @@ class BVManageSite {
 	}
 
 	function upgradeThemes($themes) {
-		global $blogvault;
 		$result  = array();
 		if (class_exists('Theme_Upgrader')) {
 			if (array_key_exists('bvskin', $_REQUEST)) {
@@ -332,11 +327,6 @@ class BVManageSite {
 		}
 		return $result;
 	}
-
-	function getError($err) {
-		global $blogvault;
-		return $blogvault->objectToArray($err);
-	}	
 	
 	function install($params) {
 		$result = array();
@@ -409,4 +399,64 @@ class BVManageSite {
 	function getPremiumUpgradesInfo() {
 		return apply_filters( 'mwp_premium_perform_update', array() );
 	}
+
+	function autoLogin($username, $isHttps) {
+		$user = get_user_by('login', $username);
+		if ($user != FALSE) {
+			wp_set_current_user( $user->ID );
+			if ($isHttps) {
+				wp_set_auth_cookie( $user->ID, false, true );
+			} else {
+				# As we are not sure about wp-cofig.php settings for sure login
+				wp_set_auth_cookie( $user->ID, false, true );
+				wp_set_auth_cookie( $user->ID, false, false );
+			}
+			$redirect_to = get_admin_url();
+			wp_safe_redirect( $redirect_to );
+			exit;
+		}
+	}
+
+	function process($method) {
+		global $wp_filesystem, $bvresp;
+		$this->include_files();
+
+		if (!$this->is_pantheon() && !$wp_filesystem) {
+			WP_Filesystem();
+		}
+
+		switch ($method) {
+		case "adduser":
+			$bvresp->addStatus("adduser", $this->addUser($_REQUEST['args']));
+			break;
+		case "upgrade":
+			$bvresp->addStatus("upgrades", $this->upgrade($_REQUEST['args']));
+			break;
+		case "edit":
+			$bvresp->addStatus("edit", $this->edit($_REQUEST['args']));
+			break;
+		case "install":
+			$bvresp->addStatus("install", $this->install($_REQUEST['args']));
+			break;
+		case "getpremiumupdates":
+			$bvresp->addStatus("premiumupdates", $this->getPremiumUpdates());
+			break;
+		case "getpremiumupgradesinfo":
+			$bvresp->addStatus("premiumupgradesinfo", $this->getPremiumUpgradesInfo());
+			break;
+		case "writeable":
+			$bvresp->addStatus("writeable", $this->isServerWritable());
+			break;
+		case "autologin":
+			$isHttps = false;
+			if (array_key_exists('https', $_REQUEST))
+				$isHttps = true;
+			$bvresp->addStatus("autologin", $this->autoLogin($_REQUEST['username'], $isHttps));
+			break;
+		default:
+			return false;
+		}
+		return true;
+	}
 }
+endif;

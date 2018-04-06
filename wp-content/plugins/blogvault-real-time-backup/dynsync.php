@@ -1,38 +1,40 @@
 <?php
+
 if (!defined('ABSPATH')) exit;
-class BVDynamicBackup {
+if (!class_exists('BVDynSync')) :
+	
+class BVDynSync {
+
+	public static $dynsync_table = 'dynamic_sync';
+	public $bvmain;
 	/**
 	 * PHP5 constructor.
 	 */
-	function __construct() {
+	function __construct($bvmain) {
+		$this->bvmain = $bvmain;
+	}
+
+	function init() {
 		$this->add_actions_and_listeners();
+		add_action('clear_dynsync_config', array($this, 'clearConfig'));
 	}
 
-	/**
-	 * PHP4 constructor.
-	 */
-	function BVDynamicBackup() {
-		BVDynamicBackup::__construct();
+	public function clearConfig() {
+		$this->bvmain->info->deleteOption('bvdynplug');
+		$this->bvmain->info->deleteOption('bvDynSyncActive');
+		$this->bvmain->info->deleteOption('bvWooDynSync');
+		$this->bvmain->db->dropBVTable(BVDynSync::$dynsync_table);
 	}
 
-	static public function &init() {
-		static $instance = false;
-		if (!$instance) {
-			$instance = new BVDynamicBackup();
-		}
-		return $instance;
+	public static function getDynSyncTableName() {
+		return $this->bvmain->db->getBVTable(BVDynSync::$dynsync_table);
 	}
-	
+
 	function add_event($event_type, $event_data) {
-		global $wp_current_filter, $wpdb, $blogvault;
-		if ($blogvault->isMultisite()) {
-			$site_id = get_current_blog_id();
-		} else {
-			$site_id = 1;
-		}
-		$table_name = $blogvault->getDynSyncTableName();
+		global $wp_current_filter;
+		$site_id = get_current_blog_id();
 		$values = array ( "event_type" => $event_type, "event_tag" => end($wp_current_filter), "event_data" => maybe_serialize($event_data), "site_id" => $site_id);
-		$wpdb->replace($table_name, $values);
+		$this->bvmain->db->replaceIntoBVTable(BVDynSync::$dynsync_table, $values);
 	}
 
 	function add_db_event($table, $message) {
@@ -51,11 +53,10 @@ class BVDynamicBackup {
 	}
 
 	function get_ignored_postmeta() {
-		global $blogvault;
 		$defaults = array(
 			'_excluded_links'
 		);
-		$ignored_postmeta = $blogvault->getOption('bvIgnoredPostmeta');
+		$ignored_postmeta = $this->bvmain->info->getOption('bvIgnoredPostmeta');
 		if (empty($ignored_postmeta)) {
 			$ignored_postmeta = array();
 		}
@@ -193,19 +194,16 @@ class BVDynamicBackup {
 	}
 
 	function get_ignored_options() {
-		global $blogvault;
 		$defaults = array(
 			'cron',
 			'wpsupercache_gc_time',
 			'rewrite_rules',
 			'akismet_spam_count',
-			'bvLastRecvTime',
-			'bvLastSendTime',
 			'iwp_client_user_hit_count',
 			'_disqus_sync_lock',
 			'stats_cache'
 		);
-		$ignored_options = $blogvault->getOption('bvIgnoredOptions');
+		$ignored_options = $this->bvmain->info->getOption('bvIgnoredOptions');
 		if (empty($ignored_options)) {
 			$ignored_options = array();
 		}
@@ -241,8 +239,7 @@ class BVDynamicBackup {
 	}
 
 	function theme_action_handler($theme) {
-		global $blogvault;
-		$this->add_event('themes', array('theme' => $blogvault->getOption('stylesheet')));
+		$this->add_event('themes', array('theme' => $this->bvmain->info->getOption('stylesheet')));
 	}
 
 	function plugin_action_handler($plugin='') {
@@ -259,20 +256,20 @@ class BVDynamicBackup {
 	}
 
 	function sitemeta_handler($option) {
-		global $wpdb;
 		$ping_permitted = $this->get_ping_permission($option);
 		if ($ping_permitted)
-			$this->add_db_event('sitemeta', array('site_id' => $wpdb->siteid, 'meta_key' => $option));
+			$this->add_db_event('sitemeta', array('site_id' => $this->bvmain->db->getSiteId(), 'meta_key' => $option));
 		return $ping_permitted;
 	}
 
 	/* WOOCOMMERCE SUPPORT FUNCTIONS BEGINS FROM HERE*/
 
 	function woocommerce_resume_order_handler($order_id) {
-		global $wpdb;
 		$this->add_db_event('woocommerce_order_items', array('order_id' => $order_id, 'msg_type' => 'delete'));
 		$meta_ids = array();
-		foreach( $wpdb->get_results($wpdb->prepare("SELECT {$wpdb->prefix}woocommerce_order_itemmeta.meta_id FROM {$wpdb->prefix}woocommerce_order_itemmeta INNER JOIN {$wpdb->prefix}woocommerce_order_items WHERE {$wpdb->prefix}woocommerce_order_items.order_item_id = {$wpdb->prefix}woocommerce_order_itemmeta.order_item_id AND {$wpdb->prefix}woocommerce_order_items.order_id = %d", $order_id)) as $key => $row) {
+		$itemmeta_table = $this->bvmain->db->getWPTable('woocommerce_order_itemmeta');
+		$items_table = $this->bvmain->db->getWPTable('woocommerce_order_items');
+		foreach( $this->bvmain->db->getResult($this->bvmain->db->prepare("SELECT {$itemmeta_table}.meta_id FROM {$itemmeta_table} INNER JOIN {$items_table} WHERE {$items_table}.order_item_id = {$itemmeta_table}.order_item_id AND {$items_table}.order_id = %d", $order_id)) as $key => $row) {
 			if (!in_array($row->meta_id, $meta_ids)) {
 				$meta_ids[] = $row->meta_id;
 				$this->add_db_event('woocommerce_order_itemmeta', array('meta_id' => $row->meta_id, 'msg_type' => 'delete'));
@@ -338,10 +335,9 @@ class BVDynamicBackup {
 	}
 
 	function woocommerce_delete_order_items_handler($postid) {
-		global $wpdb;
 		$meta_ids = array();
 		$order_item_ids = array();
-		foreach( $wpdb->get_results("SELECT {$wpdb->prefix}woocommerce_order_itemmeta.meta_id, {$wpdb->prefix}woocommerce_order_items.order_item_id FROM {$wpdb->prefix}woocommerce_order_items JOIN {$wpdb->prefix}woocommerce_order_itemmeta ON {$wpdb->prefix}woocommerce_order_items.order_item_id = {$wpdb->prefix}woocommerce_order_itemmeta.order_item_id WHERE {$wpdb->prefix}woocommerce_order_items.order_id = '{$postid}'") as $key => $row) {
+		foreach( $this->bvmain->db->get_results("SELECT {$this->bvmain->db->prefix}woocommerce_order_itemmeta.meta_id, {$this->bvmain->db->prefix}woocommerce_order_items.order_item_id FROM {$this->bvmain->db->prefix}woocommerce_order_items JOIN {$this->bvmain->db->prefix}woocommerce_order_itemmeta ON {$this->bvmain->db->prefix}woocommerce_order_items.order_item_id = {$this->bvmain->db->prefix}woocommerce_order_itemmeta.order_item_id WHERE {$this->bvmain->db->prefix}woocommerce_order_items.order_id = '{$postid}'") as $key => $row) {
 			if (!in_array($row->meta_id, $meta_ids)) {
 				$meta_ids[] = $row->meta_id;
 				$this->add_db_event('woocommerce_order_itemmeta', array('meta_id' => $row->meta_id, 'msg_type' => 'delete'));
@@ -420,8 +416,7 @@ class BVDynamicBackup {
 
 
 	/* ADDING ACTION AND LISTENERS FOR CAPTURING EVENTS. */
-	function add_actions_and_listeners() {
-		global $blogvault;
+	public function add_actions_and_listeners() {
 		/* CAPTURING EVENTS FOR WP_COMMENTS TABLE */
 		add_action('delete_comment', array($this, 'comment_action_handler'));
 		add_action('wp_set_comment_status', array($this, 'comment_action_handler'));
@@ -503,17 +498,15 @@ class BVDynamicBackup {
 		/* CAPTURING EVENTS FOR FILES UPLOAD */
 		add_action('wp_handle_upload', array($this, 'upload_handler'));
 
-		if ($blogvault->isMultisite()) {
-			add_action('wpmu_new_blog', array($this, 'wpmu_new_blog_create_handler'), 10, 1);
-			add_action('refresh_blog_details', array($this, 'wpmu_new_blog_create_handler'), 10, 1);
-			/* XNOTE: Handle registration_log_handler from within the server */
-			/* These are applicable only in case of WPMU */
-			add_action('delete_site_option',array($this, 'sitemeta_handler'), 10, 1);
-			add_action('add_site_option', array($this, 'sitemeta_handler'), 10, 1);
-			add_action('update_site_option', array($this, 'sitemeta_handler'), 10, 1);
-		}
+		/* These are applicable only in case of WPMU */
+		/* XNOTE: Handle registration_log_handler from within the server */
+		add_action('wpmu_new_blog', array($this, 'wpmu_new_blog_create_handler'), 10, 1);
+		add_action('refresh_blog_details', array($this, 'wpmu_new_blog_create_handler'), 10, 1);
+		add_action('delete_site_option',array($this, 'sitemeta_handler'), 10, 1);
+		add_action('add_site_option', array($this, 'sitemeta_handler'), 10, 1);
+		add_action('update_site_option', array($this, 'sitemeta_handler'), 10, 1);
 
-		$is_woo_dyn = $blogvault->getOption('bvWooDynSync');
+		$is_woo_dyn = $this->bvmain->info->getOption('bvWooDynSync');
 		if ($is_woo_dyn == 'yes') {
 			add_action('woocommerce_resume_order', array($this, 'woocommerce_resume_order_handler'), 10, 1);
 			add_action('woocommerce_new_order_item', 	array($this, 'woocommerce_new_order_item_handler'), 10, 3);
@@ -555,3 +548,4 @@ class BVDynamicBackup {
 		}
 	}
 }
+endif;

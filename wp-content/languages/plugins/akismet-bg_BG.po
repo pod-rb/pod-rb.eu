@@ -11,7 +11,7 @@ msgstr ""
 "Language: bg\n"
 "Project-Id-Version: Plugins - Akismet Anti-Spam - Stable (latest release)\n"
 
-#: class.akismet.php:210
+#: class.akismet.php:211
 msgid "Comment discarded."
 msgstr "Коментарът е отхвърлен."
 
@@ -67,7 +67,7 @@ msgstr "На тази страница можете да обновите Akisme
 msgid "Used by millions, Akismet is quite possibly the best way in the world to <strong>protect your blog from spam</strong>. It keeps your site protected even while you sleep. To get started: activate the Akismet plugin and then go to your Akismet Settings page to set up your API key."
 msgstr "Използван от милиони, Akismet е може би най-добрият метод за <strong>защита на вашия сайт от спам</strong>. Предпазва го, дори докато спите. За да започнете, активирайте разширението Akismet и навигирайте до настройките, за да въведете ключ за API."
 
-#. #-#-#-#-#  akismet-code.pot (Akismet Anti-Spam 4.0.2)  #-#-#-#-#
+#. #-#-#-#-#  akismet-code.pot (Akismet Anti-Spam 4.0.3)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: class.akismet-admin.php:95 class.akismet-admin.php:98
 msgid "Akismet Anti-Spam"
@@ -169,7 +169,7 @@ msgstr "Няма коментари за проверка. Akismet провер�
 msgid "Checking for Spam"
 msgstr "Проверка за Спам"
 
-#: class.akismet.php:452
+#: class.akismet.php:492
 msgid "Comment not found."
 msgstr "Коментарът не е намерен."
 
@@ -637,11 +637,11 @@ msgstr "Akismet е уловил този коментар като спам по
 msgid "Akismet cleared this comment during an automatic retry."
 msgstr "Akismet е одобрил този коментар по време на автоматичен повторен опит."
 
-#: class.akismet.php:1208
+#: class.akismet.php:1248
 msgid "Please <a href=\"%1$s\">upgrade WordPress</a> to a current version, or <a href=\"%2$s\">downgrade to version 2.4 of the Akismet plugin</a>."
 msgstr "Моля <a href=\"%1$s\">обновете WordPress</a> до последната версия или <a href=\"%2$s\">преминете на версия 2.4 на Akismet</a>."
 
-#: class.akismet.php:1208
+#: class.akismet.php:1248
 msgid "Akismet %s requires WordPress %s or higher."
 msgstr "Akismet %s изисква версия на WordPress %s или по-висока."
 

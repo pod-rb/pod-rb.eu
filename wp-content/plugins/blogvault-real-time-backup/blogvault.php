@@ -1,15 +1,15 @@
 <?php
 /*
-Plugin Name: WordPress Backup & Security Plugin - BlogVault
-Plugin URI: http://blogvault.net/
-Description: Easiest way to backup & secure your WordPress site
-Author: Backup by BlogVault
-Author URI: http://blogvault.net/
-Version: 1.49
+Plugin Name: WordPress Backup & Security Plugin - BlogVault 
+Plugin URI: https://blogvault.net 
+Description: Easiest way to backup & secure your WordPress site 
+Author: Backup by BlogVault 
+Author URI: https://blogvault.net
+Version: 1.61
 Network: True
  */
 
-/*  Copyright YEAR  PLUGIN_AUTHOR_NAME  (email : PLUGIN AUTHOR EMAIL)
+/*  Copyright 2017  BlogVault  (email : support@blogvault.net)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -28,97 +28,56 @@ Network: True
 /* Global response array */
 
 if (!defined('ABSPATH')) exit;
-global $bvVersion;
-global $blogvault;
-global $bvDynamicEvents;
-global $bvmanager;
-$bvVersion = '1.49';
+global $bvcb, $bvresp;
 
-if (is_admin())
+require_once dirname( __FILE__ ) . '/main.php';
+$bvmain = new BVBackup();
+
+register_uninstall_hook(__FILE__, array('BVBackup', 'uninstall'));
+register_activation_hook(__FILE__, array($bvmain, 'activate'));
+register_deactivation_hook(__FILE__, array($bvmain, 'deactivate'));
+
+add_action('wp_footer', array($bvmain, 'footerHandler'), 100);
+
+if (is_admin()) {
 	require_once dirname( __FILE__ ) . '/admin.php';
-
-if (!class_exists('BVHttpClient')) {
-	require_once dirname( __FILE__ ) . '/bv_http_client.php';
-}
-
-if (!class_exists('BlogVault')) {
-	require_once dirname( __FILE__ ) . '/bv_class.php';
-	$blogvault = BlogVault::getInstance();
-}
-
-if (!class_exists('BVDynamicBackup')) {
-	require_once dirname( __FILE__ ) . '/bv_dynamic_backup.php';
-}
-
-if (!class_exists('BVSecurity')) {
-	require_once dirname( __FILE__ ) . '/bv_security.php';
-	$bvsecurity = BVSecurity::init();
-}
-
-add_action('bvdailyping_daily_event', array($blogvault, 'dailyping'));
-if ( !function_exists('bvActivateHandler') ) :
-	function bvActivateHandler() {
-		global $blogvault;
-		if (!wp_next_scheduled('bvdailyping_daily_event')) {
-			wp_schedule_event(time(), 'daily', 'bvdailyping_daily_event');
-		}
-		if (!isset($_REQUEST['blogvaultkey'])) {
-			##BVKEYSLOCATE##
-		}
-		$blogvault->updateOption('bvActivateTime', time());
-		if ($blogvault->getOption('bvPublic') !== false) {
-			$blogvault->updateOption('bvLastSendTime', time());
-			$blogvault->updateOption('bvLastRecvTime', 0);
-			$blogvault->activate();
-		} else {
-			$rand_secret = $blogvault->randString(32);
-			$blogvault->updateOption('bvSecretKey', $rand_secret);
-			$blogvault->updateOption('bvActivateRedirect', 'yes');
-		}
-	}
-	register_activation_hook(__FILE__, 'bvActivateHandler');
-endif;
-
-if ( !function_exists('bvDeactivateHandler') ) :
-	function bvDeactivateHandler() {
-		global $blogvault;
-		wp_clear_scheduled_hook('bvdailyping_daily_event');
-		$body = array();
-		$body['wpurl'] = urlencode($blogvault->wpurl());
-		$body['url2'] = urlencode(get_bloginfo('wpurl'));
-		$clt = new BVHttpClient();
-		if (strlen($clt->errormsg) > 0) {
-			return false;
-		}
-		$resp = $clt->post($blogvault->getUrl("deactivate"), array(), $body);
-		if (array_key_exists('status', $resp) && ($resp['status'] != '200')) {
-			return false;
-		}
-		return true;
-	}
-	register_deactivation_hook(__FILE__, 'bvDeactivateHandler');
-endif;
-
-if (!function_exists('bvFooterHandler')) :
-	function bvFooterHandler() {
-		echo '<div style="max-width:150px; margin:0 auto; text-align: center;"><a href="http://blogvault.net?src=wpbadge"><img src="'.plugins_url('img/wordpress_backup_bbd1.png', __FILE__).'" alt="WordPress Backup" /></a></div>';
-	}
-	$isbvfooter = $blogvault->getOption('bvBadgeInFooter');
-	if ($isbvfooter == 'yes') {
-		add_action('wp_footer', 'bvFooterHandler', 100);
-	}
-endif;
-
-if ((array_key_exists('apipage', $_REQUEST)) && stristr($_REQUEST['apipage'], 'blogvault')) {
-	if (array_key_exists('afterload', $_REQUEST)) {
-		add_action('wp_loaded', array($blogvault, 'processApiRequest'));
+	$bvadmin = new BVAdmin($bvmain);
+	add_action('admin_init', array($bvadmin, 'initHandler'));
+	add_filter('all_plugins', array($bvadmin, 'initBranding'));
+	if ($bvmain->info->isMultisite()) {
+		add_action('network_admin_menu', array($bvadmin, 'menu'));
 	} else {
-		$blogvault->processApiRequest();
+		add_action('admin_menu', array($bvadmin, 'menu'));
+	}
+	add_filter('plugin_action_links', array($bvadmin, 'settingsLink'), 10, 2);
+	add_action('admin_notices', array($bvadmin, 'activateWarning'));
+}
+
+if ((array_key_exists('bvplugname', $_REQUEST)) &&
+		stristr($_REQUEST['bvplugname'], $bvmain->plugname)) {
+	require_once dirname( __FILE__ ) . '/callback.php';
+	$bvcb = new BVCallback($bvmain);
+	$bvresp = new BVResponse();
+	if ($bvcb->preauth() === 1) {
+		if ($bvcb->authenticate() === 1) {
+			if (array_key_exists('afterload', $_REQUEST)) {
+				add_action('wp_loaded', array($bvcb, 'execute'));
+			} else {
+				$bvcb->execute();
+			}
+		} else {
+			$bvcb->terminate(false);
+		}
 	}
 } else {
-	# Do not load dynamic sync for callback requests
-	$isdynsyncactive = $blogvault->getOption('bvDynSyncActive');
-	if ($isdynsyncactive == 'yes') {
-		BVDynamicBackup::init();
+	if ($bvmain->isProtectModuleEnabled()) {
+		require_once dirname( __FILE__ ) . '/protect.php';
+		$bvprotect = new BVProtect($bvmain);
+		$bvprotect->init();
+	}
+	if ($bvmain->isDynSyncModuleEnabled()) {
+		require_once dirname( __FILE__ ) . '/dynsync.php';
+		$dynsync = new BVDynSync($bvmain);
+		$dynsync->init();
 	}
 }
