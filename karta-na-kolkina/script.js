@@ -10,10 +10,30 @@ window.onload = function () {
     // viewportSelector: document.getElementById('svgMap').querySelector('#g4') // this option will make library to misbehave. Viewport should have no transform attribute
   });
 
+  var embed = document.createElement('embed');
+  embed.setAttribute('style', 'width: 100%; height: 100%; border: 1px solid black;');
+  embed.setAttribute('type', 'image/svg+xml');
+  embed.setAttribute('src', "Kolkina-razrez.svg");
+  embed.setAttribute('id', "svgRazrez");
+
+  document.getElementById('container').appendChild(embed)
+
+  lastEventListener = function () {
+    svgPanZoom(embed, {
+      zoomEnabled: true,
+      controlIconsEnabled: true,
+      fit: true,
+      center: true,
+      maxZoom: 150,
+    });
+  }
+  embed.addEventListener('load', lastEventListener)
+
   menu();
 
   function toggleLineWidth(zoomScale) {
-    if (zoomScale > 5) {
+    var isTopoOn = document.getElementById('topo').firstElementChild.className == 'fa fa-check-square-o'
+    if (zoomScale > 5 && !isTopoOn) {
       document.getElementById('container').className = ""
     } else {
       document.getElementById('container').className = "bigMap"
@@ -30,18 +50,38 @@ window.onload = function () {
       }
     }
     document.getElementById('menuButton').onclick = toggleMenu;
-    document.getElementById('topo').addEventListener("click", function (e) {
 
-      var icon = e.currentTarget.firstElementChild;
-      if (icon.className == "fa fa-square-o") {
-        document.getElementById('topoMap').style.display = "block";
-        icon.className = "fa fa-check-square-o";
-      } else {
-        document.getElementById('topoMap').style.display = "none";
-        icon.className = "fa fa-square-o";
-      }
-      toggleMenu();
+    Array.from(document.querySelectorAll('#dropdownMenu button')).forEach(function (button) {
+      button.addEventListener("click", function (e) {
+        var icon = e.currentTarget.firstElementChild;
+        if (icon.className == "fa fa-square-o") {
+          icon.className = "fa fa-check-square-o";
+        } else {
+          icon.className = "fa fa-square-o";
+        }
 
+        if (e.target.id == "topo" || e.currentTarget.id == "topo") {
+          if (icon.className == "fa fa-square-o") {
+            document.getElementById('topoMap').style.display = "none";
+          } else {
+            document.getElementById('topoMap').style.display = "block";
+          }
+        }
+
+        if (e.target.id == "vertical" || e.currentTarget.id == "vertical") {
+          if (icon.className == "fa fa-square-o") {
+            document.getElementById('topoMap').style.display = "block";
+            document.getElementById('svgMap').style.display = "block";
+            document.getElementById('svgRazrez').style.display = "none";
+          } else {
+            document.getElementById('topoMap').style.display = "none";
+            document.getElementById('svgMap').style.display = "none";
+            document.getElementById('svgRazrez').style.display = "block";
+          }
+        }
+        toggleLineWidth(mapSVG.getZoom())
+        toggleMenu();
+      });
     });
   }
 
