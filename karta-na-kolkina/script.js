@@ -10,24 +10,34 @@ window.onload = function () {
     // viewportSelector: document.getElementById('svgMap').querySelector('#g4') // this option will make library to misbehave. Viewport should have no transform attribute
   });
 
-  var embed = document.createElement('embed');
-  embed.setAttribute('style', 'width: 100%; height: 100%; border: 1px solid black;');
-  embed.setAttribute('type', 'image/svg+xml');
-  embed.setAttribute('src', "Kolkina-razrez.svg");
-  embed.setAttribute('id', "svgRazrez");
+  window.mapSVG2 = svgPanZoom('#svgRazrez', {
+    zoomEnabled: true,
+    controlIconsEnabled: true,
+    fit: true,
+    center: true,
+    maxZoom: 150,
+    onZoom: toggleLineWidthVertical
+    // viewportSelector: document.getElementById('svgMap').querySelector('#g4') // this option will make library to misbehave. Viewport should have no transform attribute
+  });
+  document.getElementById('svgRazrez').style.display = "none";
+  // var embed = document.createElement('embed');
+  // embed.setAttribute('style', 'width: 100%; height: 100%; border: 1px solid black;');
+  // embed.setAttribute('type', 'image/svg+xml');
+  // embed.setAttribute('src', "Kolkina-razrez.svg");
+  // embed.setAttribute('id', "svgRazrez");
 
-  document.getElementById('container').appendChild(embed)
+  // document.getElementById('container').appendChild(embed)
 
-  lastEventListener = function () {
-    svgPanZoom(embed, {
-      zoomEnabled: true,
-      controlIconsEnabled: true,
-      fit: true,
-      center: true,
-      maxZoom: 150,
-    });
-  }
-  embed.addEventListener('load', lastEventListener)
+  // lastEventListener = function () {
+  //   svgPanZoom(embed, {
+  //     zoomEnabled: true,
+  //     controlIconsEnabled: true,
+  //     fit: true,
+  //     center: true,
+  //     maxZoom: 150,
+  //   });
+  // }
+  // embed.addEventListener('load', lastEventListener)
 
   menu();
 
@@ -35,6 +45,14 @@ window.onload = function () {
     var isTopoOn = document.getElementById('topo').firstElementChild.className == 'fa fa-check-square-o'
     if (zoomScale > 5 && !isTopoOn) {
       document.getElementById('container').className = ""
+    } else {
+      document.getElementById('container').className = "bigMap"
+    }
+  }
+
+  function toggleLineWidthVertical(zoomScale) {
+    if (zoomScale > 2) {
+      document.getElementById('container').className = "verticalMap"
     } else {
       document.getElementById('container').className = "bigMap"
     }
