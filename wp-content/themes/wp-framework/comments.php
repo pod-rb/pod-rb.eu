@@ -1,141 +1,88 @@
 <?php
 /**
- * Template: Comments.php
+ * WordPress Template: Comments
  *
- * @package WPFramework
+ * The comments template is used when a template needs to display comments 
+ * on that page.
+ *
+ * Individual comments have their own templates. The hierarchy for these 
+ * templates are {comment_type}.php, comment.php.
+ *
+ * Template Hierarchy
+ * - comment.php
+ *
+ * @package WP Framework
  * @subpackage Template
  */
 
-// Make sure comments.php doesn't get loaded directly
-if ( !empty( $_SERVER[ 'SCRIPT_FILENAME' ] ) && 'comments.php' == basename( $_SERVER[ 'SCRIPT_FILENAME' ] ) )
-	die ( 'Please do not load this page directly. Thanks!' );
+if ( !post_type_supports( get_post_type(), 'comments' ) )
+	return;
+?>
 
-if ( post_password_required() ) { ?>
-	<p class="password-protected alert">This post is password protected. Enter the password to view comments.</p>
-<?php return; } ?>
-
-<?php if ( have_comments() ) : // If comments exist for this entry, continue ?>
-<!--BEGIN #comments-->
 <div id="comments">
-    
-<?php if ( ! empty( $comments_by_type['comment'] ) ) { ?>
-	<?php framework_discussion_title( 'comment' ); ?>
-    
-    <!--BEGIN .comment-list-->
-    <ol class="comment-list">
-		<?php wp_list_comments(array(
-        'type' => 'comment',
-        'callback' => 'framework_comments_callback',
-        'end-callback' => 'framework_comments_endcallback' )); ?>
-    <!--END .comment-list-->
-    </ol>
-<?php framework_discussion_rss(); ?>
-<?php } ?>
+	<?php do_action( 'commentsdiv_open' ); ?>
 
+	<?php
+	// Make sure comments.php doesn't get loaded directly
+	if ( post_password_required() ) {
+		do_action( 'post_password_required' ); ?>
+		<p class="password-required"><?php _e( 'This post is password protected. Enter the password to view comments.', t() ); ?></p>
+		</div><!-- #comments -->
+	<?php return; } ?>
 
-<?php //if ( ! empty( $comments_by_type['pings'] ) ) { ?>
-	<?php //framework_discussion_title( 'pings' ); ?>
-	<!--BEGIN .pings-list-->
-    <!--ol class="pings-list">
-		<?php //wp_list_comments(array('type' => 'pings', 'callback' => 'framework_pings_callback', 'end-callback' => 'framework_pings_endcallback' )); ?>
-	</ol-->
-	<!--END .pings-list-->
-<?php //} ?>
+	<?php if ( have_comments() ) : ?>
 
-<!--END #comments-->
-</div>
-<?php endif; // ( have_comments() ) ?>
+		<?php do_action( 'have_comments_before' ); ?>
 
-<?php if ( comments_open() ) : // show comment form ?>
-<!--BEGIN #respond-->
-<div id="respond">
+		<h3 id="comments-title"><?php printf( _n( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), t() ), number_format_i18n( get_comments_number() ), '<em>' . get_the_title() . '</em>' ); ?></h3>
 
-    <div class="cancel-comment-reply"><?php cancel_comment_reply_link( 'Cancel Reply' ); ?></div>
-    
-    <h3 id="leave-a-reply"><?php comment_form_title( 'Остави пещерна рисунка', 'Отговори на пещерната рисунка  %s' ); ?></h3> 
+		<?php get_template_part( 'pagination', 'comments' ); ?>
 
-    <div class="fb-comments" data-href="<?php  echo $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]; ?>" data-num-posts="30" data-width="600" data-colorscheme="dark"></div>
-    
-    <?php if ( get_option( 'comment_registration' ) && !is_user_logged_in() ) : ?>
-	<p id="login-req" class="alert">Трябва да <a href="<?php echo get_option( 'siteurl' ); ?>/wp-login.php?redirect_to=<?php echo urlencode( get_permalink() ); ?>">влезете</a> за да напишете коментар.</p>
-    <?php else : ?>
+		<!-- comments title -->
+		<ol class="comment-list">
+			<?php
+			/**
+			 * talk about wpf_list_comment_args();
+			 */
+			wp_list_comments( wpf_list_comment_args() );
+			?>
+		</ol><!-- .comment-list -->
+
+		<?php get_template_part( 'pagination', 'comments' ); ?>
+
+		<?php do_action( 'have_comments_after' ); ?>
+
+	<?php else : ?>
+
+		<?php if ( pings_open() && !comments_open() ) : ?>
+
+			<p class="comments-closed pings-open">
+				<?php printf( __( 'Comments are closed, but <a href="%1$s" title="Trackback URL for this post">trackbacks</a> and pingbacks are open.', t() ), get_trackback_url() ); ?>
+			</p><!-- .comments-closed .pings-open -->
+
+			<?php do_action( 'comments_closed_pings_open' ); ?>
+
+		<?php elseif ( !comments_open() ) : ?>
+			
+			<p class="comments-closed">
+				<?php _e( 'Comments are closed.', t() ); ?>
+			</p><!-- .comments-closed -->
+
+			<?php do_action( 'comments_closed' ); ?>
+
+		<?php elseif ( comments_open() ) : ?>
+
+			<p class="no-comments">
+				<?php _e( 'No Comments.', t() ); ?>
+			</p><!-- .no-comments -->
+
+			<?php do_action( 'no_comments' ); ?>
+
+		<?php endif; ?>
 	
-    <!--BEGIN #comment-form-->
-	<form id="comment-form" method="post" action="<?php echo get_option( 'siteurl' ); ?>/wp-comments-post.php">
-		
-		<?php if ( is_user_logged_in() ) : global $current_user; // If user is logged-in, then show them their identity ?>
+	<?php endif; ?>
 
-        <p>Проникнал като <a href="<?php echo get_option( 'siteurl' ); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Log out of this account">Излизай, че мина контролното време &raquo;</a></p>
-        
-        <!--BEGIN #form-section-author-->
-        <div id="form-section-author" class="form-section">
-            <input name="author" id="author" type="text" value="<?php echo $current_user->user_nicename; ?>" tabindex="1" <?php if ( $req ) echo "aria-required='true'"; ?> />
-            <label for="author"<?php if ( $req ) echo ' class="required"'; ?>>Име</label>
-        <!--END #form-section-author-->
-        </div>
-        
-        <!--BEGIN #form-section-email-->
-        <div id="form-section-email" class="form-section">
-            <input name="email" id="email" type="text" value="<?php echo $current_user->user_email; ?>" tabindex="2" <?php if ( $req ) echo "aria-required='true'"; ?> />
-            <label for="email"<?php if ( $req ) echo ' class="required"'; ?>>Електрическа поща</label>
-        <!--END #form-section-email-->
-        </div>
-		
-        <!--BEGIN #form-section-url-->
-        <div id="form-section-url" class="form-section">
-            <input name="url" id="url" type="text" value="<?php echo $current_user->user_url; ?>" tabindex="3" />
-            <label for="url">Сайт</label>
-        <!--END #form-section-url-->
-        </div>
-		
-		<?php else : // If user isn't logged-in, ask them for their details ?>
-        
-        <!--BEGIN #form-section-author-->
-        <div id="form-section-author" class="form-section">
-            <input name="author" id="author" type="text" value="<?php echo $comment_author; ?>" tabindex="1" <?php if ( $req ) echo "aria-required='true'"; ?> />
-            <label for="author"<?php if ( $req ) echo ' class="required"'; ?>>Име</label>
-        <!--END #form-section-author-->
-        </div>
-        
-        <!--BEGIN #form-section-email-->
-        <div id="form-section-email" class="form-section">
-            <input name="email" id="email" type="text" value="<?php echo $comment_author_email; ?>" tabindex="2" <?php if ( $req ) echo "aria-required='true'"; ?> />
-            <label for="email"<?php if ( $req ) echo ' class="required"'; ?>>Електрическа поща</label>
-        <!--END #form-section-email-->
-        </div>
-		
-        <!--BEGIN #form-section-url-->
-        <div id="form-section-url" class="form-section">
-            <input name="url" id="url" type="text" value="<?php echo $comment_author_url; ?>" tabindex="3" />
-            <label for="url">Сайт</label>
-        <!--END #form-section-url-->
-        </div>
-        
-		<?php endif; // if ( is_user_logged_in() ) ?>
-		
-		<!--BEGIN #form-section-comment-->
-        <div id="form-section-comment" class="form-section">
-        	<textarea name="comment" id="comment" tabindex="4" rows="10" cols="65"></textarea>
-        	<!--p id="allowed-tags">Може да използвате тези <abbr title="HyperText Markup Language">HTML</abbr> тагове и атрибути: <span class="allowed-tags"><?php echo allowed_tags(); ?></span></p-->
-        <!--END #form-section-comment-->
-        </div>
-        
-        <!--BEGIN #form-section-actions-->
-        <div id="form-section-actions" class="form-section">
-			<button name="submit" id="submit" type="submit" tabindex="5">Пущи коментаро</button>
-			<?php comment_id_fields(); ?>
-        <!--END #form-section-actions-->
-        </div>
+	<?php comment_form(); ?>
 
-	<?php do_action( 'comment_form', $post->ID ); // Available action: comment_form ?>
-	
-    <!--END #comment-form-->
-    </form>
-    
-	<?php endif; // If registration required and not logged in ?>
-<!--END #respond-->
-</div>
-<?php endif; // ( comments_open() ) ?>
-
-		
-        
+	<?php do_action( 'commentsdiv_close' ); ?>
+</div><!-- #comments -->

@@ -22,6 +22,7 @@ class MainWP_Child_Wordfence {
 		'alertOn_block',
 		'alertOn_critical',
 		'alertOn_loginLockout',
+		'alertOn_breachLogin',
 		'alertOn_lostPasswdForm',
 		'alertOn_nonAdminLogin',
         'alertOn_firstNonAdminLoginOnly',
@@ -43,10 +44,13 @@ class MainWP_Child_Wordfence {
         "notification_productUpdates",
         "notification_scanStatus",
 		'loginSec_lockInvalidUsers',
+		'loginSec_breachPasswds_enabled',
+		'loginSec_breachPasswds',
 		'loginSec_lockoutMins',
 		'loginSec_maskLoginErrors',
 		'loginSec_maxFailures',
 		'loginSec_maxForgotPasswd',
+		'loginSec_strongPasswds_enabled',
 		'loginSec_strongPasswds',
 		'loginSec_userBlacklist',
 		'loginSecurityEnabled',
@@ -114,6 +118,7 @@ class MainWP_Child_Wordfence {
 		'debugOn',
 		'deleteTablesOnDeact',
 		'disableCookies',
+		'liveActivityPauseEnabled',
 		'startScansRemotely',
 		//'disableConfigCaching',
 		//'addCacheComment', // removed
@@ -141,6 +146,7 @@ class MainWP_Child_Wordfence {
         'displayTopLevelBlocking',
         'betaThreatDefenseFeed',
         'scanType',
+        'schedMode', // paid, if free then auto
         'wafStatus',
         'learningModeGracePeriodEnabled',
         'learningModeGracePeriod'
@@ -176,15 +182,16 @@ class MainWP_Child_Wordfence {
 		add_action( 'mainwp_child_deactivation', array( $this, 'deactivation' ) );
 
 		require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+        
+        // ok
+        if ( is_plugin_active( 'wordfence/wordfence.php' ) && file_exists( plugin_dir_path( __FILE__ ) . '../../wordfence/wordfence.php' ) ) {
+            require_once( plugin_dir_path( __FILE__ ) . '../../wordfence/wordfence.php' );
+            $this->is_wordfence_installed = true;
+        }
 
-		if ( is_plugin_active( 'wordfence/wordfence.php' ) && file_exists( plugin_dir_path( __FILE__ ) . '../../wordfence/wordfence.php' ) ) {
-			require_once( plugin_dir_path( __FILE__ ) . '../../wordfence/wordfence.php' );
-			$this->is_wordfence_installed = true;
-		}
-
-		if ( $this->is_wordfence_installed ) {
-			add_action( 'wp_ajax_mainwp_wordfence_download_htaccess', array( $this, 'downloadHtaccess' ) );
-		}
+        if ( $this->is_wordfence_installed ) {
+            add_action( 'wp_ajax_mainwp_wordfence_download_htaccess', array( $this, 'downloadHtaccess' ) );
+        }
 
 	}
 
@@ -233,7 +240,7 @@ class MainWP_Child_Wordfence {
 				case 'get_summary':
 					$information = $this->get_summary();
 					break;
-				case 'load_issues':
+                case 'load_issues': // not used in from version 2.0 of WF ext
 					$information = $this->load_issues();
 					break;
                 case 'loadIssues':
@@ -436,8 +443,9 @@ class MainWP_Child_Wordfence {
             'other_hideWPVersion',
             'disableCodeExecutionUploads',
             'disableCookies',
+			'liveActivityPauseEnabled',
             'actUpdateInterval',
-            'disableCookies',
+            'other_bypassLitespeedNoabort',
             'deleteTablesOnDeact',
             'notification_updatesNeeded',
             'notification_securityAlerts', // paid
@@ -451,6 +459,7 @@ class MainWP_Child_Wordfence {
             'alertOn_warnings',
             'alertOn_block',
             'alertOn_loginLockout',
+			'alertOn_breachLogin',
             'alertOn_lostPasswdForm',
             'alertOn_adminLogin',
             'alertOn_firstAdminLoginOnly',
@@ -506,8 +515,11 @@ class MainWP_Child_Wordfence {
             'loginSec_countFailMins',
             'loginSec_lockoutMins',
             'loginSec_lockInvalidUsers',
+			'loginSec_breachPasswds_enabled',
+			'loginSec_breachPasswds',			
             'loginSec_userBlacklist',
-            'loginSec_strongPasswds',
+			'loginSec_strongPasswds_enabled',
+            'loginSec_strongPasswds',			
             'loginSec_maskLoginErrors',
             'loginSec_blockAdminReg',
             'loginSec_disableAuthorScan',
@@ -552,7 +564,8 @@ class MainWP_Child_Wordfence {
             'maxExecutionTime',
             'scan_exclude',
             'scan_include_extra',
-            'scanType'
+            'scanType',
+            'schedMode'
         );
         $diagnostics_opts = array(
             'debugOn',
@@ -644,7 +657,7 @@ class MainWP_Child_Wordfence {
     function do_site_stats() {
         do_action( 'mainwp_child_reports_log', 'wordfence' );
 	}
-
+    // ok
     public function do_reports_log($ext = '') {
         if ( $ext !== 'wordfence' ) return;
         if ( ! $this->is_wordfence_installed ) return;
@@ -786,11 +799,18 @@ class MainWP_Child_Wordfence {
 		$i = new wfIssues();
 		$iss = $i->getIssues($offset, $limit);
 		$counts = $i->getIssueCounts();
-		return array(
+		$return = array(
 			'issuesLists' => $iss,
 			'issueCounts' => $counts,
-			'lastScanCompleted' => wfConfig::get('lastScanCompleted')
-			);
+			'lastScanCompleted' => wfConfig::get('lastScanCompleted'),            
+			'apiKey'            => wfConfig::get( 'apiKey' ),
+			'isPaid' => wfConfig::get('isPaid'),
+			'lastscan_timestamp' => MainWP_Child_Wordfence::Instance()->get_lastscan(),          
+            'todayAttBlocked' => MainWP_Child_Wordfence::Instance()->count_attacks_blocked(1),
+            'weekAttBlocked' => MainWP_Child_Wordfence::Instance()->count_attacks_blocked(7),
+            'monthAttBlocked' => MainWP_Child_Wordfence::Instance()->count_attacks_blocked(30),        
+        );        
+        return $return;
 	}
         
     public function load_wafData() {
@@ -1096,7 +1116,7 @@ SQL
 			$opts         = $settings;
             
             // if saving then validate data
-            if (isset($saving_opts['liveTraf_ignoreUsers'])) {
+            if (in_array('liveTraf_ignoreUsers', $saving_opts)) {
                 $validUsers   = array();
                 $invalidUsers = array();
                 foreach ( explode( ',', $opts['liveTraf_ignoreUsers'] ) as $val ) {
@@ -1122,8 +1142,8 @@ SQL
                 }
             }
 
-            // if saving then validate data
-            if (isset($saving_opts['other_WFNet'])) {
+            // if saving then validate data            
+            if (in_array('other_WFNet', $saving_opts)) {
                 if ( ! $opts['other_WFNet'] ) {
                     $wfdb = new wfDB();
                     global $wpdb;
@@ -1133,35 +1153,63 @@ SQL
             }
 
             $regenerateHtaccess = false;
-            // if saving then validate data
-            if (isset($saving_opts['bannedURLs'])) {                
+            // if saving then validate data            
+            if (in_array('bannedURLs', $saving_opts)) {
                 if ( wfConfig::get( 'bannedURLs', false ) !== $opts['bannedURLs'] ) {
                     $regenerateHtaccess = true;
                 }
-            }
-           
+            }            
+            //error_log(print_r($opts, true));            
+//            $to_fix_boolean_values = array(
+//                'scansEnabled_checkGSB', 
+//                'spamvertizeCheck',
+//                'checkSpamIP',
+//                'scansEnabled_checkHowGetIPs',
+//                'scansEnabled_checkReadableConfig',
+//                'scansEnabled_suspectedFiles',
+//                'scansEnabled_core',
+//                'scansEnabled_themes',
+//                'scansEnabled_plugins',
+//                'scansEnabled_coreUnknown',
+//                'scansEnabled_malware',
+//                'scansEnabled_fileContents',
+//                'scansEnabled_fileContentsGSB',
+//                'scansEnabled_posts',
+//                'scansEnabled_comments',
+//                'scansEnabled_suspiciousOptions',
+//                'scansEnabled_oldVersions',
+//                'scansEnabled_suspiciousAdminUsers',
+//                'scansEnabled_passwds',
+//                'scansEnabled_diskSpace',
+//                'scansEnabled_dns',
+//                'other_scanOutside',
+//                'scansEnabled_scanImages',
+//                'scansEnabled_highSense',
+//                'scheduledScansEnabled',
+//                'lowResourceScansEnabled',               
+//            );
+//            
             // save the settings
 			foreach ( $opts as $key => $val ) {               
                 // check saving section fields
                 if ( in_array( $key, $saving_opts ) ) {
                     if ( 'apiKey' == $key ) { //Don't save API key yet
                         continue;
-                    }
-                    
+                    }                    
                     if (in_array( $key, self::$firewall_options_filter ) ) {
                         wfWAF::getInstance()->getStorageEngine()->setConfig($key, $val);
-                    } else {
-                        wfConfig::set( $key, $val ); // save it
+                    } else {                                         
+                        wfConfig::set( $key, $val ); // save it                       
                     }                        
                 }				
 			}
-
+            
 			if ( $regenerateHtaccess && ( wfConfig::get('cacheType') == 'falcon' ) ) {
 				wfCache::addHtaccessCode('add');
 			}
             
-            // if saving then validate data
-            if (isset($saving_opts['autoUpdate'])) { 
+            // if saving then validate data            
+            if (in_array('autoUpdate', $saving_opts)) {
                 if ( '1' === $opts['autoUpdate'] ) {
                     wfConfig::enableAutoUpdate();
                 } else if ( '0' === $opts['autoUpdate'] ) {
@@ -1169,8 +1217,8 @@ SQL
                 }
             }
             
-            // if saving then validate data
-            if (isset($saving_opts['disableCodeExecutionUploads'])) { 
+            // if saving then validate data            
+            if (in_array('disableCodeExecutionUploads', $saving_opts)) {
                 if (isset($opts['disableCodeExecutionUploads'])) {
                     try {
                         if ( $opts['disableCodeExecutionUploads'] ) {
@@ -1184,8 +1232,8 @@ SQL
                 }
             }
 
-            // if saving then validate data
-            if (isset($saving_opts['email_summary_enabled'])) { 
+            // if saving then validate data            
+            if (in_array('email_summary_enabled', $saving_opts)) {                
                 if (isset($opts['email_summary_enabled'])) {
                     if ( ! empty( $opts['email_summary_enabled'] ) ) {
                         wfConfig::set( 'email_summary_enabled', 1 );
@@ -1199,8 +1247,8 @@ SQL
                 }
             }
             
-            // if saving then validate data
-            if (isset($saving_opts['scheduleScan'])) {             
+            // if saving then validate data               
+            if (in_array('scheduleScan', $saving_opts)) {    
                 $sch = isset( $opts['scheduleScan'] ) ? $opts['scheduleScan'] : '';
                 if ( get_option( 'mainwp_child_wordfence_cron_time' ) !== $sch ) {
                     update_option( 'mainwp_child_wordfence_cron_time', $sch );
@@ -1219,7 +1267,7 @@ SQL
 			$result['paidKeyMsg'] = false;
             
             // if saving then validate data
-            if (isset($saving_opts['apiKey'])) {  
+            if (in_array('apiKey', $saving_opts)) {    
                     $apiKey               = trim( $_POST['apiKey'] );            
                     if ( ! $apiKey ) { //Empty API key (after trim above), then try to get one.
                         $api = new wfAPI( '', wfUtils::getWPVersion() );
@@ -1815,7 +1863,7 @@ SQL
 		if ( isset( $_POST['IP'] ) ) {
 			$IP = $_POST['IP'];
 			wfBlock::unblockIP( $IP );
-			return array( 'ok' => 1 );
+			return array( 'success' => 1 );
 		}
 	}
     

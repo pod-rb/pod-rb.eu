@@ -65,6 +65,32 @@ function rocket_sanitize_xml( $file ) {
 }
 
 /**
+ * Sanitizes a string key like the sanitize_key() WordPress function without forcing lowercase.
+ *
+ * @since 2.7
+ *
+ * @param string $key Key string to sanitize.
+ * @return string
+ */
+function rocket_sanitize_key( $key ) {
+	$key = preg_replace( '/[^a-z0-9_\-]/i', '', $key );
+	return $key;
+}
+
+/**
+ * Used to sanitize values of the "Never send cache pages for these user agents" option.
+ *
+ * @since 2.6.4
+ *
+ * @param string $user_agent User Agent string.
+ * @return string
+ */
+function rocket_sanitize_ua( $user_agent ) {
+	$user_agent = preg_replace( '/[^a-z0-9._\(\)\*\-\/\s\x5c]/i', '', $user_agent );
+	return $user_agent;
+}
+
+/**
  * Get an url without HTTP protocol
  *
  * @since 1.3.0
@@ -284,49 +310,34 @@ function rocket_realpath( $file ) {
  *
  * @param string $url   URL to convert.
  * @param array  $hosts An array of possible hosts for the URL.
- * @return string
+ * @return string|bool
  */
 function rocket_url_to_path( $url, $hosts = '' ) {
-	$url_components  = get_rocket_parse_url( $url );
-	$site_components = get_rocket_parse_url( site_url() );
-	$site_url        = trailingslashit( set_url_scheme( site_url() ) );
+	$root_dir = trailingslashit( dirname( WP_CONTENT_DIR ) );
+	$root_url = str_replace( wp_basename( WP_CONTENT_DIR ), '', WP_CONTENT_URL );
+	$url_host = wp_parse_url( $url, PHP_URL_HOST );
 
-	if ( isset( $hosts[ $url_components['host'] ] ) && 'home' !== $hosts[ $url_components['host'] ] ) {
-		$site_url = trailingslashit( rocket_add_url_protocol( $url_components['host'] ) );
-
-		if ( $url_components['path'] !== $site_components['path'] ) {
-			$site_url .= ltrim( $site_components['path'], '/' );
-		}
+	// relative path.
+	if ( null === $url_host ) {
+		$subdir_levels = substr_count( preg_replace( '/https?:\/\//','', site_url() ), '/' );
+		$url           = site_url() . str_repeat( '/..', $subdir_levels ) . $url;
 	}
 
-	$home_path = rocket_get_home_path();
-	$file      = str_replace( $site_url, $home_path, rocket_set_internal_url_scheme( $url ) );
-
-	return rocket_realpath( $file );
-}
-
-/**
- * Get the absolute filesystem path to the root of the WordPress installation.
- *
- * @since 2.11.7 copy function get_home_path() from WP core.
- * @since 2.11.5
- * @author Chris Williams
- *
- * @return string Full filesystem path to the root of the WordPress installation.
- */
-function rocket_get_home_path() {
-	$home      = set_url_scheme( get_option( 'home' ), 'http' );
-	$siteurl   = set_url_scheme( get_option( 'siteurl' ), 'http' );
-	$home_path = ABSPATH;
-
-	if ( ! empty( $home ) && 0 !== strcasecmp( $home, $siteurl ) ) {
-		$wp_path_rel_to_home = str_ireplace( $home, '', $siteurl ); /* $siteurl - $home */
-		$pos                 = strripos( str_replace( '\\', '/', $_SERVER['SCRIPT_FILENAME'] ), trailingslashit( $wp_path_rel_to_home ) );
-		$home_path           = substr( $_SERVER['SCRIPT_FILENAME'], 0, $pos );
-		$home_path           = trailingslashit( $home_path );
+	// CDN.
+	if ( isset( $hosts[ $url_host ] ) && 'home' !== $hosts[ $url_host ] ) {
+		$url = str_replace( $url_host, wp_parse_url( site_url(), PHP_URL_HOST ), $url );
 	}
 
-	return str_replace( '\\', '/', $home_path );
+	$root_url = preg_replace( '/^https?:/', '', $root_url );
+	$url      = preg_replace( '/^https?:/', '', $url );
+	$file     = str_replace( $root_url, $root_dir, $url );
+	$file     = rocket_realpath( $file );
+
+	if ( ! rocket_direct_filesystem()->is_readable( $file ) ) {
+		return false;
+	}
+
+	return $file;
 }
 
 /**
@@ -348,11 +359,24 @@ function rocket_get_external_url( $target, $query_args = array() ) {
 			$paths  = array(
 				'default' => 'support',
 				'fr_FR'   => 'fr/support',
-				'ca_FR'   => 'fr/support',
+				'fr_CA'   => 'fr/support',
 				'it_IT'   => 'it/supporto',
 				'de_DE'   => 'de/support',
 				'es_ES'   => 'es/soporte',
-				'gl_ES'   => 'es/soporte',
+			);
+
+			$url = isset( $paths[ $locale ] ) ? $paths[ $locale ] : $paths['default'];
+			$url = $site_url . $url . '/';
+			break;
+		case 'account':
+			$locale = function_exists( 'get_user_locale' ) ? get_user_locale() : get_locale();
+			$paths  = array(
+				'default' => 'account',
+				'fr_FR'   => 'fr/compte',
+				'fr_CA'   => 'fr/compte',
+				'it_IT'   => 'it/account/',
+				'de_DE'   => 'de/konto/',
+				'es_ES'   => 'es/cuenta/',
 			);
 
 			$url = isset( $paths[ $locale ] ) ? $paths[ $locale ] : $paths['default'];

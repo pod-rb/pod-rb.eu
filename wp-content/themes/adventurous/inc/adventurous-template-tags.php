@@ -244,6 +244,7 @@ if ( ! function_exists( 'adventurous_footer_meta' ) ) :
  * @since Adventurous 1.0
  */
 function adventurous_footer_meta() {
+	$utility_text = '';
 
 	// Translators: used between list items, there is a space after the comma.
 	$categories_list = get_the_category_list( __( ', ', 'adventurous' ) );
@@ -259,11 +260,13 @@ function adventurous_footer_meta() {
 		$utility_text = __( '<span class="in-category">Posted in %1$s</span>', 'adventurous' );
 	}
 
-	printf(
-		$utility_text,
-		$categories_list,
-		$tag_list
-	);
+	if ( $utility_text ) {
+		printf(
+			$utility_text,
+			$categories_list,
+			$tag_list
+		);
+	}
 }
 endif;
 

@@ -1385,7 +1385,7 @@ add_action( 'save_post', 'adventurous_flush_post_transients' );
  * @since Adventurous 1.4
  */
 function adventurous_customize_scripts() {
-	wp_enqueue_script( 'adventurous_customizer_custom', get_template_directory_uri() . '/inc/panel/js/customizer-custom-scripts.js', array( 'jquery' ), '20140108', true );
+	wp_enqueue_script( 'adventurous_customizer_custom', trailingslashit( esc_url ( get_template_directory_uri() ) ) . 'inc/panel/js/customizer-custom-scripts.js', array( 'jquery' ), '20140108', true );
 }
 add_action( 'customize_controls_enqueue_scripts', 'adventurous_customize_scripts' );
 
@@ -1416,7 +1416,7 @@ function adventurous_reset_data() {
 		unset( $options['featured_header_image_url'] );
 		unset( $options['featured_header_image_base'] );
 		unset( $options['reset_featured_image'] );
-        
+
         remove_theme_mod( 'header_image' );
 	}
 
@@ -1424,7 +1424,7 @@ function adventurous_reset_data() {
 	if ( $options['reset_moretag'] ) {
 		unset( $options['more_tag_text'] );
 		unset( $options['excerpt_length'] );
-		
+
 		unset( $options['reset_moretag'] );
 	}
 
@@ -1433,7 +1433,7 @@ function adventurous_reset_data() {
 		unset( $options['sidebar_layout'] );
 		unset( $options['content_layout'] );
 		unset( $options['featured_image'] );
-        
+
         unset( $options['reset_layout'] );
 	}
 

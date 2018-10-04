@@ -4,7 +4,7 @@ Theme URI: https://catchthemes.com/themes/adventurous
 Author: Catch Themes
 Author URI: https://catchthemes.com
 Description: Adventurous is a Simple, Clean, Minimal, Lightweight, Box-Shaped and Full-Width Responsive WordPress Theme. It is based in HTML5, CSS3 and very own Catch Themes easy to use Theme Options panel, which make this theme highly customizable and flexible.  Make your beautiful yet professional website in no time. Adventurous is a multi-purpose theme and is suitable for Photographers, Bloggers and Businesses. This theme is translation ready and also currently translated in Brazilian Portuguese, Hungarian, Dutch, German, Polish, Danish and Czech languages. Supports popular plugins like WP-PageNavi, Jetpack, Contact Form 7, Catch Web Tools and more. Check out Theme Instructions at https://catchthemes.com/theme-instructions/adventurous/, Support at https://catchthemes.com/support/ and Demo at https://catchthemes.com/demo/adventurous/
-Version: 3.0
+Version: 3.0.2
 License: GNU General Public License, version 3 (GPLv3)
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 Tags: blog, one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, flexible-header, front-page-post-form, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, holiday
@@ -1662,18 +1662,24 @@ a#scrollup:hover {
     width: 100%;
 }
 #content #infinite-handle span {
-    background-color: #3a3d41;
-    display: block;
-    font-size: 14px;
-    padding: 10px 0;
-    width: 100%;
-}
-#content #infinite-handle span:hover {
-	background-color: #000;
+	background: none transparent;
+	display: block;
+	padding: 0;
 }
 #content #infinite-handle span button {
-	box-shadow: none;
+	background-color: #3a3d41;
+	color: #fff;
+	display: inline;
+	font-size: 14px;
+	padding: 10px 30px;
+	width: 100%;
 }
+
+#content #infinite-handle span button:hover,
+#content #infinite-handle span button:focus {
+	background-color: #000;
+}
+
 
 /* =WP-PageNavi plugins
 ----------------------------------------------- */

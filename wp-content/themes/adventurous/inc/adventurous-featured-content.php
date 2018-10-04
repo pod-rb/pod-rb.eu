@@ -32,7 +32,7 @@ function adventurous_default_featured_content() {
 					<article id="featured-post-1" class="post hentry post-demo">
 						<figure class="featured-homepage-image">
 							<a href="#" title="Mountain Risk Caution">
-								<img title="Mountain Risk Caution" alt="Mountain Risk Caution" class="wp-post-image" src="'.get_template_directory_uri() . '/images/demo/featured-1-400x267.jpg" />
+								<img title="Mountain Risk Caution" alt="Mountain Risk Caution" class="wp-post-image" src="'.trailingslashit( esc_url ( get_template_directory_uri() ) ) . 'images/demo/featured-1-400x267.jpg" />
 							</a>
 						</figure>
 						<div class="entry-container">
@@ -50,7 +50,7 @@ function adventurous_default_featured_content() {
 					<article id="featured-post-2" class="post hentry post-demo">
 						<figure class="featured-homepage-image">
 							<a href="#" title="Rhino Nepal National Park">
-								<img title="Rhino Nepal National Park" alt="Rhino Nepal National Park" class="wp-post-image" src="'.get_template_directory_uri() . '/images/demo/featured-2-400x267.jpg" />
+								<img title="Rhino Nepal National Park" alt="Rhino Nepal National Park" class="wp-post-image" src="'.trailingslashit( esc_url ( get_template_directory_uri() ) ) . 'images/demo/featured-2-400x267.jpg" />
 							</a>
 						</figure>
 						<div class="entry-container">
@@ -68,7 +68,7 @@ function adventurous_default_featured_content() {
 					<article id="featured-post-3" class="post hentry post-demo">
 						<figure class="featured-homepage-image">
 							<a href="#" title="Nepal Yak Tibetan">
-								<img title="Nepal Yak Tibetan" alt="Nepal Yak Tibetan" class="wp-post-image" src="'.get_template_directory_uri() . '/images/demo/featured-3-400x267.jpg" />
+								<img title="Nepal Yak Tibetan" alt="Nepal Yak Tibetan" class="wp-post-image" src="'.trailingslashit( esc_url ( get_template_directory_uri() ) ) . 'images/demo/featured-3-400x267.jpg" />
 							</a>
 						</figure>
 						<div class="entry-container">
@@ -87,7 +87,7 @@ function adventurous_default_featured_content() {
 					<article id="featured-post-4" class="post hentry post-demo">
 						<figure class="featured-homepage-image">
 							<a href="#" title="White Water Rafting">
-								<img title="White Water Rafting" alt="White Water Rafting" class="wp-post-image" src="'.get_template_directory_uri() . '/images/demo/featured-4-400x267.jpg" />
+								<img title="White Water Rafting" alt="White Water Rafting" class="wp-post-image" src="'.trailingslashit( esc_url ( get_template_directory_uri() ) ) . 'images/demo/featured-4-400x267.jpg" />
 							</a>
 						</figure>
 						<div class="entry-container">

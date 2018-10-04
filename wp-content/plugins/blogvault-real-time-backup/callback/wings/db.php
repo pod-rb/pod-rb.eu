@@ -3,10 +3,11 @@
 if (!defined('ABSPATH')) exit;
 if (!class_exists('BVDBCallback')) :
 class BVDBCallback {
-	public function tableInfo($table, $tname, $rcount, $offset = 0, $limit = 0, $bsize = 512, $filter = "") {
+	
+	public function getTableData($table, $tname, $rcount, $offset, $limit, $bsize, $filter, $pkeys, $include_rows = false) {
 		global $bvcb, $bvresp;
 		$tinfo = array();
-		$data =array();
+		
 		$rows_count = $bvcb->bvmain->db->rowsCount($table);
 		$bvresp->addStatus('count', $rows_count);
 		if ($limit == 0) {
@@ -19,41 +20,29 @@ class BVDBCallback {
 			$rows = $bvcb->bvmain->db->getTableContent($table, '*', $filter, $bsize, $offset);
 			$srows = sizeof($rows);
 			$data = array();
-			$data["table"] = $table;
 			$data["offset"] = $offset;
 			$data["size"] = $srows;
 			$data["md5"] = md5(serialize($rows));
 			array_push($tinfo, $data);
+			if (!empty($pkeys) && $srows > 0) {
+				$end_row = end($rows);
+				$last_ids = array();
+				foreach($pkeys as $pk) {
+					$last_ids[$pk] = $end_row[$pk];
+				}
+				$data['last_ids'] = $last_ids;
+				$bvresp->addStatus('last_ids', $last_ids);
+			}
+			if ($include_rows) {
+				$data["rows"] = $rows;
+				$str = serialize($data);
+				$bvresp->writeStream($str);
+			}
 			$offset += $srows;
 			$limit -= $srows;
 		}
+		$bvresp->addStatus('size', $offset);
 		$bvresp->addStatus('tinfo', $tinfo);
-	}
-
-	public function uploadRows($table, $tname, $rcount, $offset = 0, $limit = 0, $bsize = 512, $filter = "") {
-		global $bvresp, $bvcb;
-		
-		$rows_count = $bvcb->bvmain->db->rowsCount($table);
-		if ($limit == 0) {
-			$limit = $rows_count;
-		}
-		$bvresp->addStatus('count', $rows_count);
-		$srows = 1;
-		while (($limit > 0) && ($srows > 0)) {
-			if ($bsize > $limit)
-				$bsize = $limit;
-			$rows = $bvcb->bvmain->db->getTableContent($table, '*', $filter, $bsize, $offset);
-			$srows = sizeof($rows);
-			$data = array();
-			$data["offset"] = $offset;
-			$data["size"] = $srows;
-			$data["rows"] = $rows;
-			$data["md5"] = md5(serialize($rows));
-			$str = serialize($data);
-			$bvresp->writeStream($str);
-			$offset += $srows;
-			$limit -= $srows;
-		}
 	}
 
 	public function process($method) {
@@ -94,7 +83,7 @@ class BVDBCallback {
 		case "gettablecontent":
 			$table = urldecode($_REQUEST['table']);
 			$fields = urldecode($_REQUEST['fields']);
-			$filter = urldecode($_REQUEST['filter']);
+			$filter = (array_key_exists('filter', $_REQUEST)) ? urldecode($_REQUEST['filter']) : "";
 			$limit = intval(urldecode($_REQUEST['limit']));
 			$offset = intval(urldecode($_REQUEST['offset']));
 			$bvresp->addStatus("rows", $db->getTableContent($table, $fields, $filter, $limit, $offset));
@@ -104,20 +93,22 @@ class BVDBCallback {
 			$offset = intval(urldecode($_REQUEST['offset']));
 			$limit = intval(urldecode($_REQUEST['limit']));
 			$bsize = intval(urldecode($_REQUEST['bsize']));
-			$filter = urldecode($_REQUEST['filter']);
+			$filter = (array_key_exists('filter', $_REQUEST)) ? urldecode($_REQUEST['filter']) : "";
 			$rcount = intval(urldecode($_REQUEST['rcount']));
 			$tname = urldecode($_REQUEST['tname']);
-			$this->tableInfo($table, $tname, $rcount, $offset, $limit, $bsize, $filter);
+			$pkeys = (array_key_exists('pkeys', $_REQUEST)) ? $_REQUEST['pkeys'] : array();
+			$this->getTableData($table, $tname, $rcount, $offset, $limit, $bsize, $filter, $pkeys, false);
 			break;
 		case "uploadrows":
 			$table = urldecode($_REQUEST['table']);
 			$offset = intval(urldecode($_REQUEST['offset']));
 			$limit = intval(urldecode($_REQUEST['limit']));
 			$bsize = intval(urldecode($_REQUEST['bsize']));
-			$filter = urldecode($_REQUEST['filter']);
+			$filter = (array_key_exists('filter', $_REQUEST)) ? urldecode($_REQUEST['filter']) : "";
 			$rcount = intval(urldecode($_REQUEST['rcount']));
 			$tname = urldecode($_REQUEST['tname']);
-			$this->uploadRows($table, $tname, $rcount, $offset, $limit, $bsize, $filter);
+			$pkeys = (array_key_exists('pkeys', $_REQUEST)) ? $_REQUEST['pkeys'] : array();
+			$this->getTableData($table, $tname, $rcount, $offset, $limit, $bsize, $filter, $pkeys, true);
 			break;
 		case "tblexists":
 			$bvresp->addStatus("tblexists", $db->isTablePresent($_REQUEST['tablename']));

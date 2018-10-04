@@ -42,11 +42,14 @@ class BVMiscCallback {
 			$info->deleteOption('bvptlug');
 			$bvresp->addStatus("unsetptplug", $info->getOption('bvptlug'));
 			break;
-		case "wpupdateplugins":
+		case "wpupplgs":
 			$bvresp->addStatus("wpupdateplugins", wp_update_plugins());
 			break;
-		case "wpupdatethemes":
+		case "wpupthms":
 			$bvresp->addStatus("wpupdatethemes", wp_update_themes());
+			break;
+		case "wpupcre":
+			$bvresp->addStatus("wpupdatecore", wp_version_check());
 			break;
 		case "rmmonitime":
 			$bvcb->bvmain->unSetMonitTime();

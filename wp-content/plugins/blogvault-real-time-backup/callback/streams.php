@@ -19,19 +19,29 @@ class BVHttpStream {
 	var $port;
 	var $timeout = 20;
 	var $conn;
+	var $errno;
+	var $errstr;
 	var $boundary;
+	var $apissl;
 
 	/**
 	 * PHP5 constructor.
 	 */
-	function __construct($_host, $_port) {
+	function __construct($_host, $_port, $_apissl) {
 		$this->host = $_host;
 		$this->port = $_port;
+		$this->apissl = $_apissl;
 	}
 
 	public function connect() {
-		$this->conn = @fsockopen($this->host, $this->port, $errno, $errstr, $this->timeout);
+		if ($this->apissl && function_exists('stream_socket_client')) {
+			$this->conn = stream_socket_client("ssl://".$this->host.":".$this->port, $errno, $errstr, $this->timeout);
+		} else {
+			$this->conn = @fsockopen($this->host, $this->port, $errno, $errstr, $this->timeout);
+		}
 		if (!$this->conn) {
+			$this->errno = $errno;
+			$this->errstr = $errstr;
 			return false;
 		}
 		socket_set_timeout($this->conn, $this->timeout);

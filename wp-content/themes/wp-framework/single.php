@@ -1,83 +1,92 @@
 <?php
 /**
- * Template: Single.php
+ * WordPress Template: Single
  *
- * @package WPFramework
+ * The single template is the general template used when a singular 'post',
+ * or custom post type is requested.
+ * 
+ * If the attachments.php or more specific attachment-based template is not 
+ * found, attachments also make use of this template.
+ * 
+ * To use a custom template for a specfic post type,
+ * create a single-{post_type}.php file in the your theme's root directory.
+ *
+ * Template Hierarchy
+ * - single-{post_type}.php
+ * - single.php
+ * - index.php
+ *
+ * @package WP Framework
  * @subpackage Template
  */
 
-get_header();
-?>
-			<!--BEGIN #primary .hfeed-->
-			<div id="primary" class="hfeed">
-			<?php if ( have_posts() ) : ?>
-                <?php while ( have_posts() ) : the_post(); ?>
+get_template_part( 'header' ); ?>
 
-				<!--BEGIN .hentry-->
-				<div id="post-<?php the_ID(); ?>" class="<?php semantic_entries(); ?>">
-					<h2 class="entry-title"><?php the_title(); ?></h2>
+				<div id="content" class="column-7">
 
-					<!--BEGIN .entry-meta .entry-header-->
-					<div class="entry-meta entry-header">
-						<span class="author vcard">Написано от <?php printf( '<a class="url fn" href="' . get_author_posts_url( $authordata->ID, $authordata->user_nicename ) . '" title="' . sprintf( 'View all posts by %s', $authordata->display_name ) . '">' . get_the_author() . '</a>' ) ?></span>
-						<span class="published">на <abbr class="published-time" title="<?php the_time( get_option('date_format') .' - '. get_option('time_format') ); ?>"><?php the_time( get_option('date_format') ); ?></abbr></span>
-						<span class="meta-sep">&mdash;</span>
-						<span class="comment-count"><a href="<?php comments_link(); ?>"><?php comments_number( 'Напиши мнение', '1 Мнение', '% Мнения' ); ?></a></span>
-						<?php edit_post_link( 'edit', '<span class="edit-post">[', ']</span>' ); ?>
-					<!--END .entry-meta .entry-header-->
-                    </div>
+					<?php do_action( 'content_open' ); ?>
 
-					<!--BEGIN .entry-content .article-->
-					<div class="entry-content article">
-						<?php the_content( 'Прочети още &raquo;' ); ?>
-						<?php wp_link_pages( array( 'before' => '<div id="page-links"><p><strong>Страници:</strong> ', 'after' => '</p></div>', 'next_or_number' => 'number' ) ); ?>
-					<!--END .entry-content .article-->
-					</div>
+					<?php if ( have_posts() ) : the_post(); ?>
 
-					<!--BEGIN .entry-meta .entry-footer-->
-                    <div class="entry-meta entry-footer">
-                    	<span class="entry-categories">Публикувано в <?php echo framework_get_terms( 'cats' ); ?></span>
-						<?php if ( framework_get_terms( 'tags' ) ) { ?>
-                        <span class="meta-sep">|</span>
-                        <span class="entry-tags">Tagged <?php echo framework_get_terms( 'tags' ); ?></span>
-                        <?php } ?>
-					<!--END .entry-meta .entry-footer-->
-                    </div>
-                    
-                    <!-- Auto Discovery Trackbacks
-					<?php trackback_rdf(); ?>
-					-->
-				<!--END .hentry-->
-				</div>
+						<?php do_action( 'loop_open' ); ?>
 
-				<?php comments_template( '', true ); ?>
-                <?php include ( TEMPLATEPATH . '/navigation.php' ); ?>
-				<?php endwhile; else : ?>
+						<div class="hfeed">
 
-				<!--BEGIN #post-0-->
-				<div id="post-0" class="<?php semantic_entries(); ?>">
-					<h2 class="entry-title">Not Found</h2>
+							<?php do_action( 'hfeed_open' ); ?>
 
-					<!--BEGIN .entry-content-->
-					<div class="entry-content">
-						<p>Sorry, but you are looking for something that isn't here.</p>
-						<?php get_search_form(); ?>
-					<!--END .entry-content-->
-					</div>
-				<!--END #post-0-->
-				</div>
+							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+								
+								<header class="entry-header">
+									<h1 class="entry-title"><?php the_title(); ?></h1>
 
-			<?php endif; ?>
-			<!--END #primary .hfeed-->
-			</div>
+									<div class="entry-meta">
+										<?php
+											printf( __( '<span class="sep">Posted on </span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>', t() ),
+												get_permalink(),
+												get_the_date( 'c' ),
+												get_the_date(),
+												get_author_posts_url( get_the_author_meta( 'ID' ) ),
+												sprintf( esc_attr__( 'View all posts by %s', t() ), get_the_author() ),
+												get_the_author()
+											);
+										?>
+									</div><!-- .entry-meta -->
+								</header><!-- .entry-header -->
 
-<?php 
-/*if(!in_category(1) && !in_category(16) && !in_category(17) && !in_category(18)){ */
-/* These IDs for categories in the Gallery category*/
-	get_sidebar();
-/*
-}
-*/
-get_sidebar();
-?>
-<?php get_footer(); ?>
+								<div class="entry-content">
+									<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', t() ) ); ?>
+									<?php wp_link_pages( array( 'before' => '<div class="page-link"><span class="page-link-meta">' . __( 'Pages:', t() ) . '</span>', 'after' => '</div>', 'next_or_number' => 'number' ) ); ?>
+								</div><!-- .entry-content -->
+
+								<footer class="entry-meta">
+									<span class="tax-link"><?php wpf_the_taxonomies(); ?></span>
+									<span class="bookmark-link"><?php printf( __( 'Bookmark the <a href="%s" title="Permalink to %s" rel="bookmark">permalink</a>.', t() ), get_permalink(), the_title_attribute( 'echo=0' ) ); ?></span>
+									<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', t() ), __( '1 Comment', t() ), __( '% Comments', t() ) ); ?></span>
+									<?php edit_post_link( __( 'Edit', t() ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
+								</footer><!-- .entry-meta -->
+
+							</article><!-- #post-<?php the_ID(); ?> -->	
+
+							<?php comments_template( '', true ); ?>
+
+							<?php get_template_part( 'pagination' ); ?>
+
+							<?php do_action( 'hfeed_close' ); ?>
+
+						</div><!-- .hfeed -->
+
+						<?php do_action( 'loop_close' ); ?>
+
+					<?php else : ?>
+
+						<?php get_template_part( 'loop-404' ); ?>
+
+					<?php endif; ?>
+
+					<?php do_action( 'content_close' ); ?>
+
+				</div><!-- #content -->
+
+				<?php get_template_part( 'sidebar' ); ?>
+
+<?php get_template_part( 'footer' ); ?>

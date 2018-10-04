@@ -426,16 +426,16 @@ class BVManageCallback {
 		}
 
 		switch ($method) {
-		case "adduser":
+		case "adusr":
 			$bvresp->addStatus("adduser", $this->addUser($_REQUEST['args']));
 			break;
-		case "upgrade":
+		case "upgrde":
 			$bvresp->addStatus("upgrades", $this->upgrade($_REQUEST['args']));
 			break;
-		case "edit":
+		case "edt":
 			$bvresp->addStatus("edit", $this->edit($_REQUEST['args']));
 			break;
-		case "install":
+		case "instl":
 			$bvresp->addStatus("install", $this->install($_REQUEST['args']));
 			break;
 		case "getpremiumupdates":
@@ -444,10 +444,10 @@ class BVManageCallback {
 		case "getpremiumupgradesinfo":
 			$bvresp->addStatus("premiumupgradesinfo", $this->getPremiumUpgradesInfo());
 			break;
-		case "writeable":
+		case "wrteble":
 			$bvresp->addStatus("writeable", $this->isServerWritable());
 			break;
-		case "autologin":
+		case "atolgn":
 			$isHttps = false;
 			if (array_key_exists('https', $_REQUEST))
 				$isHttps = true;

@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: WordPress Backup & Security Plugin - BlogVault 
-Plugin URI: https://blogvault.net 
-Description: Easiest way to backup & secure your WordPress site 
-Author: Backup by BlogVault 
+Plugin Name: WordPress Backup & Security Plugin - BlogVault
+Plugin URI: https://blogvault.net
+Description: Easiest way to backup & secure your WordPress site
+Author: Backup by BlogVault
 Author URI: https://blogvault.net
-Version: 1.61
+Version: 1.72
 Network: True
  */
 
@@ -44,6 +44,7 @@ if (is_admin()) {
 	$bvadmin = new BVAdmin($bvmain);
 	add_action('admin_init', array($bvadmin, 'initHandler'));
 	add_filter('all_plugins', array($bvadmin, 'initBranding'));
+	add_filter('plugin_row_meta', array($bvadmin, 'hidePluginDetails'), 10, 2);
 	if ($bvmain->info->isMultisite()) {
 		add_action('network_admin_menu', array($bvadmin, 'menu'));
 	} else {
@@ -51,6 +52,11 @@ if (is_admin()) {
 	}
 	add_filter('plugin_action_links', array($bvadmin, 'settingsLink'), 10, 2);
 	add_action('admin_notices', array($bvadmin, 'activateWarning'));
+	##ADMINENQUEUESCRIPTS##
+}
+
+if ((array_key_exists('bvreqmerge', $_POST)) || (array_key_exists('bvreqmerge', $_GET))) {
+	  $_REQUEST = array_merge($_GET, $_POST);
 }
 
 if ((array_key_exists('bvplugname', $_REQUEST)) &&
@@ -66,18 +72,20 @@ if ((array_key_exists('bvplugname', $_REQUEST)) &&
 				$bvcb->execute();
 			}
 		} else {
-			$bvcb->terminate(false);
+			$bvcb->terminate(false, array_key_exists('bvdbg', $_REQUEST));
 		}
 	}
 } else {
 	if ($bvmain->isProtectModuleEnabled()) {
-		require_once dirname( __FILE__ ) . '/protect.php';
-		$bvprotect = new BVProtect($bvmain);
-		$bvprotect->init();
-	}
+	require_once dirname( __FILE__ ) . '/protect.php';
+	$bvprotect = new BVProtect($bvmain);
+	$bvprotect->init();
+}
+
 	if ($bvmain->isDynSyncModuleEnabled()) {
-		require_once dirname( __FILE__ ) . '/dynsync.php';
-		$dynsync = new BVDynSync($bvmain);
-		$dynsync->init();
-	}
+	require_once dirname( __FILE__ ) . '/dynsync.php';
+	$dynsync = new BVDynSync($bvmain);
+	$dynsync->init();
+}
+
 }

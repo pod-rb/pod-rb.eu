@@ -8,15 +8,15 @@ require_once dirname( __FILE__ ) . '/main/auth.php';
 require_once dirname( __FILE__ ) . '/main/db.php';
 
 class BVBackup {
-	public $version = '1.61';
+	public $version = '1.72';
 	public $plugname = 'bvbackup';
 	public $brandname = 'BlogVault';
-	public $webpage = "https://blogvault.net";
+	public $webpage = 'https://blogvault.net';
 	public $appurl = 'https://app.blogvault.net';
 	public $slug = 'blogvault-real-time-backup/blogvault.php';
-	public $plug_redirect = "bvredirect";
-	public $badgeinfo = "bvbadge";
-	public $logo = "../img/bvlogo.png";
+	public $plug_redirect = 'bvredirect';
+	public $badgeinfo = 'bvbadge';
+	public $logo = '../img/bvlogo.png';
 	
 	public $ip_header_option = 'bvipheader';
 	public $brand_option = 'bvbrand';
@@ -129,7 +129,6 @@ class BVBackup {
 		if (!isset($_REQUEST['blogvaultkey'])) {
 			##BVKEYSLOCATE##
 		}
-		##BVBRANDINFO##
 		if ($this->isConfigured()) {
 			/* This informs the server about the activation */
 			$this->pingbv('/bvapi/activate');

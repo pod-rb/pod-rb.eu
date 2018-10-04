@@ -20,7 +20,8 @@ class MainWP_Child_Staging {
         
         if (!$this->is_plugin_installed)
             return;       
-		
+        
+        add_filter( 'mainwp-site-sync-others-data', array( $this, 'syncOthersData' ), 10, 2 );		
     }
 
     
@@ -30,9 +31,7 @@ class MainWP_Child_Staging {
         
         if (!$this->is_plugin_installed) 
             return;      
-        
-        //add_action( 'mainwp_child_site_stats', array( $this, 'do_site_stats' ) );
-         
+          
 		if ( get_option( 'mainwp_wp_staging_hide_plugin' ) === 'hide' ) {
 			add_filter( 'all_plugins', array( $this, 'all_plugins' ) );
 			add_action( 'admin_menu', array( $this, 'remove_menu' ) );
@@ -40,6 +39,17 @@ class MainWP_Child_Staging {
 		}
 	}
 
+	public function syncOthersData( $information, $data = array() ) {       
+        if ( isset( $data['syncWPStaging'] ) && $data['syncWPStaging'] ) {		
+            try{
+                $information['syncWPStaging'] = $this->get_sync_data();
+            } catch(Exception $e) {
+                // do not exit
+            }
+        }        
+		return $information;
+	}
+    // ok
     public function get_sync_data() {        
         return $this->get_overview();
     }
@@ -106,6 +116,12 @@ class MainWP_Child_Staging {
                     case 'cancel_clone':
                             $information = $this->ajaxCancelClone();
                         break;
+					case 'staging_update':
+                            $information = $this->ajaxUpdateProcess();
+                        break;
+					case 'cancel_update':
+                            $information = $this->ajaxCancelUpdate();
+                        break;					
                 }
             }
             MainWP_Helper::write( $information );
@@ -129,7 +145,9 @@ class MainWP_Child_Staging {
             'wpSubDirectory',
             'debugMode',
             'unInstallOnDelete',
-            'checkDirectorySize'
+            'checkDirectorySize',
+			'optimizer',
+			'loginSlug'
         );
         
         $save_fields = array();
@@ -188,9 +206,11 @@ class MainWP_Child_Staging {
    }
    
    public function ajaxStartClone() {
-    
-      $cloning = new WPStaging\Backend\Modules\Jobs\Cloning();
 
+	   $this->url = ''; // to fix warning
+      $cloning = new WPStaging\Backend\Modules\Jobs\Cloning();
+	  
+	
       if( !$cloning->save() ) {
          return;
       }
@@ -280,7 +300,25 @@ class MainWP_Child_Staging {
       $cancel = new WPStaging\Backend\Modules\Jobs\Cancel();
       return $cancel->start();
    }
+   
+    public function ajaxCancelUpdate() {      
+	  $cancel = new WPStaging\Backend\Modules\Jobs\CancelUpdate();
+      return $cancel->start();
+   }
 
+   public function ajaxUpdateProcess() {
+      
+		$cloning = new WPStaging\Backend\Modules\Jobs\Updating();	   
+
+		if( !$cloning->save() ) {
+		   return;
+		}
+
+		ob_start();
+		require_once WPSTG_PLUGIN_DIR . "apps/Backend/views/clone/ajax/update.php";
+		$result = ob_get_clean();
+		return $result;	 
+   }
    
     public function ajaxCheckFreeSpace() {             
        return $this->hasFreeDiskSpace();

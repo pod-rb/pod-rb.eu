@@ -8,6 +8,19 @@ class BVLib {
 		return json_decode(json_encode($obj), true);
 	}
 
+	public function dbsig($full = false) {
+		if (defined('DB_USER') && defined('DB_NAME') &&
+				defined('DB_PASSWORD') && defined('DB_HOST')) {
+			$sig = sha1(DB_USER.DB_NAME.DB_PASSWORD.DB_HOST);
+		} else {
+			$sig = "bvnone".$this->randString(34);
+		}
+		if ($full)
+			return $sig;
+		else
+			return substr($sig, 0, 6);
+	}
+
 	public function randString($length) {
 		$chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		

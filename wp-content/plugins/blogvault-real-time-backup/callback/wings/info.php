@@ -164,6 +164,7 @@ class BVInfoCallback {
 			$info['openssl_public_decrypt'] = "1";
 		}
 		$info['sha1'] = "1";
+		$info['apissl'] = "1";
 		if (function_exists('base64_encode')) {
 			$info['b64encode'] = true;
 		}
@@ -247,37 +248,37 @@ class BVInfoCallback {
 		case "activateinfo":
 			$this->activate();
 			break;
-		case "getposts":
+		case "gtpsts":
 			$count = 5;
 			if (array_key_exists('count', $_REQUEST))
 				$count = $_REQUEST['count'];
 			$this->getPosts($_REQUEST['post_type'], $count);
 			break;
-		case "getstats":
+		case "gtsts":
 			$this->getStats();
 			break;
-		case "getplugins":
+		case "gtplgs":
 			$this->getPlugins();
 			break;
-		case "getthemes":
+		case "gtthms":
 			$this->getThemes();
 			break;
-		case "getsystem":
+		case "gtsym":
 			$this->getSystemInfo();
 			break;
-		case "getwp":
+		case "gtwp":
 			$this->getWpInfo();
 			break;
 		case "getoption":
 			$bvresp->addStatus("option", $bvresp->getOption($_REQUEST['name']));
 			break;
-		case "getusers":
+		case "gtusrs":
 			$full = false;
 			if (array_key_exists('full', $_REQUEST))
 				$full = true;
 			$this->getUsers($_REQUEST['args'], $full);
 			break;
-		case "gettransient":
+		case "gttrnsnt":
 			$transient = $bvcb->bvmain->info->getTransient($_REQUEST['name']);
 			if ($transient && array_key_exists('asarray', $_REQUEST))
 				$transient = $bvcb->bvmain->lib->objectToArray($transient);

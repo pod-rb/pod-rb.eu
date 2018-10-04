@@ -8,7 +8,7 @@ function adventurous_pass_slider_value() {
 	$transition_effect   = $options['transition_effect'];
 	$transition_delay    = $options['transition_delay'] * 1000;
 	$transition_duration = $options['transition_duration'] * 1000;
-	
+
 	wp_localize_script(
 		'adventurous-slider',
 		'js_value',
@@ -36,7 +36,7 @@ function adventurous_default_sliders() {
 				<article class="post hentry slides demo-image displayblock">
 					<figure class="slider-image">
 						<a title="Tiger" href="#">
-							<img src="'. get_template_directory_uri() . '/images/demo/slider-1-1600x600.jpg" class="wp-post-image" alt="Tiger" title="Tiger">
+							<img src="'. trailingslashit( esc_url ( get_template_directory_uri() ) ) . 'images/demo/slider-1-1600x600.jpg" class="wp-post-image" alt="Tiger" title="Tiger">
 						</a>
 					</figure>
 				</article><!-- .slides -->
@@ -44,7 +44,7 @@ function adventurous_default_sliders() {
 				<article class="post hentry slides demo-image displaynone">
 					<figure class="slider-image">
 						<a title="Tiger" href="#">
-							<img src="'. get_template_directory_uri() . '/images/demo/slider-2-1600x600.jpg" class="wp-post-image" alt="Tiger" title="Tiger">
+							<img src="'. trailingslashit( esc_url ( get_template_directory_uri() ) ) . 'images/demo/slider-2-1600x600.jpg" class="wp-post-image" alt="Tiger" title="Tiger">
 						</a>
 					</figure>
 				</article><!-- .slides -->
@@ -81,7 +81,7 @@ function adventurous_post_sliders() {
 		global $post;
 
 		$options  = adventurous_get_options();
-		
+
 		$output = '
 		<div id="main-slider">
         	<section class="featured-slider">';

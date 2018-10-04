@@ -26,11 +26,11 @@ class wpdevart_comment_setting{
 			"curent_url"						=> get_permalink(),			
 			"title_text"						=> 'Comments',
 			"title_text_color"					=> '#000000',
-			"title_text_font_size"				=> '16',
+			"title_text_font_size"				=> '15',
 			"title_text_font_famely"			=> 'Times New Roman,Times,Serif,Georgia',
 			"title_text_position"				=> 'left',
 			"width"								=>  '100%',
-			"count_of_comments"					=>  '10',
+			"count_of_comments"					=>  '7',
 			"locale"							=>  'en_US',	
 				
 		);

@@ -6,8 +6,8 @@ Author: mainwp
 Author URI: https://mainwp.com
 Plugin URI: https://mainwp.com
 Requires at least: 3.6
-Tested up to: 4.9.4
-Stable tag: 3.4.6
+Tested up to: 4.9.7
+Stable tag: 3.4.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html 
 
@@ -29,6 +29,20 @@ The MainWP Child plugin is used to securely manage multiple WordPress websites f
 * Manage and Add all your Pages from one location
 * Run everything from 1 Dashboard that you host!
 
+= More Information =
+[MainWP Documentation](https://mainwp.com/help/)
+
+[MainWP User Group](https://www.facebook.com/groups/MainWPUsers/)
+
+[MainWP Support](https://mainwp.com/support/)
+
+[MainWP Videos](http://www.youtube.com/user/MyMainWP)
+
+[MainWP Extensions](https://mainwp.com/mainwp-extensions/)
+
+[MainWP Codex](https://mainwp.com/codex/)
+
+[MainWP on Github](https://mainwp.com/github/)
 
 == Installation ==
 
@@ -56,6 +70,36 @@ To see full documentation and FAQs please visit [MainWP Documentation](https://m
 9. Global Dashboard Screen
 
 == Changelog ==
+
+= 3.4.9 - 7-23-18 =
+* Fixed: MainWP iThemes Security Extension issues caused by the latest iThemes Security plugin version
+
+= 3.4.8 - 6-26-18 =
+* Fixed: issues caused by deprecated functions
+* Added: mainwp_before_post_update hook
+* Added: support for the new extension
+* Added: conditional checks to prevent possible conflicts with certain plugins 
+* Added: support for the new MainWP Branding Extension feature
+* Improved: PHP 7.2 compatibility  
+
+= 3.4.7.1 - 5-25-18 =
+* Fixed: UpdraftPlus 1.14.10 compatibility issue that caused child sites to disconnect
+* Added: support for the new MainWP Branding Extension option
+* Updated: compatibility with the new Wordfence plugin version
+* Updated: compatibility with the new WP Rocket plugin version
+
+= 3.4.7 - 4-17-18 =
+* Fixed: multiple cloning issues
+* Fixed: timezone issue backup timestamp
+* Fixed: MainWP Branding Extension conflict that caused issues with hooking WP Admin menu items
+* Fixed: MainWP Branding Extension issue with hiding WordPress update nag
+* Fixed: MainWP Branding Extension issue with updating WordPress footer content 
+* Fixed: issues with loading broken links data
+* Fixed: multiple PHP 7.2 warnings 
+* Added: support for the BackBlaze backup remote destination (UpdraftPlus Extension)
+* Added: support for recording Live Stash updates for Client Reporting
+* Updated: recent Wordfence plugin version compatibility
+* Updated: recent WP Staging plugin version compatibility
 
 = 3.4.6 - 2-21-18 =
 * Fixed: Wordfence 7 compatibility issues

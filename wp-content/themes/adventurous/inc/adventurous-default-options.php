@@ -13,7 +13,7 @@
 function adventurous_get_defaults( $parameter = null ) {
 	$defaults = array(
 		'remove_header_logo'            => '1',
-		'featured_logo_header'          => get_template_directory_uri().'/images/logo.png',
+		'featured_logo_header'          => esc_url( get_template_directory_uri() ).'/images/logo.png',
 		'enable_promotion'              => 'homepage',
 		'homepage_headline'             => esc_html__( 'Adventurous is a Simple, Clean and Responsive WordPress Theme', 'adventurous' ),
 		'homepage_subheadline'          => esc_html__( 'This is Promotion Headline. You can edit this from "Appearance => Theme Options => Promotion Headline Options"', 'adventurous' ),
@@ -100,7 +100,7 @@ function adventurous_get_defaults( $parameter = null ) {
 	if ( null !== $parameter ) {
 		return $defaults[ $parameter ];
 	}
-	
+
 	return $defaults;
 }
 

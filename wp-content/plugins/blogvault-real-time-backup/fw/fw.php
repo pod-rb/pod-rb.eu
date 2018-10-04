@@ -84,13 +84,15 @@ VALUES|VARBINARY|VARCHAR|VARCHARACTER|VARYING|WHEN|WHERE|WHILE|WRITE|YEAR_MONTH|
 		if ($category)
 			$this->request->setCategory($category);
 		$this->request->setStatus(BVRequest::BLOCKED);
+		$this->request->setRespCode(403);
 		if ($this->isProtecting()) {
+			header('HTTP/1.0 403 Forbidden');
 			$this->log();
 			$brandname = $this->bvmain->getBrandName();
 			die("
 				<div style='height: 98vh;'>
 					<div style='text-align: center; padding: 10% 0; font-family: Arial, Helvetica, sans-serif;'>
-					<div><p><img src=".plugins_url('../img/lock.png', __FILE__)."><h2>Firewall</h2><h3>powered by</h3><h2>"
+					<div><p><img src=".plugins_url('../img/icon.png', __FILE__)."><h2>Firewall</h2><h3>powered by</h3><h2>"
 							.$brandname."</h2></p><div>
 						<p>Blocked because of Malicious Activities</p>
 					</div>
@@ -101,7 +103,7 @@ VALUES|VARBINARY|VARCHAR|VARCHARACTER|VARYING|WHEN|WHERE|WHILE|WRITE|YEAR_MONTH|
 	}
 
 	public function isWhitelistedIP() {
-		return (in_array($this->request->getIP(), $this->config->getWhitelistedIPs()));
+		return (in_array($this->request->getIP(), $this->config->getWhitelistedIPs(), true));
 	}
 
 	public function canBypassFirewall() {
@@ -114,7 +116,7 @@ VALUES|VARBINARY|VARCHAR|VARCHARACTER|VARYING|WHEN|WHERE|WHILE|WRITE|YEAR_MONTH|
 	}
 	
 	public function isBlacklisted() {
-		return (in_array($this->request->getIP(), $this->config->getBlacklistedIPs()));
+		return (in_array($this->request->getIP(), $this->config->getBlacklistedIPs(), true));
 	}
 
 	public function execute() {
@@ -154,7 +156,7 @@ VALUES|VARBINARY|VARCHAR|VARCHARACTER|VARYING|WHEN|WHERE|WHILE|WRITE|YEAR_MONTH|
 
 	public function contains($pattern, $subject) {
 		if (is_array($pattern)) {
-			return in_array($pattern, $subject);
+			return in_array($pattern, $subject, true);
 		}
 		return strpos((string) $subject, (string) $pattern) !== false;
 	}

@@ -66,7 +66,7 @@ class BVRecover {
 		global $bvresp, $bvcb;
 		$bvmain = $bvcb->bvmain;
 		$keys = $bvmain->auth->allKeys();
-		$keys['dbsig'] = $bvcb->dbsig(true);
+		$keys['dbsig'] = $bvmain->lib->dbsig(true);
 		$keys['salt'] = $bvmain->lib->randString(32);
 		$bvresp->addStatus("activatetime", $bvmain->info->getOption('bvActivateTime'));
 		$bvresp->addStatus("currenttime", time());

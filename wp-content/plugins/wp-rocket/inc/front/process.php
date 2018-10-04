@@ -109,7 +109,7 @@ if ( ! empty( $_GET )
 }
 
 // Don't cache SSL.
-if ( ! isset( $rocket_cache_ssl ) && rocket_is_ssl() ) {
+if ( empty( $rocket_cache_ssl ) && is_ssl() ) {
 	rocket_define_donotoptimize_constant( true );
 	return;
 }
@@ -190,14 +190,14 @@ if ( isset( $rocket_cache_mobile, $rocket_do_caching_mobile_files ) && class_exi
 }
 
 // Rename the caching filename for SSL URLs.
-if ( ( rocket_is_ssl() && ! empty( $rocket_cache_ssl ) ) ) {
+if ( ( is_ssl() && ! empty( $rocket_cache_ssl ) ) ) {
 	$filename .= '-https';
 }
 
 // Rename the caching filename depending to dynamic cookies.
 if ( ! empty( $rocket_cache_dynamic_cookies ) ) {
 	foreach ( $rocket_cache_dynamic_cookies as $cookie_name ) {
-		if ( ! empty( $_COOKIE[ $cookie_name ] ) ) {
+		if ( isset( $_COOKIE[ $cookie_name ] ) && '' !== $_COOKIE[ $cookie_name ] ) {
 			$cache_key = $_COOKIE[ $cookie_name ];
 			$cache_key = preg_replace( '/[^a-z0-9_\-]/i', '-', $cache_key );
 			$filename .= '-' . $cache_key;
@@ -244,6 +244,7 @@ function do_rocket_callback( $buffer ) {
 	$rocket_override_donotcachepage = apply_filters( 'rocket_override_donotcachepage', false );
 
 	if ( strlen( $buffer ) > 255
+		&& ( http_response_code() === 200 ) // only cache 200.
 		&& ( function_exists( 'is_404' ) && ! is_404() ) // Don't cache 404.
 		&& ( function_exists( 'is_search' ) && ! is_search() || $rocket_cache_search ) // Don't cache search results.
 		&& ( ! defined( 'DONOTCACHEPAGE' ) || ! DONOTCACHEPAGE || $rocket_override_donotcachepage ) // Don't cache template that use this constant.
@@ -373,27 +374,6 @@ function rocket_serve_cache_file( $rocket_cache_filepath ) {
 		readfile( $rocket_cache_filepath );
 		exit;
 	}
-}
-
-/**
- * Determine if SSL is used
- *
- * @since 2.0
- *
- * @source is_ssl() in /wp-includes/functions.php
- */
-function rocket_is_ssl() {
-	if ( isset( $_SERVER['HTTPS'] ) ) {
-		if ( 'on' === strtolower( $_SERVER['HTTPS'] ) ) {
-			return true;
-		}
-		if ( '1' === $_SERVER['HTTPS'] ) {
-			return true;
-		}
-	} elseif ( isset( $_SERVER['SERVER_PORT'] ) && ( '443' === $_SERVER['SERVER_PORT'] ) ) {
-		return true;
-	}
-	return false;
 }
 
 /**

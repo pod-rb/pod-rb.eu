@@ -25,6 +25,12 @@ class BVBrandCallback {
 				$brandinfo['logo'] = $_REQUEST['logo'];
 				$brandinfo['webpage'] = $_REQUEST['webpage'];
 				$brandinfo['appurl'] = $_REQUEST['appurl'];
+				if (array_key_exists('hide_plugin_details', $_REQUEST)) {
+					$brandinfo['hide_plugin_details'] = $_REQUEST['hide_plugin_details'];
+				}
+				if (array_key_exists('hide_from_menu', $_REQUEST)) {
+					$brandinfo['hide_from_menu'] = $_REQUEST['hide_from_menu'];
+				}
 			}
 			$info->updateOption($option_name, $brandinfo);
 			$bvresp->addStatus("setbrand", $info->getOption($option_name));

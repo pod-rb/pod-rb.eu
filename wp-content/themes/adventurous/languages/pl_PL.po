@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Adventurous\n"
 "Report-Msgid-Bugs-To: https://catchthemes.com/contact-us/\n"
-"POT-Creation-Date: 2017-10-10 14:24+0545\n"
-"PO-Revision-Date: 2017-10-10 14:24+0545\n"
+"POT-Creation-Date: 2018-04-02 00:07+0545\n"
+"PO-Revision-Date: 2018-04-02 00:07+0545\n"
 "Last-Translator: Sakin Shrestha <info@catchthemes.com>\n"
 "Language-Team: Piotrekkk <fansitejustgames@gmail.com>\n"
 "Language: pl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1.2c;esc_attr_e;esc_attr__\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -555,7 +555,7 @@ msgid "Reply"
 msgstr "Odpowiedz"
 
 #: ../inc/adventurous-template-tags.php:222
-#: ../inc/adventurous-template-tags.php:295
+#: ../inc/adventurous-template-tags.php:298
 #, php-format
 msgid "View all posts by %s"
 msgstr "Wszystkie wpisy opublikowane przez %s"
@@ -569,14 +569,14 @@ msgstr ""
 "<span class=\"on-date\">Opublikowano %1$s</span><span class=\"by-author\"> "
 "przez %2$s</span>"
 
-#: ../inc/adventurous-template-tags.php:249
-#: ../inc/adventurous-template-tags.php:252
-#: ../inc/adventurous-template-tags.php:281
+#: ../inc/adventurous-template-tags.php:250
+#: ../inc/adventurous-template-tags.php:253
 #: ../inc/adventurous-template-tags.php:284
+#: ../inc/adventurous-template-tags.php:287
 msgid ", "
 msgstr ","
 
-#: ../inc/adventurous-template-tags.php:257
+#: ../inc/adventurous-template-tags.php:258
 #, php-format
 msgid ""
 "<span class=\"in-category\">Posted in %1$s</span><span class=\"sep\"> | </"
@@ -585,12 +585,12 @@ msgstr ""
 "<span class=\"in-category\">Opublikowano w %1$s</span><span class=\"sep\"> | "
 "</span><span class=\"in-tag\">Otagowano %2$s</span>"
 
-#: ../inc/adventurous-template-tags.php:259
+#: ../inc/adventurous-template-tags.php:260
 #, php-format
 msgid "<span class=\"in-category\">Posted in %1$s</span>"
 msgstr "<span class=\"in-category\">Opublikowano w %1$s<span>"
 
-#: ../inc/adventurous-template-tags.php:301
+#: ../inc/adventurous-template-tags.php:304
 #, php-format
 msgid ""
 "<span class=\"on-date\">Posted on %3$s</span><span class=\"in-category\"> "
@@ -603,7 +603,7 @@ msgstr ""
 "\">Otagowano %2$s</span><span class=\"sep\"> | </span><span class=\"by-author"
 "\"> Autor: %4$s</span>"
 
-#: ../inc/adventurous-template-tags.php:303
+#: ../inc/adventurous-template-tags.php:306
 #, php-format
 msgid ""
 "<span class=\"on-date\">Posted on %3$s</span><span class=\"in-category\"> "
@@ -614,7 +614,7 @@ msgstr ""
 "\"> pod %1$s</span><span class=\"sep\"> | </span><span class=\"by-author\"> "
 "Autor: %4$s</span>."
 
-#: ../inc/adventurous-template-tags.php:305
+#: ../inc/adventurous-template-tags.php:308
 #, php-format
 msgid ""
 "<span class=\"on-date\">Posted on %3$s</span><span class=\"sep\"> | </"

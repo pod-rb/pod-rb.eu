@@ -2,10 +2,15 @@
 
 if (!defined('ABSPATH')) exit;
 if (!class_exists('BVAdmin')) :
+
+require_once dirname( __FILE__ ) . '/account.php';
+
 class BVAdmin {
 	public $bvmain;
+	public $account;
 	function __construct($bvmain) {
 		$this->bvmain = $bvmain;
+		$this->account = new BVAccountInfo($this->bvmain);
 	}
 
 	public function mainUrl($_params = '') {
@@ -41,17 +46,35 @@ class BVAdmin {
 
 	public function menu() {
 		$brand = $this->bvmain->getBrandInfo();
-		if (!$brand || !array_key_exists('hide', $brand)) {
+		if (!$brand || (!array_key_exists('hide', $brand) && !array_key_exists('hide_from_menu', $brand))) {
 			$bname = $this->bvmain->getBrandName();
 			add_menu_page($bname, $bname, 'manage_options', $this->bvmain->plugname,
 					array($this, 'adminPage'), plugins_url('img/icon.png',  __FILE__ ));
 		}
 	}
 
+	public function hidePluginDetails($plugin_metas, $slug) {
+		$brand = $this->bvmain->getBrandInfo();
+		$bvslug = $this->bvmain->slug;
+
+		if ($slug === $bvslug && $brand && array_key_exists('hide_plugin_details', $brand)){
+			foreach ($plugin_metas as $pluginKey => $pluginValue) {
+				if (strpos($pluginValue, sprintf('>%s<', translate('View details')))) {
+					unset($plugin_metas[$pluginKey]);
+					break;
+				}
+			}
+		}
+		return $plugin_metas;
+	}
+
 	public function settingsLink($links, $file) {
 		#XNOTE: Fix this
 		if ( $file == plugin_basename( dirname(__FILE__).'/blogvault.php' ) ) {
-			$links[] = '<a href="'.$this->mainUrl().'">'.__( 'Settings' ).'</a>';
+			$brand = $this->bvmain->getBrandInfo();
+			if (!$brand || !array_key_exists('hide_plugin_details', $brand)) {
+				$links[] = '<a href="'.$this->mainUrl().'">'.__( 'Settings' ).'</a>';
+			}
 		}
 		return $links;
 	}
@@ -78,6 +101,7 @@ class BVAdmin {
 		$tags = "<input type='hidden' name='url' value='".$this->bvmain->info->wpurl()."'/>\n".
 				"<input type='hidden' name='homeurl' value='".$this->bvmain->info->homeurl()."'/>\n".
 				"<input type='hidden' name='siteurl' value='".$this->bvmain->info->siteurl()."'/>\n".
+				"<input type='hidden' name='dbsig' value='".$this->bvmain->lib->dbsig(false)."'/>\n".
 				"<input type='hidden' name='plug' value='".$this->bvmain->plugname."'/>\n".
 				"<input type='hidden' name='adminurl' value='".$this->mainUrl()."'/>\n".
 				"<input type='hidden' name='bvversion' value='".$this->bvmain->version."'/>\n".
@@ -100,8 +124,27 @@ class BVAdmin {
 		}
 	}
 
+	public function isConfigured() {
+		$accounts = $this->account->allAccounts();
+		return (is_array($accounts) && sizeof($accounts) >= 1);
+	}
+
 	public function adminPage() {
-		require_once dirname( __FILE__ ) . '/admin/main_page.php';
+		wp_enqueue_style( 'bvsurface', plugins_url('css/bvmui.min.css', __FILE__));
+		if (isset($_REQUEST['bvnonce']) && wp_verify_nonce( $_REQUEST['bvnonce'], 'bvnonce' )) {
+			$this->account->remove($_REQUEST['pubkey']);
+		}
+		require_once dirname( __FILE__ ) . '/admin/header.php';
+		if ($this->isConfigured()) {
+			if (!isset($_REQUEST['add_account'])) {
+				require_once dirname( __FILE__ ) . '/admin/main_page.php';
+			} else {
+				require_once dirname( __FILE__ ) . '/admin/add_new_acc.php';
+			}
+		} else {
+			require_once dirname( __FILE__ ) . '/admin/add_new_acc.php';
+		}
+		require_once dirname( __FILE__ ) . '/admin/footer.php';
 	}
 
 	public function initBranding($plugins) {

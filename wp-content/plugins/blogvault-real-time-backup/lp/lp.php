@@ -121,7 +121,7 @@ class BVLP {
 			return "
 			<div style='height: 98vh;'>
 				<div style='text-align: center; padding: 10% 0; font-family: Arial, Helvetica, sans-serif;'>
-					<div><p><img src=".plugins_url('../img/lock.png', __FILE__)."><h2>Login Protection</h2><h3>powered by</h3><h2>"
+					<div><p><img src=".plugins_url('../img/icon.png', __FILE__)."><h2>Login Protection</h2><h3>powered by</h3><h2>"
 							.$brandname."</h2></p><div>
 					<p>" . $templates[$this->getCategory()]. "</p>
 				</div>
@@ -137,11 +137,11 @@ class BVLP {
 	}
 
 	public function isBlacklistedIP() {
-		return (in_array($this->ip, $this->config->getBlacklistedIPs()));
+		return (in_array($this->ip, $this->config->getBlacklistedIPs(), true));
 	}
 
 	public function isWhitelistedIP() {
-		return (in_array($this->ip, $this->config->getWhitelistedIPs()));
+		return (in_array($this->ip, $this->config->getWhitelistedIPs(), true));
 	}
 
 	public function isUnBlockedIP() {
@@ -177,6 +177,7 @@ class BVLP {
 		$this->setMessage('Login Blocked');
 		$this->log(BVLP::LOGINBLOCKED);
 		if ($this->isProtecting()) {
+			header('HTTP/1.0 403 Forbidden');
 			die($this->terminateTemplate());
 			exit;
 		}

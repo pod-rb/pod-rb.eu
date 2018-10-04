@@ -59,19 +59,19 @@ $sidebar_layout = array(
 						'id' => 'adventurous-sidebarlayout',
 						'value' => 'right-sidebar',
 						'label' => __( 'Right sidebar', 'adventurous' ),
-						'thumbnail' => get_template_directory_uri() . '/inc/panel/images/right-sidebar.png'
+						'thumbnail' => trailingslashit( esc_url ( get_template_directory_uri() ) ) . 'inc/panel/images/right-sidebar.png'
        				),
         'left-sidebar' => array(
             			'id'		=> 'adventurous-sidebarlayout',
 						'value' 	=> 'left-sidebar',
 						'label' 	=> __( 'Left sidebar', 'adventurous' ),
-						'thumbnail' => get_template_directory_uri() . '/inc/panel/images/left-sidebar.png'
+						'thumbnail' => trailingslashit( esc_url ( get_template_directory_uri() ) ) . 'inc/panel/images/left-sidebar.png'
        				),
         'no-sidebar' => array(
             			'id'		=> 'adventurous-sidebarlayout',
 						'value' 	=> 'no-sidebar',
 						'label' 	=> __( 'No sidebar', 'adventurous' ),
-						'thumbnail' => get_template_directory_uri() . '/inc/panel/images/no-sidebar.png'
+						'thumbnail' => trailingslashit( esc_url ( get_template_directory_uri() ) ) . 'inc/panel/images/no-sidebar.png'
         			)
 
     );

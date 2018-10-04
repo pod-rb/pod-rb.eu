@@ -1,25 +1,17 @@
 <?php
 /**
- * Functions - Framework gatekeeper
+ * WordPress Template: Functions
+ * 
+ * This file is automatically loaded by WordPress.
+ * functions.php bootstraps and initialization WP Framework.
  *
- * This file defines a few constants variables, loads up the core framework file, 
- * and finally initialises the main WP Framework Class.
- *
- * @package WPFramework
- * @subpackage Functions
+ * @package WP Framework
+ * @subpackage Template
  */
 
-define( 'WP_FRAMEWORK', '0.2.4' ); // Defines current version for WP Framework
-	
-	/* Blast you red baron! Initialise WP Framework */
-	require_once( TEMPLATEPATH . '/library/framework.php' );
-	WPFramework::init();
+/**
+ * NOTE: USE custom-functions.php instead of this file.
+ */
 
-function register_my_menus() {
-  register_nav_menus(
-    array( 'header-menu' => __( 'Header Menu' ))
-  );
-}
-
-add_action( 'init', 'register_my_menus' );
-?>
+// Bootstrap and Initialise WP Framework.
+require_once( TEMPLATEPATH . '/framework/init.php' );

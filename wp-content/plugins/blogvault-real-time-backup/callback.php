@@ -11,19 +11,6 @@ class BVCallback {
 		$this->bvmain = $bvmain;
 	}
 
-	public function dbsig($full = false) {
-		if (defined('DB_USER') && defined('DB_NAME') &&
-				defined('DB_PASSWORD') && defined('DB_HOST')) {
-			$sig = sha1(DB_USER.DB_NAME.DB_PASSWORD.DB_HOST);
-		} else {
-			$sig = "bvnone".$this->bvmain->lib->randString(34);
-		}
-		if ($full)
-			return $sig;
-		else
-			return substr($sig, 0, 6);
-	}
-
 	public function serversig($full = false) {
 		$sig = sha1($_SERVER['SERVER_ADDR'].ABSPATH);
 		if ($full)
@@ -32,13 +19,13 @@ class BVCallback {
 			return substr($sig, 0, 6);
 	}
 
-	public function terminate($with_basic) {
+	public function terminate($with_basic, $bvdebug = false) {
 		global $bvresp;
 		$public = $this->bvmain->auth->defaultPublic();
 		$bvresp->addStatus("signature", "Blogvault API");
 		$bvresp->addStatus("asymauth", "true");
 		$bvresp->addStatus("sha1", "true");
-		$bvresp->addStatus("dbsig", $this->dbsig(false));
+		$bvresp->addStatus("dbsig", $this->bvmain->lib->dbsig(false));
 		$bvresp->addStatus("serversig", $this->serversig(false));
 		$bvresp->addStatus("public", substr($public, 0, 6));
 		if ($with_basic) {
@@ -46,6 +33,10 @@ class BVCallback {
 			$this->bvmain->info->basic($binfo);
 			$bvresp->addStatus("basic", $binfo);
 			$bvresp->addStatus("bvversion", $this->bvmain->version);
+		}
+
+		if ($bvdebug) {
+			$bvresp->addStatus("inreq", $_REQUEST);
 		}
 
 		$bvresp->finish();
@@ -134,7 +125,7 @@ class BVCallback {
 			if ($this->recover() !== 1) {
 				$bvresp->addStatus("statusmsg", 'failed authentication');
 			}
-			$this->terminate(false);
+			$this->terminate(false, array_key_exists('bvdbg', $_REQUEST));
 			return false;
 		}
 		return 1;
@@ -211,6 +202,10 @@ class BVCallback {
 			require_once dirname( __FILE__ ) . '/callback/wings/protect.php';
 			$module = new BVProtectCallback();
 			break;
+		case 'act':
+			require_once dirname( __FILE__ ) . '/callback/wings/account.php';
+			$module = new BVAccountCallback();
+			break;
 		default:
 			require_once dirname( __FILE__ ) . '/callback/wings/misc.php';
 			$module = new BVMiscCallback();
@@ -231,7 +226,7 @@ class BVCallback {
 			$this->route($_REQUEST['wing'], $_REQUEST['bvMethod']);
 			$bvresp->endStream();
 		}
-		$this->terminate(true);
+		$this->terminate(true, array_key_exists('bvdbg', $_REQUEST));
 	}
 }
 endif;

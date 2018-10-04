@@ -9,20 +9,18 @@ require WP_ROCKET_3RD_PARTY_PATH . 'hosting/pagely.php';
 require WP_ROCKET_3RD_PARTY_PATH . 'hosting/nginx.php';
 require WP_ROCKET_3RD_PARTY_PATH . 'hosting/siteground.php';
 require WP_ROCKET_3RD_PARTY_PATH . 'hosting/pressidium.php';
+require WP_ROCKET_3RD_PARTY_PATH . 'hosting/savvii.php';
+require WP_ROCKET_3RD_PARTY_PATH . 'hosting/godaddy.php';
+require WP_ROCKET_3RD_PARTY_PATH . 'hosting/kinsta.php';
+require WP_ROCKET_3RD_PARTY_PATH . 'hosting/o2switch.php';
 
-if ( version_compare( phpversion(), '5.3.0', '>=' ) ) {
-	require WP_ROCKET_3RD_PARTY_PATH . 'hosting/savvii.php';
-	require WP_ROCKET_3RD_PARTY_PATH . 'hosting/godaddy.php';
-	require WP_ROCKET_3RD_PARTY_PATH . 'plugins/geotargetingwp.php';
-}
-
+require WP_ROCKET_3RD_PARTY_PATH . 'plugins/geotargetingwp.php';
 require WP_ROCKET_3RD_PARTY_PATH . 'plugins/slider/revslider.php';
 require WP_ROCKET_3RD_PARTY_PATH . 'plugins/slider/layerslider.php';
 require WP_ROCKET_3RD_PARTY_PATH . 'plugins/slider/meta-slider.php';
 require WP_ROCKET_3RD_PARTY_PATH . 'plugins/slider/soliloquy.php';
 require WP_ROCKET_3RD_PARTY_PATH . 'plugins/i18n/wpml.php';
 require WP_ROCKET_3RD_PARTY_PATH . 'plugins/i18n/polylang.php';
-require WP_ROCKET_3RD_PARTY_PATH . 'plugins/ecommerce/woocommerce.php';
 require WP_ROCKET_3RD_PARTY_PATH . 'plugins/ecommerce/aelia-currencyswitcher.php';
 require WP_ROCKET_3RD_PARTY_PATH . 'plugins/ecommerce/aelia-prices-by-country.php';
 require WP_ROCKET_3RD_PARTY_PATH . 'plugins/ecommerce/aelia-tax-display-by-country.php';
@@ -68,9 +66,11 @@ require WP_ROCKET_3RD_PARTY_PATH . 'plugins/wp-offload-s3.php';
 require WP_ROCKET_3RD_PARTY_PATH . 'plugins/wp-offload-s3-assets.php';
 require WP_ROCKET_3RD_PARTY_PATH . 'plugins/s2member.php';
 require WP_ROCKET_3RD_PARTY_PATH . 'plugins/cookie-notice.php';
+require WP_ROCKET_3RD_PARTY_PATH . 'plugins/sumome.php';
 
 require WP_ROCKET_3RD_PARTY_PATH . 'themes/divi.php';
 require WP_ROCKET_3RD_PARTY_PATH . 'themes/avada.php';
 require WP_ROCKET_3RD_PARTY_PATH . 'themes/studiopress.php';
+require WP_ROCKET_3RD_PARTY_PATH . 'themes/uncode.php';
 
 require WP_ROCKET_3RD_PARTY_PATH . 'aqua-resizer.php';

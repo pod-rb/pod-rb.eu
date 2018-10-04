@@ -1,71 +1,35 @@
 <?php
 /**
- * Template: Archive.php
+ * WordPress Template: Archive
  *
- * @package WPFramework
+ * The archive template is the general template used when an archive-based 
+ * template is queried.
+ * 
+ * To use a custom template for a specfic archive, create a taxonomy.php file 
+ * for taxonomies, user.php file for users/authors, or date.php file for 
+ * date-based archives and store them in your parent/child theme's root 
+ * directory.
+ * 
+ * Template Hierarchy
+ * - archive.php
+ * - index.php
+ *
+ * @package WP Framework
  * @subpackage Template
  */
 
-get_header();
-?>
-			<!--BEGIN #primary .hfeed-->
-			<div id="primary" class="hfeed">
-			<?php if ( have_posts() ) : ?>
-            	<h1 class="page-title archive-title">Archives:</h1>
-				<?php while ( have_posts() ) : the_post(); ?>
+get_template_part( 'header' ); ?>
 
-				<!--BEGIN .hentry-->
-				<div id="post-<?php the_ID(); ?>" class="<?php semantic_entries(); ?>">
-					<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
+				<div id="content" class="column-7">
 
-					<!--BEGIN .entry-meta .entry-header-->
-					<div class="entry-meta entry-header">
-						<!--<span class="author vcard">Написано от <?php printf( '<a class="url fn" href="' . get_author_posts_url( $authordata->ID, $authordata->user_nicename ) . '" title="' . sprintf( 'View all posts by %s', $authordata->display_name ) . '">' . get_the_author() . '</a>' ) ?></span> -->
-						<span class="published">на <abbr class="published-time" title="<?php the_time( get_option('date_format') .' - '. get_option('time_format') ); ?>"><?php the_time( get_option('date_format') ); ?></abbr></span>
-						<span class="meta-sep">&mdash;</span>
-						<span class="comment-count"><a href="<?php comments_link(); ?>"><?php comments_number( 'Напиши коментар', '1 Коментар', '% Коментари' ); ?></a></span>
-						<?php edit_post_link( 'edit', '<span class="edit-post">[', ']</span>' ); ?>
-					<!--END .entry-meta .entry-header-->
-                    </div>
+					<?php do_action( 'content_open' ); ?>
 
-					<!--BEGIN .entry-summary .article-->
-					<div class="entry-summary article">
-						<?php the_excerpt(); ?>
-					<!--END .entry-summary .article-->
-					</div>
+					<?php get_template_part( 'loop', 'archive' ); ?>
 
-					<!--BEGIN .entry-meta .entry-footer-->
-                    <div class="entry-meta entry-footer">
-                    	<span class="entry-categories">Posted in <?php echo framework_get_terms( 'cats' ); ?></span>
-						<?php if ( framework_get_terms( 'tags' ) ) { ?>
-                        <span class="meta-sep">|</span>
-                        <span class="entry-tags">Tagged <?php echo framework_get_terms( 'tags' ); ?></span>
-                        <?php } ?>
-					<!--END .entry-meta .entry-footer-->
-                    </div>
-				<!--END .hentry-->
-				</div>
+					<?php do_action( 'content_close' ); ?>
 
-				<?php endwhile; ?>
-				<?php include ( TEMPLATEPATH . '/navigation.php' ); ?>
-				<?php else : ?>
+				</div><!-- #content -->
 
-				<!--BEGIN #post-0-->
-				<div id="post-0" class="<?php semantic_entries(); ?>">
-					<h2 class="entry-title">Not Found</h2>
+				<?php get_template_part( 'sidebar' ); ?>
 
-					<!--BEGIN .entry-content-->
-					<div class="entry-content">
-						<p>Sorry, but you are looking for something that isn't here.</p>
-						<?php get_search_form(); ?>
-					<!--END .entry-content-->
-					</div>
-				<!--END #post-0-->
-				</div>
-
-			<?php endif; ?>
-			<!--END #primary .hfeed-->
-			</div>
-
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php get_template_part( 'footer' ); ?>
