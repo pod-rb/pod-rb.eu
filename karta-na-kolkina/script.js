@@ -42,8 +42,8 @@ window.onload = function () {
   menu();
 
   function toggleLineWidth(zoomScale) {
-    var isTopoOn = document.getElementById('topo').firstElementChild.className == 'fa fa-check-square-o'
-    if (zoomScale > 5 && !isTopoOn) {
+    // var isTopoOn = document.getElementById('topo').firstElementChild.className == 'fa fa-check-square-o'
+    if (zoomScale > 2) {
       document.getElementById('container').className = ""
     } else {
       document.getElementById('container').className = "bigMap"

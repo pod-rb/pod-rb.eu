@@ -64,3 +64,7 @@ article td {
 #homepage-message .right-section a, #homepage-message .right-section a:hover {
 	background-color:#e34500;
 }
+
+.photonic-loading {
+	box-shadow: 0px 0px 4px;
+}
