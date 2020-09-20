@@ -67,7 +67,30 @@
          */		 
         do_action( 'adventurous_site_generator' ); ?>       
            
-             
+  <script type="text/javascript">
+  /**
+   * This fixes aa bug for Wp-image-zoom plugin connected to sticky header that displaces the aoom lens. Check official wp-image zoom documentation
+   */
+    jQuery(document).ready(function( $ ) {
+      var haveRefreshed = false;
+      jQuery(document).scroll(function() {
+        var topScrol = $(window).scrollTop()
+          var options = IZ.options;
+          if(topScrol > 70 && !haveRefreshed) { // the value when the header becomse small
+            haveRefreshed = true;
+            $('.zoomContainer').remove();
+            if (IZ && IZ.with_woocommerce == '1') {
+              $('img.zoooom, .attachment-shop_single, .attachment-shop_thumbnail.flex-active-slide img').image_zoom(options);
+            } else {
+              $('img.zoooom, .zoooom img').image_zoom(options);
+            }
+            if (IZ && IZ.woo_categories == '1') {
+              $('.tax-product_cat .products img').image_zoom(options);
+            }
+        }
+      });
+    });
+  </script>               
 	</footer><!-- #colophon .site-footer -->
     
     <?php 
